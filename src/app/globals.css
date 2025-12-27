@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: var(--font-montserrat), system-ui, sans-serif;
+    background-color: #F8F6F3;
+    color: #2C3E2D;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-playfair), serif;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  
+  .font-script {
+    font-family: var(--font-great-vibes), cursive;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-matcha text-white px-8 py-4 font-medium transition-all duration-300;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-charcoal border-2 border-charcoal px-8 py-4 font-medium transition-all duration-300;
+  }
+  
+  .card {
+    @apply bg-white shadow-soft transition-all duration-300;
+  }
+  
+  .section-padding {
+    @apply py-20 lg:py-28;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .bg-texture {
+    background-image: 
+      radial-gradient(circle at 1px 1px, rgba(122, 155, 87, 0.05) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+  
+  .zen-spacing {
+    @apply space-y-8 lg:space-y-12;
+  }
+  
+  /* Enhanced Animation Keyframes */
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  
+  .animate-fade-in-right {
+    animation: fadeInRight 0.8s ease-out forwards;
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .shadow-3xl {
+    box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
