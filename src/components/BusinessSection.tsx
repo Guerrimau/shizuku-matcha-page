@@ -47,15 +47,22 @@ const BusinessSection = () => {
             </div>
 
             {/* Visual Side */}
-            <div className="bg-cream p-12 lg:p-16 flex items-center justify-center">
-              <div className="text-center space-y-4">
-                <div className="text-6xl mb-4">☕</div>
-                <h3 className="font-serif text-2xl text-charcoal">
-                  Eleva tu Menú
-                </h3>
-                <p className="text-charcoal-light">
-                  Únete a las cafeterías que ya ofrecen matcha premium
-                </p>
+            <div className="bg-cream p-6 lg:p-8 flex items-center justify-center">
+              <div className="aspect-[4/3] w-full relative overflow-hidden">
+                <img 
+                  src="/CoffeShop.png" 
+                  alt="Cafetería con matcha premium" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-cream/80 to-transparent"></div>
+                <div className="absolute bottom-6 left-6 right-6 text-center">
+                  <h3 className="font-serif text-2xl text-charcoal mb-2">
+                    Eleva tu Menú
+                  </h3>
+                  <p className="text-charcoal-light">
+                    Únete a las cafeterías que ya ofrecen matcha premium
+                  </p>
+                </div>
               </div>
             </div>
           </div>

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Instagram, Scale, PackageCheck, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Instagram, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState<'matcha' | 'hojicha' | 'sencha'>('matcha');
@@ -9,32 +9,48 @@ const Products = () => {
   const productImages = {
     matcha: [
       {
-        src: "/1.png",
-        alt: "Matcha Shizuku empaque"
+        src: "/MatchaProducts.png",
+        alt: "Productos de Matcha Shizuku"
       },
       {
-        src: "/5.png",
-        alt: "Matcha preparado"
+        src: "/MatchaLatter.png",
+        alt: "Matcha latte preparado"
       },
       {
-        src: "/6.png",
-        alt: "Proceso de preparación"
-      },
-      {
-        src: "/7.png",
+        src: "/MatchaPowder.png",
         alt: "Matcha en polvo"
+      },
+      {
+        src: "/BowlWithMatcha.png",
+        alt: "Bowl con matcha preparado"
+      },
+      {
+        src: "/MatchaSet.png",
+        alt: "Set completo de matcha"
+      },
+      {
+        src: "/TeaWhisk.png",
+        alt: "Proceso de preparación con chasen"
       }
     ],
     hojicha: [
       {
-        src: "/1.png",
-        alt: "Hojicha Shizuku"
+        src: "/HojichaBag.png",
+        alt: "Bolsa de Hojicha Shizuku"
+      },
+      {
+        src: "/HojichaPowder.png",
+        alt: "Hojicha en polvo"
       }
     ],
     sencha: [
       {
-        src: "/1.png",
+        src: "/TeaFarmTea.png",
         alt: "Sencha Shizuku"
+      },
+      {
+        src: "/TeaPlant.png",
+        alt: "Plantas de té"
       }
     ]
   };
@@ -61,28 +77,39 @@ const Products = () => {
 
   const products = {
     matcha: {
-      name: "Matcha Premium",
-      description: "Matcha premium de primera cosecha, directo de Shizuoka, Japón",
+      name: "Matcha Shizu no Midori",
+      subtitle: "抹茶",
+      description: "Té verde molido en piedra. Origen Shizuoka, Japón. Cultivar Okumidori.",
+      quality: "Calidad Premium",
+      use: "Formulación especializada para lattes y bebidas selectas",
       sizes: [
         {
           size: "30g",
-          portions: "10 bebidas aproximadas (3g por porción)",
-          duration: "Ideal para 1-2 semanas de consumo diario",
-          icon: Scale
+          price: 350
         },
         {
           size: "100g",
-          portions: "33 bebidas aproximadas (3g por porción)",
-          duration: "Perfecto para 1 mes de consumo diario",
-          icon: PackageCheck,
+          price: 950,
           badge: "Mejor Valor"
         }
       ],
+      characteristics: [
+        "Cosecha estacional",
+        "Notas verdes dulces",
+        "Hierba fresca",
+        "Toques cremosos"
+      ],
+      tasteProfile: [
+        "Dulzor vegetal",
+        "Umami moderado",
+        "Amargor bajo",
+        "Cuerpo medio a cremoso"
+      ],
       features: [
-        "Primera cosecha de Shizuoka",
-        "Grado premium",
-        "Guía de preparación incluida",
-        "Empaque resellable para mayor frescura"
+        "Stone-ground • Molido en piedra",
+        "Origen Shizuoka, Japón",
+        "Cultivar Okumidori",
+        "Guía de preparación incluida"
       ]
     },
     hojicha: {
@@ -90,10 +117,7 @@ const Products = () => {
       description: "Té verde tostado japonés con sabor suave y aroma reconfortante",
       sizes: [
         {
-          size: "40g",
-          portions: "TODO: Calcular porciones según uso recomendado",
-          duration: "TODO: Duración estimada de consumo",
-          icon: Scale
+          size: "40g"
         }
       ],
       features: [
@@ -108,10 +132,7 @@ const Products = () => {
       description: "Té verde japonés premium, el más popular en Japón",
       sizes: [
         {
-          size: "50g",
-          portions: "TODO: Calcular porciones según uso recomendado",
-          duration: "TODO: Duración estimada de consumo",
-          icon: Scale
+          size: "50g"
         }
       ],
       features: [
@@ -129,7 +150,7 @@ const Products = () => {
     <section id="products" className="section-padding bg-white">
       <div className="container-custom">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-4xl lg:text-5xl font-serif text-charcoal mb-4">
             Nuestros Productos
           </h2>
@@ -140,7 +161,7 @@ const Products = () => {
         </div>
 
         {/* Product Selector - More Prominent */}
-        <div className="max-w-6xl mx-auto mb-16">
+        <div className="max-w-6xl mx-auto mb-12">
           <div className="flex flex-col items-center gap-4">
             <p className="text-sm text-charcoal-light uppercase tracking-wide">
               Selecciona tu té
@@ -199,10 +220,10 @@ const Products = () => {
           <div className="bg-cream">
             <div className="grid md:grid-cols-2 items-center">
               {/* Image Side */}
-              <div className="p-8 lg:p-12">
+              <div className="p-6 lg:p-8">
                 <div className="relative max-w-xl mx-auto">
                   {/* Main Image Container */}
-                  <div className="aspect-square relative overflow-hidden">
+                  <div className="aspect-[4/3] relative overflow-hidden">
                     <img 
                       src={currentImages[currentImageIndex].src}
                       alt={currentImages[currentImageIndex].alt}
@@ -261,54 +282,91 @@ const Products = () => {
               </div>
 
               {/* Content Side */}
-              <div className="p-8 lg:p-12 bg-matcha-pale/10 h-full">
+              <div className="p-6 lg:p-8 bg-matcha-pale/10 h-full">
                 <div className="max-w-xl mx-auto">
-                  <h3 className="text-3xl font-serif text-charcoal mb-4">
-                    {currentProduct.name}
-                  </h3>
-                  <p className="text-charcoal-light mb-8">
+                  <div className="mb-4">
+                    <h3 className="text-3xl font-serif text-charcoal mb-1">
+                      {currentProduct.name}
+                    </h3>
+                    {'subtitle' in currentProduct && (
+                      <p className="text-xl text-charcoal-light mb-2 font-script">
+                        {currentProduct.subtitle}
+                      </p>
+                    )}
+                    {'quality' in currentProduct && (
+                      <p className="text-sm font-medium text-matcha uppercase tracking-wide mb-2">
+                        {currentProduct.quality}
+                      </p>
+                    )}
+                  </div>
+                  
+                  <p className="text-charcoal-light mb-4">
                     {currentProduct.description}
                   </p>
+                  
+                  {'use' in currentProduct && (
+                    <p className="text-sm text-charcoal-light italic mb-8 border-l-2 border-matcha pl-4">
+                      {currentProduct.use}
+                    </p>
+                  )}
 
                   {/* Sizes */}
-                  <div className="space-y-6 mb-10">
-                    {currentProduct.sizes.map((sizeInfo, index) => {
-                      const IconComponent = sizeInfo.icon;
-                      return (
-                        <div key={index} className="flex items-start gap-6">
-                          <div className="w-14 h-14 bg-white flex items-center justify-center flex-shrink-0">
-                            <IconComponent className="text-matcha" size={28} />
+                  <div className="mb-6">
+                    <h4 className="font-medium text-charcoal mb-3 text-sm uppercase tracking-wide">
+                      Presentaciones
+                    </h4>
+                    <div className="flex flex-col gap-2 text-charcoal-light text-sm">
+                      {currentProduct.sizes.map((sizeInfo, index) => {
+                        const sizeNumber = sizeInfo.size.replace('g', '').replace('G', '');
+                        return (
+                          <div key={index} className="text-charcoal">
+                            LATA {sizeNumber} G{'price' in sizeInfo && sizeInfo.price ? ` - $${sizeInfo.price} MXN` : ''}
+                            {'badge' in sizeInfo && sizeInfo.badge && (
+                              <span className="text-xs bg-gold text-white px-2 py-0.5 ml-2">
+                                {sizeInfo.badge}
+                              </span>
+                            )}
                           </div>
-                          <div>
-                            <h4 className="font-medium text-charcoal text-lg flex items-center gap-2">
-                              Bolsa {sizeInfo.size}
-                              {'badge' in sizeInfo && sizeInfo.badge && (
-                                <span className="text-xs bg-gold text-white px-2 py-1">
-                                  {sizeInfo.badge}
-                                </span>
-                              )}
-                            </h4>
-                            <p className="text-charcoal-light">
-                              • {sizeInfo.portions}
-                              <br/>
-                              • {sizeInfo.duration}
-                            </p>
-                          </div>
-                        </div>
-                      );
-                    })}
+                        );
+                      })}
+                    </div>
                   </div>
 
-                  {/* Features */}
-                  <ul className="space-y-3 text-charcoal-light mb-10">
-                    {currentProduct.features.map((feature, index) => (
-                      <li key={index} className="flex items-center gap-3">
-                        <span className="text-matcha text-lg">•</span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                  {/* Characteristics */}
+                  {'characteristics' in currentProduct && (
+                    <div className="mb-6">
+                      <h4 className="font-medium text-charcoal mb-3 text-sm uppercase tracking-wide">
+                        Características
+                      </h4>
+                      <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-charcoal-light text-sm">
+                        {currentProduct.characteristics.map((item, index) => (
+                          <li key={index} className="flex items-start gap-2">
+                            <span className="text-matcha mt-1">•</span>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
 
+                  {/* Taste Profile */}
+                  {'tasteProfile' in currentProduct && (
+                    <div className="mb-6">
+                      <h4 className="font-medium text-charcoal mb-3 text-sm uppercase tracking-wide">
+                        Perfil de Sabor
+                      </h4>
+                      <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-charcoal-light text-sm">
+                        {currentProduct.tasteProfile.map((item, index) => (
+                          <li key={index} className="flex items-start gap-2">
+                            <span className="text-matcha mt-1">•</span>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                 
                   {/* CTA y mensaje de entrega */}
                   <div className="space-y-4">
                     <a 
@@ -320,11 +378,6 @@ const Products = () => {
                       <Instagram size={24} />
                       Ordenar por DM
                     </a>
-                    <div className="text-sm text-center text-charcoal-light space-y-2 p-4 bg-white">
-                      <p className="font-medium text-matcha">Pick-up disponible:</p>
-                      <p>• Coordina tu recogida por DM</p>
-                      <p>• Disponible toda la semana</p>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -333,7 +386,7 @@ const Products = () => {
         </div>
 
         {/* Local Benefits */}
-        <div className="mt-16 grid grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="mt-12 grid grid-cols-3 gap-6 max-w-6xl mx-auto">
           <div className="text-center p-6 bg-cream">
             <div className="text-2xl mb-2">📍</div>
             <h4 className="font-medium text-charcoal mb-1">Pick-up</h4>

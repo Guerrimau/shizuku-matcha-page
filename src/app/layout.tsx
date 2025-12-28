@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Playfair_Display, Montserrat, Great_Vibes } from 'next/font/google'
+import { Playfair_Display, Montserrat, Noto_Serif_JP } from 'next/font/google'
 import '@/app/globals.css'
 
 const playfair = Playfair_Display({
@@ -14,10 +14,10 @@ const montserrat = Montserrat({
   display: 'swap',
 })
 
-const greatVibes = Great_Vibes({
-  weight: '400',
+const notoSerifJP = Noto_Serif_JP({
+  weight: ['400', '500', '600'],
   subsets: ['latin'],
-  variable: '--font-great-vibes',
+  variable: '--font-noto-serif-jp',
   display: 'swap',
 })
 
@@ -38,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="es" className={`${playfair.variable} ${montserrat.variable} ${greatVibes.variable}`}>
+    <html lang="es" className={`${playfair.variable} ${montserrat.variable} ${notoSerifJP.variable}`}>
       <head>
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
         <script

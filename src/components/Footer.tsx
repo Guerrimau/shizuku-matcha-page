@@ -8,8 +8,8 @@ const Footer = () => {
         <div className="text-center">
           {/* Brand */}
           <div className="mb-8">
-            <h3 className="text-3xl font-serif mb-2">Shizuku</h3>
-            <p className="text-2xl font-light text-gold-light">Matcha Studio</p>
+            <h3 className="text-3xl font-serif mb-1">Shizuku</h3>
+            <p className="text-sm font-sans font-normal text-gold-light tracking-wider uppercase">Matcha Studio</p>
             <div className="w-16 h-px bg-gold mx-auto mt-4"></div>
           </div>
           

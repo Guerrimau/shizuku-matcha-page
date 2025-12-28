@@ -5,7 +5,7 @@ const Story = () => {
     <section id="story" className="section-padding bg-white">
       <div className="container-custom">
         {/* Header */}
-        <div className="max-w-xl mx-auto text-center mb-24">
+        <div className="max-w-xl mx-auto text-center mb-12">
           <h2 className="text-4xl lg:text-5xl font-serif text-charcoal">
             Nuestro Viaje al Origen
           </h2>
@@ -15,25 +15,25 @@ const Story = () => {
           {/* Main Story Block */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
             {/* Large Feature Image */}
-            <div className="h-[70vh] relative">
+            <div className="aspect-[4/3] md:aspect-auto md:h-[70vh] relative">
               <img 
-                src="/ruta-a-tu-foto-templo"
-                alt="Nuestro viaje a Japón" 
+                src="/ShiShizuoka.png"
+                alt="Matcha Shizu no Midori en Shizuoka, Japón" 
                 className="w-full h-full object-cover"
               />
               <div className="absolute bottom-0 left-0 bg-white p-6">
-                <p className="font-serif text-lg text-charcoal">Kioto, Japón</p>
-                <p className="text-sm text-charcoal-light">El corazón de la tradición del té</p>
+                <p className="font-serif text-lg text-charcoal">Shizuoka, Japón</p>
+                <p className="text-sm text-charcoal-light">El origen de nuestro matcha premium</p>
               </div>
             </div>
 
             {/* Story Content */}
-            <div className="bg-matcha-pale/10 p-12 flex items-center">
+            <div className="bg-matcha-pale/10 p-6 lg:p-8 flex items-center">
               <div className="space-y-6">
                 <p className="text-charcoal-light leading-relaxed">
-                  Nuestro viaje nos llevó a las antiguas calles de Kioto, donde cada 
-                  rincón respira la tradición del té. Visitamos templos centenarios y 
-                  casas de té donde el tiempo parece detenerse.
+                  Nuestro viaje nos llevó a Shizuoka, la región más importante de Japón 
+                  para la producción de té. Visitamos las plantaciones donde se cultiva 
+                  nuestro matcha y conocimos a los maestros que preservan esta tradición milenaria.
                 </p>
                 <p className="text-charcoal-light leading-relaxed">
                   Hoy traemos esa misma pasión y respeto por el matcha a Hermosillo, 
@@ -48,18 +48,18 @@ const Story = () => {
             <div className="bg-white">
               <div className="aspect-square">
                 <img 
-                  src="/ruta-a-tu-foto-cafeteria"
-                  alt="Cafetería tradicional" 
+                  src="/TeaFarm.png"
+                  alt="Plantación de té en Shizuoka" 
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="p-6">
                 <h3 className="font-serif text-lg text-charcoal mb-2">
-                  Cafeterías Centenarias
+                  Las Plantaciones
                 </h3>
                 <p className="text-sm text-charcoal-light">
-                  Descubrimos lugares donde el matcha se ha servido de la misma 
-                  manera por generaciones, cada taza cuenta una historia.
+                  Visitamos las plantaciones de Shizuoka donde se cultiva nuestro matcha, 
+                  conociendo el cuidado y dedicación que requiere cada hoja.
                 </p>
               </div>
             </div>
@@ -67,27 +67,8 @@ const Story = () => {
             <div className="bg-white">
               <div className="aspect-square">
                 <img 
-                  src="/ruta-a-tu-foto-chawan"
-                  alt="Chawan antiguo" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="font-serif text-lg text-charcoal mb-2">
-                  Arte y Tradición
-                </h3>
-                <p className="text-sm text-charcoal-light">
-                  Nos maravillamos con chawanes de cientos de años, cada uno 
-                  una obra de arte que ha servido a generaciones de maestros del té.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-white">
-              <div className="aspect-square">
-                <img 
-                  src="/ruta-a-tu-foto-preparacion"
-                  alt="Preparación tradicional" 
+                  src="/TeaWhisk.png"
+                  alt="Preparación tradicional de matcha con chasen" 
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -101,10 +82,29 @@ const Story = () => {
                 </p>
               </div>
             </div>
+
+            <div className="bg-white">
+              <div className="aspect-square">
+                <img 
+                  src="/TeaPlant.png"
+                  alt="Plantas de té en Shizuoka" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-serif text-lg text-charcoal mb-2">
+                  El Origen
+                </h3>
+                <p className="text-sm text-charcoal-light">
+                  Shizuoka, donde cada grano de matcha cuenta la historia de 
+                  una región dedicada a la excelencia del té.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Final Quote */}
-          <div className="mt-24 max-w-2xl mx-auto text-center">
+          <div className="mt-12 max-w-2xl mx-auto text-center">
             <p className="text-2xl font-serif text-charcoal italic">
               "En cada taza de Shizuku, servimos la esencia de lo que 
               descubrimos en Japón"

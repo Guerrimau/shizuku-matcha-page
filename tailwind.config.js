@@ -10,7 +10,7 @@ module.exports = {
       fontFamily: {
         serif: ['var(--font-playfair)', 'serif'],
         sans: ['var(--font-montserrat)', 'system-ui', 'sans-serif'],
-        script: ['var(--font-great-vibes)', 'cursive'],
+        script: ['var(--font-noto-serif-jp)', 'Hiragino Mincho ProN', 'Yu Mincho', 'MS PMincho', 'serif'],
       },
       colors: {
         charcoal: {
@@ -19,9 +19,9 @@ module.exports = {
           dark: '#1F2B20',
         },
         matcha: {
-          DEFAULT: '#7A9B57',
-          light: '#8FAB6B',
-          dark: '#658043',
+          DEFAULT: '#2b3d15',
+          light: '#3d5620',
+          dark: '#1f2d0f',
           pale: '#E8F0E1',
         },
         gold: {

@@ -45,11 +45,17 @@ const Navbar = () => {
           {/* Logo */}
           <button 
             onClick={handleLogoClick}
-            className="flex items-center gap-3"
+            className="flex flex-col items-start transition-colors duration-300"
           >
-            <span className="text-2xl font-serif text-matcha">抹茶</span>
-            <span className="text-xl font-serif text-charcoal">
-              Shizuku Matcha Studio
+            <span className={`text-2xl md:text-3xl font-serif leading-tight transition-colors duration-300 ${
+              isScrolled ? 'text-charcoal' : 'text-white'
+            }`}>
+              Shizuku
+            </span>
+            <span className={`text-xs md:text-sm font-sans font-normal tracking-wider uppercase transition-colors duration-300 ${
+              isScrolled ? 'text-charcoal-light' : 'text-white/90'
+            }`}>
+              Matcha Studio
             </span>
           </button>
 
@@ -59,25 +65,41 @@ const Navbar = () => {
               <>
                 <button 
                   onClick={() => scrollToSection('products')}
-                  className="text-charcoal-light hover:text-matcha transition-colors"
+                  className={`transition-colors duration-300 ${
+                    isScrolled 
+                      ? 'text-charcoal-light hover:text-matcha' 
+                      : 'text-white/90 hover:text-white'
+                  }`}
                 >
                   Productos
                 </button>
                 <button 
                   onClick={() => scrollToSection('experience')}
-                  className="text-charcoal-light hover:text-matcha transition-colors"
+                  className={`transition-colors duration-300 ${
+                    isScrolled 
+                      ? 'text-charcoal-light hover:text-matcha' 
+                      : 'text-white/90 hover:text-white'
+                  }`}
                 >
                   Experiencia
                 </button>
                 <button 
                   onClick={() => scrollToSection('how-to-order')}
-                  className="text-charcoal-light hover:text-matcha transition-colors"
+                  className={`transition-colors duration-300 ${
+                    isScrolled 
+                      ? 'text-charcoal-light hover:text-matcha' 
+                      : 'text-white/90 hover:text-white'
+                  }`}
                 >
                   Ordenar
                 </button>
                 <button 
                   onClick={() => scrollToSection('story')}
-                  className="text-charcoal-light hover:text-matcha transition-colors"
+                  className={`transition-colors duration-300 ${
+                    isScrolled 
+                      ? 'text-charcoal-light hover:text-matcha' 
+                      : 'text-white/90 hover:text-white'
+                  }`}
                 >
                   Historia
                 </button>
@@ -85,7 +107,11 @@ const Navbar = () => {
             )}
             <Link 
               href="/matcha-cafeterias"
-              className="inline-flex items-center gap-2 text-charcoal-light hover:text-matcha transition-colors"
+              className={`inline-flex items-center gap-2 transition-colors duration-300 ${
+                isScrolled 
+                  ? 'text-charcoal-light hover:text-matcha' 
+                  : 'text-white/90 hover:text-white'
+              }`}
             >
               <Building2 size={16} />
               Para Cafeterías
@@ -94,7 +120,7 @@ const Navbar = () => {
               href="https://www.instagram.com/shizukumatchastudio/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-matcha text-white px-4 py-2 hover:bg-matcha-dark transition-colors"
+              className="inline-flex items-center gap-2 bg-matcha text-white px-4 py-2 hover:bg-matcha-dark transition-colors duration-300"
             >
               <Instagram size={16} />
               Ordenar
@@ -103,7 +129,9 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-charcoal"
+            className={`md:hidden transition-colors duration-300 ${
+              isScrolled ? 'text-charcoal' : 'text-white'
+            }`}
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}

@@ -6,7 +6,7 @@ const HowToOrder = () => {
     <section id="how-to-order" className="section-padding bg-white">
       <div className="container-custom">
         {/* Header Simple */}
-        <div className="max-w-xl mx-auto text-center mb-24">
+        <div className="max-w-xl mx-auto text-center mb-12">
           <h2 className="text-4xl lg:text-5xl font-serif text-charcoal">
             ¿Cómo Ordenar?
           </h2>
@@ -16,7 +16,7 @@ const HowToOrder = () => {
           {/* Process Steps */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-charcoal/10">
             {/* Step 1 */}
-            <div className="bg-white p-8">
+            <div className="bg-white p-6">
               <div className="h-12 w-12 bg-matcha flex items-center justify-center mb-6">
                 <Instagram className="text-white" size={24} />
               </div>
@@ -32,7 +32,7 @@ const HowToOrder = () => {
             </div>
 
             {/* Step 2 */}
-            <div className="bg-white p-8">
+            <div className="bg-white p-6">
               <div className="h-12 w-12 bg-matcha flex items-center justify-center mb-6">
                 <CalendarDays className="text-white" size={24} />
               </div>
@@ -48,7 +48,7 @@ const HowToOrder = () => {
             </div>
 
             {/* Step 3 */}
-            <div className="bg-white p-8">
+            <div className="bg-white p-6">
               <div className="h-12 w-12 bg-matcha flex items-center justify-center mb-6">
                 <MapPin className="text-white" size={24} />
               </div>
@@ -65,7 +65,7 @@ const HowToOrder = () => {
           </div>
 
           {/* Pick-up Info */}
-          <div className="mt-16 bg-matcha-pale/10 p-8">
+          <div className="mt-12 bg-matcha-pale/10 p-6 lg:p-8">
             <h3 className="font-serif text-lg text-charcoal mb-4 text-center">
               Pick-up Disponible
             </h3>
@@ -86,7 +86,7 @@ const HowToOrder = () => {
           </div>
 
           {/* CTA */}
-          <div className="mt-16 text-center">
+          <div className="mt-12 text-center">
             <a 
               href="https://www.instagram.com/shizukumatchastudio/" 
               target="_blank"

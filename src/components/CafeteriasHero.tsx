@@ -11,7 +11,7 @@ const CafeteriasHero = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-cream/90 to-matcha-pale/90"></div>
       <div className="absolute inset-0">
         <img 
-          src="/5.png" 
+          src="/MatchaLatter.png" 
           alt="Matcha preparation" 
           className="w-full h-full object-cover opacity-20"
         />
@@ -69,7 +69,7 @@ const CafeteriasHero = () => {
           <div className="hidden md:block relative">
             <div className="relative group">
               <img 
-                src="/5.png" 
+                src="/MatchaLatter.png" 
                 alt="Matcha para cafeterías" 
                 className="w-full h-auto object-cover shadow-medium hover:shadow-strong transition-all duration-500 transform group-hover:scale-[1.02]"
               />

@@ -6,7 +6,7 @@ const Experience = () => {
     <section id="experience" className="section-padding bg-white">
       <div className="container-custom">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-4xl lg:text-5xl font-serif text-charcoal mb-4">
             La Experiencia Shizuku
           </h2>
@@ -17,13 +17,13 @@ const Experience = () => {
         </div>
 
         {/* Main Feature - Split Section */}
-        <div className="max-w-6xl mx-auto mb-16">
+        <div className="max-w-6xl mx-auto mb-12">
           <div className="grid md:grid-cols-2">
             {/* Image Side */}
             <div className="aspect-[4/3] relative">
               <img 
-                src="/6.png" 
-                alt="Preparación de Matcha" 
+                src="/MatchaPowder.png" 
+                alt="Matcha en polvo - Energía Natural" 
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent">
@@ -35,8 +35,8 @@ const Experience = () => {
             </div>
 
             {/* Content Side */}
-            <div className="bg-matcha-pale/10 p-8 lg:p-12 flex items-center">
-              <div className="space-y-8">
+            <div className="bg-matcha-pale/10 p-6 lg:p-8 flex items-center">
+              <div className="space-y-6">
                 <div className="space-y-4">
                   <h3 className="text-2xl font-serif text-charcoal">
                     Beneficios del Matcha
@@ -94,10 +94,10 @@ const Experience = () => {
         {/* Usage Examples */}
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-px bg-charcoal/10">
-            <div className="bg-white p-8">
-              <div className="aspect-square mb-6">
+            <div className="bg-white p-6">
+              <div className="aspect-square mb-4">
                 <img 
-                  src="/1.png" 
+                  src="/BowlWithMatcha.png" 
                   alt="Matcha Tradicional" 
                   className="w-full h-full object-cover"
                 />
@@ -110,10 +110,10 @@ const Experience = () => {
               </p>
             </div>
 
-            <div className="bg-white p-8">
-              <div className="aspect-square mb-6">
+            <div className="bg-white p-6">
+              <div className="aspect-square mb-4">
                 <img 
-                  src="/5.png" 
+                  src="/HotMatchaLatte.png" 
                   alt="Matcha Latte" 
                   className="w-full h-full object-cover"
                 />
@@ -126,10 +126,10 @@ const Experience = () => {
               </p>
             </div>
 
-            <div className="bg-white p-8">
-              <div className="aspect-square mb-6">
+            <div className="bg-white p-6">
+              <div className="aspect-square mb-4">
                 <img 
-                  src="/7.png" 
+                  src="/MatchaLatter.png" 
                   alt="Matcha Frío" 
                   className="w-full h-full object-cover"
                 />
@@ -141,27 +141,6 @@ const Experience = () => {
                 Refrescante para el clima de Hermosillo
               </p>
             </div>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="max-w-xl mx-auto mt-16 text-center">
-          <div className="bg-matcha-pale/10 p-8">
-            <h3 className="text-2xl font-serif text-charcoal mb-4">
-              ¿Listo para probar?
-            </h3>
-            <p className="text-charcoal-light mb-6">
-              Comienza tu experiencia Shizuku con pick-up disponible toda la semana
-            </p>
-            <a 
-              href="https://www.instagram.com/shizukumatchastudio/" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-matcha text-white px-8 py-4 hover:bg-matcha-dark transition-colors"
-            >
-              <Instagram size={20} />
-              Ordenar por Instagram
-            </a>
           </div>
         </div>
       </div>

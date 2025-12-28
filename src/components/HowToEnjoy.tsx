@@ -6,7 +6,7 @@ const HowToEnjoy = () => {
     <section id="how-to-enjoy" className="section-padding bg-cream">
       <div className="container-custom">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-4xl lg:text-5xl font-serif text-charcoal mb-4">
             Cómo Disfrutar Tu Matcha
           </h2>
@@ -17,7 +17,7 @@ const HowToEnjoy = () => {
         </div>
 
         {/* Steps */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-16">
+        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
           <div className="text-center">
             <div className="w-16 h-16 bg-matcha-pale rounded-full flex items-center justify-center mx-auto mb-6">
               <Droplets className="text-matcha" size={24} />
@@ -51,17 +51,17 @@ const HowToEnjoy = () => {
 
         {/* Video or Image */}
         <div className="max-w-2xl mx-auto rounded-lg overflow-hidden shadow-medium">
-          <div className="aspect-video">
+          <div className="aspect-[4/3]">
             <img 
-              src="/6.png" 
-              alt="Preparación de Matcha" 
+              src="/TeaWhisk.png" 
+              alt="Preparación de Matcha con chasen" 
               className="w-full h-full object-cover"
             />
           </div>
         </div>
 
         {/* Tips */}
-        <div className="mt-16 text-center">
+        <div className="mt-12 text-center">
           <p className="text-charcoal-light">
             ¿Necesitas ayuda? Te guiamos en la preparación de tu primer matcha
           </p>
