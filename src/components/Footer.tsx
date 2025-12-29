@@ -26,7 +26,7 @@ const Footer = () => {
           {/* Divider */}
           <div className="border-t border-charcoal-light pt-8 mt-8">
             <div className="flex items-center justify-center gap-2 text-gold-light">
-              <span className="text-sm">© 2024 Hecho con</span>
+              <span className="text-sm">© 2025 Hecho con</span>
               <Heart size={16} className="fill-current" />
               <span className="text-sm">tradición y matcha</span>
             </div>

@@ -10,49 +10,51 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center relative overflow-hidden pt-20 md:pt-0">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
           src="/MatchaMix.png" 
           alt="Matcha mezclado - Preparación de matcha" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center"
         />
         {/* Overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-charcoal/70 via-charcoal/50 to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal/40 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-charcoal/80 via-charcoal/60 md:from-charcoal/70 md:via-charcoal/50 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-charcoal/50 md:from-charcoal/40 to-transparent"></div>
       </div>
 
       {/* Content */}
-      <div className="container-custom relative z-10 w-full">
-        <div className="max-w-2xl text-left space-y-8">
+      <div className="container-custom relative z-10 w-full py-12 md:py-0">
+        <div className="max-w-2xl text-left space-y-6 md:space-y-8">
           {/* Local Badge */}
-          <div className="inline-flex items-center gap-2 bg-matcha text-white px-4 py-2 text-sm font-medium animate-fade-in">
-            Hermosillo
-            <MapPin size={16} />
-          </div>
-          
-          {/* Pick-up Badge */}
-          <div className="inline-flex items-center gap-2 text-sm text-white/90 ml-2 mb-4 animate-fade-in">
-            <span>Pick-up disponible toda la semana</span>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+            <div className="inline-flex items-center gap-2 bg-gold text-charcoal px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-medium animate-fade-in w-fit">
+              Hermosillo
+              <MapPin size={14} className="sm:w-4 sm:h-4" />
+            </div>
+            
+            {/* Pick-up Badge */}
+            <div className="inline-flex items-center gap-2 text-xs sm:text-sm text-white/90 animate-fade-in">
+              <span>Pick-up disponible toda la semana</span>
+            </div>
           </div>
           
           {/* Title */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-tight animate-fade-in-up drop-shadow-lg">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-tight animate-fade-in-up drop-shadow-lg">
             Matcha Japonés Premium en Hermosillo
           </h1>
           
           {/* Subtitle */}
-          <p className="text-lg md:text-xl text-white/95 leading-relaxed max-w-xl animate-fade-in-up drop-shadow-md" style={{animationDelay: '0.2s'}}>
+          <p className="text-base sm:text-lg md:text-xl text-white/95 leading-relaxed max-w-xl animate-fade-in-up drop-shadow-md" style={{animationDelay: '0.2s'}}>
             Descubre la autenticidad del matcha, hojicha y sencha japoneses. 
             A drop of beauty, a lifetime ritual.
           </p>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 pt-6 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 sm:pt-6 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
             <button 
               onClick={scrollToProducts}
-              className="group bg-matcha text-white px-8 py-4 font-medium text-lg transition-all duration-300 hover:bg-matcha-dark flex items-center justify-center gap-3 shadow-lg"
+              className="group bg-gold text-charcoal px-6 py-3 sm:px-8 sm:py-4 font-medium text-base sm:text-lg transition-all duration-300 hover:bg-gold-light flex items-center justify-center gap-2 sm:gap-3 shadow-lg w-full sm:w-auto"
             >
               Ver Productos
             </button>
@@ -61,10 +63,11 @@ const Hero = () => {
               href="https://www.instagram.com/shizukumatchastudio/" 
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-white text-charcoal border-2 border-white px-8 py-4 font-medium text-lg transition-all duration-300 hover:bg-white/90 flex items-center justify-center gap-3 shadow-lg"
+              className="group bg-white text-charcoal border-2 border-white px-6 py-3 sm:px-8 sm:py-4 font-medium text-base sm:text-lg transition-all duration-300 hover:bg-white/90 flex items-center justify-center gap-2 sm:gap-3 shadow-lg w-full sm:w-auto"
             >
-              <Instagram size={20} />
-              Ordenar por Instagram
+              <Instagram size={18} className="sm:w-5 sm:h-5" />
+              <span className="hidden sm:inline">Ordenar por Instagram</span>
+              <span className="sm:hidden">Ordenar</span>
             </a>
           </div>
         </div>

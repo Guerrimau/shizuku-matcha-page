@@ -15,7 +15,7 @@ const Story = () => {
           {/* Main Story Block */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
             {/* Large Feature Image */}
-            <div className="aspect-[4/3] md:aspect-auto md:h-[70vh] relative">
+            <div className="aspect-[4/3] aspect-auto h-[60vh] relative">
               <img 
                 src="/ShiShizuoka.png"
                 alt="Matcha Shizu no Midori en Shizuoka, Japón" 

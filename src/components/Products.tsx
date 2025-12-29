@@ -20,18 +20,7 @@ const Products = () => {
         src: "/MatchaPowder.png",
         alt: "Matcha en polvo"
       },
-      {
-        src: "/BowlWithMatcha.png",
-        alt: "Bowl con matcha preparado"
-      },
-      {
-        src: "/MatchaSet.png",
-        alt: "Set completo de matcha"
-      },
-      {
-        src: "/TeaWhisk.png",
-        alt: "Proceso de preparación con chasen"
-      }
+
     ],
     hojicha: [
       {
@@ -160,19 +149,19 @@ const Products = () => {
           </p>
         </div>
 
-        {/* Product Selector - More Prominent */}
-        <div className="max-w-6xl mx-auto mb-12">
+        {/* Product Selector - Column layout */}
+        <div className="max-w-6xl mx-auto mb-12 px-4">
           <div className="flex flex-col items-center gap-4">
             <p className="text-sm text-charcoal-light uppercase tracking-wide">
               Selecciona tu té
             </p>
-            <div className="bg-matcha-pale/10 p-2 inline-flex gap-2">
+            <div className="bg-matcha-pale/10 p-2 flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
               <button
                 onClick={() => {
                   setSelectedProduct('matcha');
                   setCurrentImageIndex(0);
                 }}
-                className={`relative px-10 py-4 transition-all font-medium text-lg ${
+                className={`relative px-6 sm:px-10 py-3 sm:py-4 transition-all font-medium text-base sm:text-lg w-full sm:w-auto ${
                   selectedProduct === 'matcha'
                     ? 'bg-matcha text-white shadow-medium'
                     : 'bg-white text-charcoal border-2 border-matcha/30 hover:bg-matcha-pale/30'
@@ -190,7 +179,7 @@ const Products = () => {
                   setSelectedProduct('hojicha');
                   setCurrentImageIndex(0);
                 }}
-                className={`px-10 py-4 transition-all font-medium text-lg ${
+                className={`px-6 sm:px-10 py-3 sm:py-4 transition-all font-medium text-base sm:text-lg w-full sm:w-auto ${
                   selectedProduct === 'hojicha'
                     ? 'bg-matcha text-white shadow-medium'
                     : 'bg-white text-charcoal hover:bg-matcha-pale/30'
@@ -203,7 +192,7 @@ const Products = () => {
                   setSelectedProduct('sencha');
                   setCurrentImageIndex(0);
                 }}
-                className={`px-10 py-4 transition-all font-medium text-lg ${
+                className={`px-6 sm:px-10 py-3 sm:py-4 transition-all font-medium text-base sm:text-lg w-full sm:w-auto ${
                   selectedProduct === 'sencha'
                     ? 'bg-matcha text-white shadow-medium'
                     : 'bg-white text-charcoal hover:bg-matcha-pale/30'
@@ -216,11 +205,11 @@ const Products = () => {
         </div>
 
         {/* Single Product Card */}
-        <div className="max-w-6xl mx-auto">
-          <div className="bg-cream">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="bg-cream overflow-hidden">
             <div className="grid md:grid-cols-2 items-center">
               {/* Image Side */}
-              <div className="p-6 lg:p-8">
+              <div className="p-4 sm:p-6 lg:p-8">
                 <div className="relative max-w-xl mx-auto">
                   {/* Main Image Container */}
                   <div className="aspect-[4/3] relative overflow-hidden">
@@ -235,19 +224,19 @@ const Products = () => {
                       Premium
                     </div>
 
-                    {/* Navigation Arrows */}
+                    {/* Navigation Arrows - Hidden on mobile, visible on desktop */}
                     {currentImages.length > 1 && (
                       <>
                         <button 
                           onClick={prevImage}
-                          className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 hover:bg-white flex items-center justify-center text-charcoal transition-colors"
+                          className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 hover:bg-white items-center justify-center text-charcoal transition-colors"
                           aria-label="Imagen anterior"
                         >
                           <ChevronLeft size={24} />
                         </button>
                         <button 
                           onClick={nextImage}
-                          className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 hover:bg-white flex items-center justify-center text-charcoal transition-colors"
+                          className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 hover:bg-white items-center justify-center text-charcoal transition-colors"
                           aria-label="Siguiente imagen"
                         >
                           <ChevronRight size={24} />
@@ -282,7 +271,7 @@ const Products = () => {
               </div>
 
               {/* Content Side */}
-              <div className="p-6 lg:p-8 bg-matcha-pale/10 h-full">
+              <div className="p-4 sm:p-6 lg:p-8 bg-matcha-pale/10 h-full">
                 <div className="max-w-xl mx-auto">
                   <div className="mb-4">
                     <h3 className="text-3xl font-serif text-charcoal mb-1">
@@ -338,7 +327,7 @@ const Products = () => {
                       <h4 className="font-medium text-charcoal mb-3 text-sm uppercase tracking-wide">
                         Características
                       </h4>
-                      <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-charcoal-light text-sm">
+                      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-charcoal-light text-sm">
                         {currentProduct.characteristics.map((item, index) => (
                           <li key={index} className="flex items-start gap-2">
                             <span className="text-matcha mt-1">•</span>
@@ -355,7 +344,7 @@ const Products = () => {
                       <h4 className="font-medium text-charcoal mb-3 text-sm uppercase tracking-wide">
                         Perfil de Sabor
                       </h4>
-                      <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-charcoal-light text-sm">
+                      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-charcoal-light text-sm">
                         {currentProduct.tasteProfile.map((item, index) => (
                           <li key={index} className="flex items-start gap-2">
                             <span className="text-matcha mt-1">•</span>
@@ -368,15 +357,15 @@ const Products = () => {
 
                  
                   {/* CTA y mensaje de entrega */}
-                  <div className="space-y-4">
+                  <div >
                     <a 
                       href="https://www.instagram.com/shizukumatchastudio/" 
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 bg-matcha text-white w-full py-4 justify-center transition-colors text-lg hover:bg-matcha-dark"
+                      className="flex items-center gap-1.5 sm:gap-2 bg-matcha text-white w-full py-3 sm:py-4 justify-center transition-colors text-sm sm:text-base md:text-lg hover:bg-matcha-dark px-3 sm:px-4"
                     >
-                      <Instagram size={24} />
-                      Ordenar por DM
+                      <Instagram size={18} className="sm:w-5 sm:h-5 md:w-6 md:h-6 flex-shrink-0" />
+                      <span className="whitespace-nowrap text-xs sm:text-base md:text-lg">Ordenar por DM</span>
                     </a>
                   </div>
                 </div>
@@ -386,7 +375,7 @@ const Products = () => {
         </div>
 
         {/* Local Benefits */}
-        <div className="mt-12 grid grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto px-4">
           <div className="text-center p-6 bg-cream">
             <div className="text-2xl mb-2">📍</div>
             <h4 className="font-medium text-charcoal mb-1">Pick-up</h4>
