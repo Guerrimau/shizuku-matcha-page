@@ -48,10 +48,51 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "Shizuku Matcha Studio",
-              "description": "Matcha japonés auténtico y productos premium para la ceremonia del té",
+              "description": "Matcha japonés auténtico de primera cosecha de Shizuoka, Japón. Disponible en Hermosillo, Sonora. Entregas gratis los sábados.",
               "url": "https://shizukumatchastudio.com",
-              "priceRange": "$$$",
-              "servesCuisine": "Japanese Tea"
+              "image": "https://shizukumatchastudio.com/MatchaMix.png",
+              "priceRange": "$$",
+              "servesCuisine": "Japanese Tea",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Hermosillo",
+                "addressRegion": "Sonora",
+                "addressCountry": "MX"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "29.0729",
+                "longitude": "-110.9559"
+              },
+              "areaServed": {
+                "@type": "City",
+                "name": "Hermosillo",
+                "addressRegion": "Sonora",
+                "addressCountry": "MX"
+              },
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                  ],
+                  "opens": "09:00",
+                  "closes": "18:00"
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": "Saturday",
+                  "opens": "10:00",
+                  "closes": "14:00"
+                }
+              ],
+              "sameAs": [
+                "https://www.instagram.com/shizukumatchastudio/"
+              ]
             })
           }}
         />
