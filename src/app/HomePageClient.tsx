@@ -6,6 +6,7 @@ import Story from '@/components/Story'
 import Products from '@/components/Products'
 import Experience from '@/components/Experience'
 import HowToOrder from '@/components/HowToOrder'
+import FAQ from '@/components/FAQ'
 import BusinessSection from '@/components/BusinessSection'
 import Footer from '@/components/Footer'
 
@@ -18,6 +19,7 @@ export default function HomePageClient() {
       <Products />
       <Story />
       <HowToOrder />
+      <FAQ />
       <BusinessSection />
       <Footer /> 
     </div>

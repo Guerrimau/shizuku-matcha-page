@@ -71,7 +71,7 @@ const Hero = () => {
           
           {/* Subtitle */}
           <p className="text-base sm:text-lg md:text-xl text-white/95 leading-relaxed max-w-xl drop-shadow-md">
-            Descubre la autenticidad del matcha, hojicha y sencha japoneses. 
+            Descubre la autenticidad del matcha, hojicha y sencha japoneses de primera cosecha de Shizuoka. 
             A drop of beauty, a lifetime ritual.
           </p>
           

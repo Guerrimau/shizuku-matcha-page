@@ -18,7 +18,7 @@ const Products = () => {
       },
       {
         src: "/MatchaPowder.png",
-        alt: "Matcha en polvo"
+        alt: "Matcha en polvo premium de primera cosecha"
       },
 
     ],
@@ -145,7 +145,8 @@ const Products = () => {
           </h2>
           <div className="w-24 h-px bg-matcha mx-auto mb-6"></div>
           <p className="text-xl text-charcoal-light max-w-2xl mx-auto">
-            Tés japoneses premium importados directamente de Shizuoka
+            Tés japoneses premium importados directamente de Shizuoka. 
+            Matcha de primera cosecha, ideal para preparación tradicional y bebidas modernas.
           </p>
         </div>
 
