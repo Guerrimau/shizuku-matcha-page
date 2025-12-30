@@ -2,12 +2,12 @@ import { Metadata } from 'next'
 import CafeteriasPageClient from './CafeteriasPageClient'
 
 export const metadata: Metadata = {
-  title: 'Matcha para Cafeterías en Hermosillo | Shizuku Matcha Studio',
-  description: 'Matcha premium japonés para cafeterías y negocios en Hermosillo. Precios mayoristas, soporte especializado y productos de primera cosecha de Shizuoka, Japón.',
-  keywords: 'matcha para cafeterías, matcha mayorista hermosillo, té japonés para negocios, matcha b2b, productos para cafeterías hermosillo',
+  title: 'Matcha para Cafeterías de Especialidad | Shizuku Matcha Studio',
+  description: 'Matcha premium japonés para cafeterías de especialidad. ~50% más barato que el mercado, sin consumo mínimo, con asesoramiento profesional. Primera cosecha de Shizuoka, Japón.',
+  keywords: 'matcha para cafeterías de especialidad, matcha premium cafeterías, matcha hermosillo cafeterías, matcha b2b, matcha mayorista, matcha para lattes, matcha premium vs ceremonial',
   openGraph: {
-    title: 'Matcha Premium para Cafeterías en Hermosillo',
-    description: 'Eleva tu menú con matcha japonés auténtico. Precios mayoristas y soporte especializado.',
+    title: 'Matcha para Cafeterías de Especialidad | Shizuku Matcha Studio',
+    description: 'Si te tomas en serio el café de especialidad, tómate en serio el matcha premium. Precio competitivo, sin consumo mínimo.',
   },
 }
 

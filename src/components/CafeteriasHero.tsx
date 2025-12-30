@@ -25,18 +25,18 @@ const CafeteriasHero = () => {
             {/* Business Badge */}
             <div className="inline-flex items-center gap-2 bg-matcha text-white px-4 py-2 text-sm font-medium">
               <Building2 size={16} />
-              Para Cafeterías y Negocios
+              Para Cafeterías de Especialidad
             </div>
             
             {/* Title */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-charcoal leading-tight">
-              Matcha Premium para tu Cafetería en Hermosillo
+              Matcha para Cafeterías de Especialidad
             </h1>
             
             {/* Subtitle */}
             <p className="text-lg md:text-xl text-charcoal-light leading-relaxed max-w-xl">
-              Eleva tu menú con matcha japonés auténtico. Ofrecemos productos premium 
-              y soporte especializado para cafeterías y negocios de alimentos.
+              Si te tomas en serio el café de especialidad, tómate en serio el matcha premium. 
+              Matcha japonés auténtico de primera cosecha, precio competitivo y asesoramiento profesional.
             </p>
             
             {/* CTA Buttons */}
@@ -52,7 +52,7 @@ const CafeteriasHero = () => {
               </a>
               
               <Link 
-                href="/"
+                href="/#products"
                 className="group bg-white text-charcoal border-2 border-charcoal px-8 py-4 font-medium text-lg transition-all duration-300 hover:bg-charcoal hover:text-white flex items-center justify-center gap-3"
               >
                 Ver Productos Individuales
@@ -60,18 +60,22 @@ const CafeteriasHero = () => {
             </div>
 
             {/* Business Info */}
-            <div className="text-sm text-charcoal-light">
-              Precios mayoristas • Soporte para negocios • Pick-up en Hermosillo
+            <div className="flex flex-wrap gap-4 text-sm text-charcoal-light">
+              <span className="font-medium text-matcha">~50% más barato que el mercado</span>
+              <span>•</span>
+              <span>Sin consumo mínimo</span>
+              <span>•</span>
+              <span>Asesoramiento de preparación</span>
             </div>
           </div>
 
           {/* Right Content */}
           <div className="hidden md:block relative">
-            <div className="relative group">
+            <div className="relative">
               <img 
                 src="/MatchaLatter.png" 
                 alt="Matcha para cafeterías" 
-                className="w-full h-auto object-cover shadow-medium hover:shadow-strong transition-all duration-500 transform group-hover:scale-[1.02]"
+                className="w-full h-auto object-cover shadow-medium"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/10 to-transparent"></div>
             </div>

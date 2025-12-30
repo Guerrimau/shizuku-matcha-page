@@ -6,6 +6,7 @@ import CafeteriasHero from '@/components/CafeteriasHero'
 import CafeteriasBenefits from '@/components/CafeteriasBenefits'
 import CafeteriasProducts from '@/components/CafeteriasProducts'
 import CafeteriasProcess from '@/components/CafeteriasProcess'
+import CafeteriasFAQ from '@/components/CafeteriasFAQ'
 import CafeteriasCTA from '@/components/CafeteriasCTA'
 
 export default function CafeteriasPageClient() {
@@ -16,6 +17,7 @@ export default function CafeteriasPageClient() {
       <CafeteriasBenefits />
       <CafeteriasProducts />
       <CafeteriasProcess />
+      <CafeteriasFAQ />
       <CafeteriasCTA />
       <Footer /> 
     </div>

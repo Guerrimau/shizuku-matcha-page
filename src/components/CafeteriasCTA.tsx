@@ -8,11 +8,11 @@ const CafeteriasCTA = () => {
       <div className="container-custom">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl lg:text-5xl font-serif text-charcoal mb-6">
-            ¿Listo para Elevar tu Menú?
+            Matcha Premium para tu Cafetería de Especialidad
           </h2>
           <p className="text-xl text-charcoal-light mb-12 max-w-2xl mx-auto">
-            Únete a las cafeterías en Hermosillo que ya están ofreciendo 
-            matcha premium a sus clientes. Contáctanos hoy mismo.
+            Si te tomas en serio el café de especialidad, tómate en serio el matcha. 
+            Precio competitivo, sin consumo mínimo, con asesoramiento profesional.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -27,7 +27,7 @@ const CafeteriasCTA = () => {
             </a>
             
             <Link 
-              href="/"
+              href="/#products"
               className="inline-flex items-center gap-2 text-charcoal hover:text-matcha transition-colors"
             >
               Ver productos para consumo individual
@@ -38,21 +38,21 @@ const CafeteriasCTA = () => {
           {/* Additional Info */}
           <div className="mt-16 grid md:grid-cols-3 gap-8 text-left">
             <div>
-              <h4 className="font-medium text-charcoal mb-2">Precios Competitivos</h4>
+              <h4 className="font-medium text-charcoal mb-2">~50% Más Barato</h4>
               <p className="text-sm text-charcoal-light">
-                Descuentos especiales para pedidos mayores y compras recurrentes
+                Precio competitivo comparado con el mercado. Matcha premium sin pagar precios premium
               </p>
             </div>
             <div>
-              <h4 className="font-medium text-charcoal mb-2">Soporte Continuo</h4>
+              <h4 className="font-medium text-charcoal mb-2">Sin Consumo Mínimo</h4>
               <p className="text-sm text-charcoal-light">
-                Asesoría en preparación y recetas para tu equipo
+                Empieza con el volumen que necesites. Sin compromisos ni obligaciones
               </p>
             </div>
             <div>
-              <h4 className="font-medium text-charcoal mb-2">Disponibilidad</h4>
+              <h4 className="font-medium text-charcoal mb-2">Asesoramiento Incluido</h4>
               <p className="text-sm text-charcoal-light">
-                Stock disponible para pedidos inmediatos en Hermosillo
+                Guías técnicas, recetas y entrenamiento para tu equipo sin costo adicional
               </p>
             </div>
           </div>

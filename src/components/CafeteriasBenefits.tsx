@@ -8,11 +8,11 @@ const CafeteriasBenefits = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-serif text-charcoal mb-4">
-            ¿Por Qué Elegir Shizuku para tu Negocio?
+            Para Cafeterías que se Toman en Serio el Matcha
           </h2>
           <div className="w-24 h-px bg-matcha mx-auto mb-6"></div>
           <p className="text-xl text-charcoal-light max-w-2xl mx-auto">
-            Beneficios que hacen la diferencia en tu cafetería
+            Matcha premium japonés con el mismo rigor que aplicas a tu café de especialidad
           </p>
         </div>
 
@@ -20,27 +20,27 @@ const CafeteriasBenefits = () => {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="bg-cream p-8">
             <div className="w-16 h-16 bg-matcha-pale flex items-center justify-center mb-6">
-              <Award className="text-matcha" size={32} />
+              <TrendingUp className="text-matcha" size={32} />
             </div>
             <h3 className="font-serif text-xl text-charcoal mb-3">
-              Calidad Premium
+              Precio Competitivo
             </h3>
             <p className="text-charcoal-light">
-              Matcha de primera cosecha de Shizuoka, Japón. Diferenciate con 
-              productos de la más alta calidad.
+              Aproximadamente 50% más barato que el mercado. Matcha premium 
+              sin pagar precios premium.
             </p>
           </div>
 
           <div className="bg-cream p-8">
             <div className="w-16 h-16 bg-matcha-pale flex items-center justify-center mb-6">
-              <TrendingUp className="text-matcha" size={32} />
+              <Award className="text-matcha" size={32} />
             </div>
             <h3 className="font-serif text-xl text-charcoal mb-3">
-              Mayor Margen
+              Matcha Premium Japonés
             </h3>
             <p className="text-charcoal-light">
-              Precios mayoristas competitivos que te permiten ofrecer matcha 
-              premium con excelente rentabilidad.
+              Primera cosecha de Shizuoka, Japón. Calidad auténtica para 
+              cafeterías de especialidad.
             </p>
           </div>
 
@@ -49,11 +49,11 @@ const CafeteriasBenefits = () => {
               <Users className="text-matcha" size={32} />
             </div>
             <h3 className="font-serif text-xl text-charcoal mb-3">
-              Soporte Especializado
+              Asesoramiento de Preparación
             </h3>
             <p className="text-charcoal-light">
-              Guía de preparación, recetas y tips para que tu equipo prepare 
-              el mejor matcha.
+              Guía profesional para tu equipo. Técnicas, recetas y tips para 
+              preparar el mejor matcha latte.
             </p>
           </div>
 
@@ -62,11 +62,11 @@ const CafeteriasBenefits = () => {
               <Coffee className="text-matcha" size={32} />
             </div>
             <h3 className="font-serif text-xl text-charcoal mb-3">
-              Versatilidad
+              Sin Consumo Mínimo
             </h3>
             <p className="text-charcoal-light">
-              Perfecto para lattes, bebidas frías, postres y más. Expande tu 
-              menú con opciones premium.
+              Empieza con el volumen que necesites. Sin compromisos ni 
+              pedidos mínimos obligatorios.
             </p>
           </div>
         </div>

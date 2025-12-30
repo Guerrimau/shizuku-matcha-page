@@ -8,11 +8,11 @@ const CafeteriasProducts = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-serif text-charcoal mb-4">
-            Productos para tu Negocio
+            Matcha Premium para Bebidas
           </h2>
           <div className="w-24 h-px bg-matcha mx-auto mb-6"></div>
           <p className="text-xl text-charcoal-light max-w-2xl mx-auto">
-            Disponemos de presentaciones ideales para uso comercial
+            Matcha japonés de primera cosecha, perfecto para lattes y bebidas de especialidad
           </p>
         </div>
 
@@ -27,13 +27,13 @@ const CafeteriasProducts = () => {
               Matcha Premium
             </h3>
             <ul className="space-y-2 text-charcoal-light mb-6">
-              <li>• Presentaciones: 30g, 100g</li>
-              <li>• Ideal para lattes y bebidas</li>
-              <li>• Calidad ceremonial</li>
-              <li>• Precios mayoristas</li>
+              <li>• Primera cosecha de Shizuoka, Japón</li>
+              <li>• Perfecto para lattes y bebidas</li>
+              <li>• Sabor equilibrado y cremoso</li>
+              <li>• Presentaciones comerciales</li>
             </ul>
             <p className="text-sm text-charcoal-light italic mb-4">
-              Consulta disponibilidad de presentaciones más grandes
+              Ideal para cafeterías de especialidad
             </p>
           </div>
 
@@ -76,15 +76,15 @@ const CafeteriasProducts = () => {
           </div>
         </div>
 
-        {/* Wholesale Note */}
+        {/* Pricing Note */}
         <div className="max-w-4xl mx-auto mt-16 bg-matcha-pale/20 p-8">
           <div className="text-center">
             <h3 className="font-serif text-2xl text-charcoal mb-4">
-              Precios Mayoristas Disponibles
+              Precio Competitivo • Sin Consumo Mínimo
             </h3>
             <p className="text-charcoal-light mb-6">
-              Ofrecemos descuentos especiales para pedidos mayores y compras recurrentes. 
-              Contáctanos para conocer nuestros precios mayoristas y opciones de volumen.
+              Aproximadamente 50% más barato que el mercado. Empieza con el volumen que necesites, 
+              sin compromisos ni pedidos mínimos obligatorios. Contáctanos para conocer nuestros precios.
             </p>
             <a 
               href="https://www.instagram.com/shizukumatchastudio/" 

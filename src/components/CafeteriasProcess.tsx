@@ -27,7 +27,7 @@ const CafeteriasProcess = () => {
                   <h3 className="font-serif text-lg text-charcoal">Contacto</h3>
                 </div>
                 <p className="text-charcoal-light text-sm">
-                  Escríbenos por Instagram con los detalles de tu negocio
+                  Escríbenos por Instagram. Sin consumo mínimo, sin compromisos
                 </p>
               </div>
             </div>
@@ -43,7 +43,7 @@ const CafeteriasProcess = () => {
                   <h3 className="font-serif text-lg text-charcoal">Cotización</h3>
                 </div>
                 <p className="text-charcoal-light text-sm">
-                  Te enviamos precios mayoristas según tu volumen
+                  Te enviamos precios competitivos y opciones de asesoramiento
                 </p>
               </div>
             </div>
@@ -59,7 +59,7 @@ const CafeteriasProcess = () => {
                   <h3 className="font-serif text-lg text-charcoal">Acuerdo</h3>
                 </div>
                 <p className="text-charcoal-light text-sm">
-                  Confirmamos pedido y coordinamos método de pago
+                  Confirmamos pedido y coordinamos entrega o pick-up en Hermosillo
                 </p>
               </div>
             </div>

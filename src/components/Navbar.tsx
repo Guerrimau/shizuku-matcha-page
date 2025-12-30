@@ -9,6 +9,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+  const isCafeteriasPage = pathname === '/matcha-cafeterias';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,7 +39,11 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-sm' : 'bg-transparent'
+      isScrolled 
+        ? 'bg-white shadow-sm' 
+        : isCafeteriasPage 
+          ? 'bg-white/80 backdrop-blur-sm' 
+          : 'bg-transparent'
     }`}>
       <div className="container-custom">
         <div className="flex items-center justify-between py-4">
@@ -48,12 +53,12 @@ const Navbar = () => {
             className="flex flex-col items-start transition-colors duration-300"
           >
             <span className={`text-2xl md:text-3xl font-serif leading-tight transition-colors duration-300 ${
-              isScrolled ? 'text-charcoal' : 'text-white'
+              isScrolled || isCafeteriasPage ? 'text-charcoal' : 'text-white'
             }`}>
               Shizuku
             </span>
             <span className={`text-xs md:text-sm font-sans font-normal tracking-wider uppercase transition-colors duration-300 ${
-              isScrolled ? 'text-charcoal-light' : 'text-white/90'
+              isScrolled || isCafeteriasPage ? 'text-charcoal-light' : 'text-white/90'
             }`}>
               Matcha Studio
             </span>
@@ -66,7 +71,7 @@ const Navbar = () => {
                 <button 
                   onClick={() => scrollToSection('products')}
                   className={`transition-colors duration-300 ${
-                    isScrolled 
+                    isScrolled || isCafeteriasPage
                       ? 'text-charcoal-light hover:text-matcha' 
                       : 'text-white/90 hover:text-white'
                   }`}
@@ -76,7 +81,7 @@ const Navbar = () => {
                 <button 
                   onClick={() => scrollToSection('experience')}
                   className={`transition-colors duration-300 ${
-                    isScrolled 
+                    isScrolled || isCafeteriasPage
                       ? 'text-charcoal-light hover:text-matcha' 
                       : 'text-white/90 hover:text-white'
                   }`}
@@ -86,7 +91,7 @@ const Navbar = () => {
                 <button 
                   onClick={() => scrollToSection('how-to-order')}
                   className={`transition-colors duration-300 ${
-                    isScrolled 
+                    isScrolled || isCafeteriasPage
                       ? 'text-charcoal-light hover:text-matcha' 
                       : 'text-white/90 hover:text-white'
                   }`}
@@ -96,7 +101,7 @@ const Navbar = () => {
                 <button 
                   onClick={() => scrollToSection('story')}
                   className={`transition-colors duration-300 ${
-                    isScrolled 
+                    isScrolled || isCafeteriasPage
                       ? 'text-charcoal-light hover:text-matcha' 
                       : 'text-white/90 hover:text-white'
                   }`}
@@ -108,7 +113,7 @@ const Navbar = () => {
             <Link 
               href="/matcha-cafeterias"
               className={`inline-flex items-center gap-2 transition-colors duration-300 ${
-                isScrolled 
+                isScrolled || isCafeteriasPage
                   ? 'text-charcoal-light hover:text-matcha' 
                   : 'text-white/90 hover:text-white'
               }`}
@@ -130,7 +135,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button 
             className={`md:hidden transition-colors duration-300 ${
-              isScrolled ? 'text-charcoal' : 'text-white'
+              isScrolled || isCafeteriasPage ? 'text-charcoal' : 'text-white'
             }`}
             onClick={() => setIsOpen(!isOpen)}
           >
