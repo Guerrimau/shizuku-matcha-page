@@ -40,37 +40,41 @@ const FAQ = () => {
   return (
     <section id="faq" className="section-padding bg-cream">
       <div className="container-custom">
+        
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-serif text-charcoal mb-4">
-            Preguntas Frecuentes
+        <div className="text-center mb-16 lg:mb-20 space-y-6">
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-forest-green">
+            FAQ
+          </p>
+          <h2 className="studio-subheading text-washi-text">
+            Preguntas frecuentes
           </h2>
-          <div className="w-24 h-px bg-matcha mx-auto mb-6"></div>
-          <p className="text-xl text-charcoal-light max-w-2xl mx-auto">
+          <div className="w-20 h-px bg-forest-green/30 mx-auto"></div>
+          <p className="text-base md:text-lg text-charcoal-light max-w-xl mx-auto font-light leading-relaxed">
             Todo lo que necesitas saber sobre nuestro matcha premium
           </p>
         </div>
 
-        {/* FAQ Items */}
-        <div className="max-w-4xl mx-auto space-y-4">
+        {/* FAQ Items - Minimal Design */}
+        <div className="max-w-4xl mx-auto space-y-2">
           {faqs.map((faq, index) => (
-            <div key={index} className="bg-white border border-charcoal/10">
+            <div key={index} className="border-b border-charcoal/10">
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-cream/50 transition-colors"
+                className="w-full py-8 flex items-center justify-between text-left hover:opacity-70 transition-opacity duration-300"
               >
-                <h3 className="font-serif text-lg md:text-xl text-charcoal pr-8">
+                <h3 className="font-serif text-xl md:text-2xl text-washi-text font-light tracking-tight pr-8">
                   {faq.question}
                 </h3>
                 {openIndex === index ? (
-                  <ChevronUp className="text-matcha flex-shrink-0" size={24} />
+                  <ChevronUp className="text-forest-green flex-shrink-0" size={20} />
                 ) : (
-                  <ChevronDown className="text-matcha flex-shrink-0" size={24} />
+                  <ChevronDown className="text-forest-green flex-shrink-0" size={20} />
                 )}
               </button>
               {openIndex === index && (
-                <div className="px-8 pb-6">
-                  <p className="text-charcoal-light leading-relaxed">
+                <div className="pb-8 pr-12">
+                  <p className="text-charcoal-light font-light leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
@@ -84,4 +88,3 @@ const FAQ = () => {
 };
 
 export default FAQ;
-

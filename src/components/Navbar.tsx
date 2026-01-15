@@ -13,7 +13,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 60);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -38,105 +38,78 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${
+    <nav className={`fixed w-full z-50 transition-all duration-500 ${
       isScrolled 
-        ? 'bg-white shadow-sm' 
-        : isCafeteriasPage 
-          ? 'bg-white/80 backdrop-blur-sm' 
-          : 'bg-transparent'
+        ? 'bg-washi-bg/95 backdrop-blur-subtle shadow-sm border-b border-charcoal/5' 
+        : 'bg-transparent backdrop-blur-subtle'
     }`}>
       <div className="container-custom">
-        <div className="flex items-center justify-between py-4">
+        <div className="flex items-center justify-between py-5 md:py-6">
+          
           {/* Logo */}
           <button 
             onClick={handleLogoClick}
-            className="flex flex-col items-start transition-colors duration-300"
+            className="flex flex-col items-start transition-colors duration-500 group"
           >
-            <span className={`text-2xl md:text-3xl font-serif leading-tight transition-colors duration-300 ${
-              isScrolled || isCafeteriasPage ? 'text-charcoal' : 'text-white'
-            }`}>
+            <span className="text-2xl md:text-3xl font-serif text-washi-text tracking-tight leading-tight transition-colors duration-500">
               Shizuku
             </span>
-            <span className={`text-xs md:text-sm font-sans font-normal tracking-wider uppercase transition-colors duration-300 ${
-              isScrolled || isCafeteriasPage ? 'text-charcoal-light' : 'text-white/90'
-            }`}>
+            <span className="font-mono text-[10px] md:text-xs uppercase tracking-[0.2em] text-charcoal-light transition-colors duration-500">
               Matcha Studio
             </span>
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-8 lg:gap-10">
             {pathname === '/' && (
               <>
                 <button 
                   onClick={() => scrollToSection('products')}
-                  className={`transition-colors duration-300 ${
-                    isScrolled || isCafeteriasPage
-                      ? 'text-charcoal-light hover:text-matcha' 
-                      : 'text-white/90 hover:text-white'
-                  }`}
+                  className="font-mono text-xs uppercase tracking-[0.15em] text-charcoal-light hover:text-forest-green transition-colors duration-300"
                 >
-                  Productos
+                  productos
                 </button>
                 <button 
                   onClick={() => scrollToSection('experience')}
-                  className={`transition-colors duration-300 ${
-                    isScrolled || isCafeteriasPage
-                      ? 'text-charcoal-light hover:text-matcha' 
-                      : 'text-white/90 hover:text-white'
-                  }`}
+                  className="font-mono text-xs uppercase tracking-[0.15em] text-charcoal-light hover:text-forest-green transition-colors duration-300"
                 >
-                  Experiencia
+                  experiencia
                 </button>
                 <button 
                   onClick={() => scrollToSection('how-to-order')}
-                  className={`transition-colors duration-300 ${
-                    isScrolled || isCafeteriasPage
-                      ? 'text-charcoal-light hover:text-matcha' 
-                      : 'text-white/90 hover:text-white'
-                  }`}
+                  className="font-mono text-xs uppercase tracking-[0.15em] text-charcoal-light hover:text-forest-green transition-colors duration-300"
                 >
-                  Ordenar
+                  ordenar
                 </button>
                 <button 
                   onClick={() => scrollToSection('story')}
-                  className={`transition-colors duration-300 ${
-                    isScrolled || isCafeteriasPage
-                      ? 'text-charcoal-light hover:text-matcha' 
-                      : 'text-white/90 hover:text-white'
-                  }`}
+                  className="font-mono text-xs uppercase tracking-[0.15em] text-charcoal-light hover:text-forest-green transition-colors duration-300"
                 >
-                  Historia
+                  historia
                 </button>
               </>
             )}
             <Link 
               href="/matcha-cafeterias"
-              className={`inline-flex items-center gap-2 transition-colors duration-300 ${
-                isScrolled || isCafeteriasPage
-                  ? 'text-charcoal-light hover:text-matcha' 
-                  : 'text-white/90 hover:text-white'
-              }`}
+              className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.15em] text-charcoal-light hover:text-forest-green transition-colors duration-300"
             >
-              <Building2 size={16} />
-              Para Cafeterías
+              <Building2 size={14} />
+              cafeterías
             </Link>
             <a 
               href="https://www.instagram.com/shizukumatchastudio/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-matcha text-white px-4 py-2 hover:bg-matcha-dark transition-colors duration-300"
+              className="inline-flex items-center gap-2 border border-forest-green text-forest-green px-4 py-2 font-mono text-xs uppercase tracking-[0.15em] hover:bg-forest-green hover:text-washi-bg transition-all duration-500"
             >
-              <Instagram size={16} />
-              Ordenar
+              <Instagram size={14} />
+              orden
             </a>
           </div>
 
           {/* Mobile Menu Button */}
           <button 
-            className={`md:hidden transition-colors duration-300 ${
-              isScrolled || isCafeteriasPage ? 'text-charcoal' : 'text-white'
-            }`}
+            className="md:hidden text-washi-text transition-colors duration-300"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -145,58 +118,65 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden bg-white border-t border-gray-100">
-            <div className="flex flex-col py-4">
+          <div className="md:hidden bg-washi-bg/98 backdrop-blur-subtle border-t border-charcoal/10">
+            <div className="flex flex-col py-6 space-y-1">
               {pathname === '/' && (
                 <>
                   <button 
                     onClick={() => scrollToSection('products')}
-                    className="px-4 py-3 text-charcoal-light hover:text-matcha transition-colors text-left"
+                    className="px-4 py-3 font-mono text-xs uppercase tracking-[0.15em] text-charcoal-light hover:text-forest-green transition-colors text-left"
                   >
-                    Productos
+                    productos
                   </button>
                   <button 
                     onClick={() => scrollToSection('experience')}
-                    className="px-4 py-3 text-charcoal-light hover:text-matcha transition-colors text-left"
+                    className="px-4 py-3 font-mono text-xs uppercase tracking-[0.15em] text-charcoal-light hover:text-forest-green transition-colors text-left"
                   >
-                    Experiencia
+                    experiencia
                   </button>
                   <button 
                     onClick={() => scrollToSection('how-to-order')}
-                    className="px-4 py-3 text-charcoal-light hover:text-matcha transition-colors text-left"
+                    className="px-4 py-3 font-mono text-xs uppercase tracking-[0.15em] text-charcoal-light hover:text-forest-green transition-colors text-left"
                   >
-                    Ordenar
+                    ordenar
                   </button>
                   <button 
                     onClick={() => scrollToSection('story')}
-                    className="px-4 py-3 text-charcoal-light hover:text-matcha transition-colors text-left"
+                    className="px-4 py-3 font-mono text-xs uppercase tracking-[0.15em] text-charcoal-light hover:text-forest-green transition-colors text-left"
                   >
-                    Historia
+                    historia
                   </button>
                 </>
               )}
               <Link 
                 href="/matcha-cafeterias"
                 onClick={() => setIsOpen(false)}
-                className="px-4 py-3 text-charcoal-light hover:text-matcha transition-colors text-left flex items-center gap-2"
+                className="px-4 py-3 font-mono text-xs uppercase tracking-[0.15em] text-charcoal-light hover:text-forest-green transition-colors text-left flex items-center gap-2"
               >
-                <Building2 size={16} />
-                Para Cafeterías
+                <Building2 size={14} />
+                cafeterías
               </Link>
-              <div className="px-4 py-3">
+              <div className="px-4 pt-4">
                 <a 
                   href="https://www.instagram.com/shizukumatchastudio/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-matcha text-white px-4 py-2 w-full justify-center hover:bg-matcha-dark transition-colors"
+                  className="inline-flex items-center gap-2 border border-forest-green text-forest-green px-4 py-2 w-full justify-center font-mono text-xs uppercase tracking-[0.15em] hover:bg-forest-green hover:text-washi-bg transition-all duration-500"
                 >
-                  <Instagram size={16} />
-                  Ordenar
+                  <Instagram size={14} />
+                  orden
                 </a>
               </div>
             </div>
           </div>
         )}
+      </div>
+
+      {/* Location Detail - Bottom Right Corner */}
+      <div className="absolute bottom-0 right-6 md:right-12 pb-2 hidden md:block">
+        <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-charcoal-light/60">
+          Hermosillo, MX — 29.07° N
+        </p>
       </div>
     </nav>
   );

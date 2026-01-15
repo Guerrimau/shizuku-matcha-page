@@ -4,44 +4,74 @@
 
 @layer base {
   body {
-    font-family: var(--font-montserrat), system-ui, sans-serif;
-    background-color: #F8F6F3;
-    color: #2C3E2D;
-    line-height: 1.6;
+    font-family: var(--font-inter), system-ui, sans-serif;
+    background-color: #F9F8F4;
+    color: #1A1C1A;
+    line-height: 1.7;
     scroll-behavior: smooth;
+    letter-spacing: 0.01em;
   }
   
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-playfair), serif;
+  h1, h2 {
+    font-family: var(--font-cormorant), serif;
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+  
+  h3, h4, h5, h6 {
+    font-family: var(--font-inter), sans-serif;
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 1.3;
+    letter-spacing: 0.005em;
   }
   
   .font-script {
     font-family: var(--font-noto-serif-jp), 'Hiragino Mincho ProN', 'Yu Mincho', 'MS PMincho', serif;
     font-weight: 500;
   }
+  
+  .font-mono {
+    font-family: var(--font-space-mono), 'Courier New', monospace;
+    letter-spacing: 0.02em;
+  }
 }
 
 @layer components {
-  .btn-primary {
-    @apply bg-matcha text-white px-8 py-4 font-medium transition-all duration-300;
+  .btn-ghost {
+    @apply border border-current px-6 py-3 text-sm uppercase tracking-widest font-mono transition-all duration-500 hover:bg-current hover:text-washi-bg;
   }
   
-  .btn-secondary {
-    @apply bg-white text-charcoal border-2 border-charcoal px-8 py-4 font-medium transition-all duration-300;
+  .btn-text-link {
+    @apply text-sm lowercase tracking-wide transition-all duration-300 hover:opacity-60;
   }
   
   .card {
-    @apply bg-white shadow-soft transition-all duration-300;
+    @apply bg-white shadow-soft transition-all duration-500;
   }
   
   .section-padding {
-    @apply py-20 lg:py-28;
+    @apply py-24 lg:py-32;
+  }
+  
+  .section-padding-compact {
+    @apply py-16 lg:py-20;
   }
   
   .container-custom {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-7xl mx-auto px-6 sm:px-8 lg:px-12;
+  }
+  
+  .studio-heading {
+    @apply font-serif text-5xl lg:text-7xl font-light tracking-tight;
+  }
+  
+  .studio-subheading {
+    @apply font-serif text-2xl lg:text-4xl font-light tracking-tight;
+  }
+  
+  .studio-label {
+    @apply font-mono text-xs uppercase tracking-widest;
   }
 }
 
@@ -52,12 +82,21 @@
   
   .bg-texture {
     background-image: 
-      radial-gradient(circle at 1px 1px, rgba(43, 61, 21, 0.05) 1px, transparent 0);
-    background-size: 20px 20px;
+      radial-gradient(circle at 1px 1px, rgba(26, 28, 26, 0.03) 1px, transparent 0);
+    background-size: 24px 24px;
   }
   
   .zen-spacing {
-    @apply space-y-8 lg:space-y-12;
+    @apply space-y-12 lg:space-y-16;
+  }
+  
+  .studio-spacing {
+    @apply space-y-16 lg:space-y-20;
+  }
+  
+  .backdrop-blur-subtle {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
   }
   
   /* Enhanced Animation Keyframes */

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { Instagram, MapPin } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -18,7 +18,7 @@ const Hero = () => {
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll(); // Llamar una vez para inicializar
+    handleScroll();
     
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -28,75 +28,85 @@ const Hero = () => {
     element?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const parallaxOffset = scrollY * 0.5;
+  const parallaxOffset = scrollY * 0.3;
 
   return (
-    <section ref={heroRef} id="home" className="min-h-screen flex items-center relative overflow-hidden pt-20 md:pt-0">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src="/MatchaMix.png" 
-          alt="Matcha japonés premium en Hermosillo, Sonora - Preparación de matcha auténtico" 
-          className="w-full h-full object-cover object-center transition-transform duration-0"
-          style={{
-            transform: `translateY(${parallaxOffset}px)`,
-            willChange: 'transform',
-          }}
-        />
-        {/* Overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-charcoal/80 via-charcoal/60 md:from-charcoal/70 md:via-charcoal/50 to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal/50 md:from-charcoal/40 to-transparent"></div>
-      </div>
+    <section 
+      ref={heroRef} 
+      id="home" 
+      className="min-h-screen flex items-center relative overflow-hidden bg-washi-bg"
+    >
+      {/* Asymmetrical Grid Layout */}
+      <div className="container-custom relative z-10 w-full py-24 md:py-0">
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center min-h-screen md:min-h-0">
+          
+          {/* Left Side - Minimal Text Content */}
+          <div className="order-2 md:order-1 space-y-10 md:space-y-12 max-w-lg">
+            
+            {/* Small Label */}
+            <div className="space-y-3">
+              <p className="font-mono text-xs uppercase tracking-[0.2em] text-forest-green">
+                Hermosillo, MX
+              </p>
+              <div className="w-16 h-px bg-forest-green"></div>
+            </div>
 
-      {/* Content */}
-      <div className="container-custom relative z-10 w-full py-12 md:py-0">
-        <div className="max-w-2xl text-left space-y-6 md:space-y-8">
-          {/* Local Badge */}
-          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-            <div className="inline-flex items-center gap-2 bg-gold text-charcoal px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-medium w-fit">
-              Hermosillo
-              <MapPin size={14} className="sm:w-4 sm:h-4" />
-            </div>
+            {/* Main Headline */}
+            <h1 className="text-5xl lg:text-6xl xl:text-7xl font-serif font-light tracking-tight text-washi-text leading-[1.1]">
+              The art of<br />stillness.
+            </h1>
             
-            {/* Pick-up Badge */}
-            <div className="inline-flex items-center gap-2 text-xs sm:text-sm text-white/90">
-              <span>Pick-up disponible toda la semana</span>
+            {/* Subheadline */}
+            <p className="text-lg md:text-xl text-charcoal-light leading-relaxed font-light max-w-md">
+              Ceremonial grade matcha from Shizuoka, curated for the modern ritual in Hermosillo, Sonora.
+            </p>
+            
+            {/* Ghost CTA - Lowercase for modern studio feel */}
+            <div className="pt-4">
+              <button 
+                onClick={scrollToProducts}
+                className="group inline-flex items-center gap-3 text-sm lowercase tracking-wide text-washi-text transition-all duration-500 hover:gap-5"
+              >
+                <span>explore the collection</span>
+                <ArrowRight size={16} className="transition-transform duration-500 group-hover:translate-x-1" />
+              </button>
+            </div>
+
+          </div>
+
+          {/* Right Side - Ritual-Focused Lifestyle Image */}
+          <div className="order-1 md:order-2 relative">
+            <div className="relative aspect-[3/4] md:aspect-[4/5] overflow-hidden">
+              <img 
+                src="/BowlWithMatcha.png" 
+                alt="Matcha ritual - ceremonial preparation" 
+                className="w-full h-full object-cover transition-transform duration-700 ease-out"
+                style={{
+                  transform: `translateY(${parallaxOffset * 0.5}px)`,
+                  willChange: 'transform',
+                }}
+              />
+              
+              {/* Subtle Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-washi-bg/20 to-transparent"></div>
+            </div>
+
+            {/* Floating Detail Element */}
+            <div className="absolute -bottom-8 -left-8 md:-left-12 bg-washi-bg border border-forest-green/20 p-6 md:p-8 max-w-xs shadow-lg">
+              <p className="font-mono text-xs uppercase tracking-[0.15em] text-forest-green mb-2">
+                From Shizuoka
+              </p>
+              <p className="text-sm text-charcoal-light leading-relaxed font-light">
+                Stone-ground, first harvest matcha from traditional tea gardens.
+              </p>
             </div>
           </div>
-          
-          {/* Title */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-tight drop-shadow-lg">
-            Matcha Japonés Premium en Hermosillo
-          </h1>
-          
-          {/* Subtitle */}
-          <p className="text-base sm:text-lg md:text-xl text-white/95 leading-relaxed max-w-xl drop-shadow-md">
-            Descubre la autenticidad del matcha, hojicha y sencha japoneses de primera cosecha de Shizuoka. 
-            A drop of beauty, a lifetime ritual.
-          </p>
-          
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 sm:pt-6">
-            <button 
-              onClick={scrollToProducts}
-              className="group bg-gold text-charcoal px-6 py-3 sm:px-8 sm:py-4 font-medium text-base sm:text-lg transition-all duration-300 hover:bg-gold-light flex items-center justify-center gap-2 sm:gap-3 shadow-lg w-full sm:w-auto"
-            >
-              Ver Productos
-            </button>
-            
-            <a 
-              href="https://www.instagram.com/shizukumatchastudio/" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group bg-white text-charcoal border-2 border-white px-6 py-3 sm:px-8 sm:py-4 font-medium text-base sm:text-lg transition-all duration-300 hover:bg-white/90 flex items-center justify-center gap-2 sm:gap-3 shadow-lg w-full sm:w-auto"
-            >
-              <Instagram size={18} className="sm:w-5 sm:h-5" />
-              <span className="hidden sm:inline">Ordenar por Instagram</span>
-              <span className="sm:hidden">Ordenar</span>
-            </a>
-          </div>
+
         </div>
       </div>
+
+      {/* Subtle Background Texture */}
+      <div className="absolute inset-0 bg-texture opacity-40 pointer-events-none"></div>
     </section>
   );
 };

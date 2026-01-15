@@ -3,36 +3,46 @@ import { Heart } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-charcoal text-white py-16">
+    <footer className="bg-washi-text text-washi-bg py-20 lg:py-24">
       <div className="container-custom">
-        <div className="text-center">
+        <div className="text-center space-y-12">
+          
           {/* Brand */}
-          <div className="mb-8">
-            <h3 className="text-3xl font-serif mb-1">Shizuku</h3>
-            <p className="text-sm font-sans font-normal text-gold-light tracking-wider uppercase">Matcha Studio</p>
-            <div className="w-16 h-px bg-gold mx-auto mt-4"></div>
+          <div className="space-y-4">
+            <h3 className="text-4xl font-serif font-light tracking-tight">Shizuku</h3>
+            <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-washi-bg/70">
+              Matcha Studio
+            </p>
+            <div className="w-20 h-px bg-forest-green-light/40 mx-auto"></div>
           </div>
           
           {/* Japanese Characters */}
-          <div className="mb-8">
-            <span className="text-5xl font-script text-gold opacity-80">抹茶</span>
+          <div>
+            <span className="text-5xl font-script text-washi-bg/60">抹茶</span>
           </div>
           
           {/* Description */}
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-8 leading-relaxed">
+          <p className="text-base text-washi-bg/80 max-w-xl mx-auto font-light leading-relaxed">
             Llevando el arte del matcha japonés a Hermosillo, Sonora, una gota de belleza a la vez.
           </p>
           
+          {/* Location Detail */}
+          <div className="pt-8">
+            <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-washi-bg/50">
+              Hermosillo, MX — 29.07° N, 110.95° W
+            </p>
+          </div>
+          
           {/* Divider */}
-          <div className="border-t border-charcoal-light pt-8 mt-8">
-            <div className="flex items-center justify-center gap-2 text-gold-light">
-              <span className="text-sm">© 2025 Hecho con</span>
-              <Heart size={16} className="fill-current" />
-              <span className="text-sm">tradición y matcha</span>
+          <div className="border-t border-washi-bg/10 pt-12 mt-12 space-y-4">
+            <div className="flex items-center justify-center gap-2 text-washi-bg/60">
+              <span className="font-mono text-xs tracking-wide">© 2025 hecho con</span>
+              <Heart size={14} className="fill-current" />
+              <span className="font-mono text-xs tracking-wide">tradición y matcha</span>
             </div>
             
-            <p className="text-xs text-gray-400 mt-2">
-              Shizuku Matcha Studio • Hermosillo, Sonora
+            <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-washi-bg/40">
+              Shizuku Matcha Studio
             </p>
           </div>
         </div>

@@ -1,16 +1,24 @@
 import type { Metadata } from 'next'
-import { Playfair_Display, Montserrat, Noto_Serif_JP } from 'next/font/google'
+import { Cormorant_Garamond, Inter, Space_Mono, Noto_Serif_JP } from 'next/font/google'
 import '@/app/globals.css'
 
-const playfair = Playfair_Display({
+const cormorant = Cormorant_Garamond({
+  weight: ['300', '400', '500', '600'],
   subsets: ['latin'],
-  variable: '--font-playfair',
+  variable: '--font-cormorant',
   display: 'swap',
 })
 
-const montserrat = Montserrat({
+const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-montserrat',
+  variable: '--font-inter',
+  display: 'swap',
+})
+
+const spaceMono = Space_Mono({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  variable: '--font-space-mono',
   display: 'swap',
 })
 
@@ -22,13 +30,48 @@ const notoSerifJP = Noto_Serif_JP({
 })
 
 export const metadata: Metadata = {
-  title: 'Shizuku Matcha Studio – Matcha Japonés Auténtico',
-  description: 'Una selección curada de productos que celebran la esencia del matcha japonés: pureza, calidad y estilo. Descubre la tradición del té en México.',
-  keywords: 'matcha japonés, té premium, matcha auténtico, ceremonia del té, productos japoneses, mindfulness',
+  title: 'Shizuku Matcha Studio — The art of stillness',
+  description: 'Ceremonial grade matcha from Shizuoka, curated for the modern ritual in Hermosillo, Sonora. Tés japoneses premium importados directamente de Shizuoka.',
+  keywords: 'matcha ceremonial, matcha hermosillo, matcha sonora, té japonés premium, matcha shizuoka, ceremonial matcha mexico, japanese tea hermosillo',
+  metadataBase: new URL('https://shizukumatchastudio.com'),
   openGraph: {
     type: 'website',
-    title: 'Shizuku Matcha Studio – Matcha Japonés Auténtico',
-    description: 'Una selección curada de productos que celebran la esencia del matcha japonés: pureza, calidad y estilo.',
+    locale: 'es_MX',
+    url: 'https://shizukumatchastudio.com',
+    siteName: 'Shizuku Matcha Studio',
+    title: 'Shizuku Matcha Studio — The art of stillness',
+    description: 'Ceremonial grade matcha from Shizuoka, curated for the modern ritual in Hermosillo, Sonora.',
+    images: [
+      {
+        url: '/BowlWithMatcha.png',
+        width: 1200,
+        height: 630,
+        alt: 'Shizuku Matcha Studio — Ceremonial matcha preparation',
+      },
+      {
+        url: '/MatchaMix.png',
+        width: 1200,
+        height: 630,
+        alt: 'Matcha japonés premium en Hermosillo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Shizuku Matcha Studio — The art of stillness',
+    description: 'Ceremonial grade matcha from Shizuoka, curated for the modern ritual in Hermosillo, Sonora.',
+    images: ['/BowlWithMatcha.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 }
 
@@ -38,7 +81,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="es" className={`${playfair.variable} ${montserrat.variable} ${notoSerifJP.variable}`}>
+    <html lang="es" className={`${cormorant.variable} ${inter.variable} ${spaceMono.variable} ${notoSerifJP.variable}`}>
       <head>
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
         <script
@@ -48,9 +91,9 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "Shizuku Matcha Studio",
-              "description": "Matcha japonés auténtico de primera cosecha de Shizuoka, Japón. Disponible en Hermosillo, Sonora. Entregas gratis los sábados.",
+              "description": "Ceremonial grade matcha from Shizuoka, curated for the modern ritual in Hermosillo, Sonora. Tés japoneses premium importados directamente de Shizuoka, Japón.",
               "url": "https://shizukumatchastudio.com",
-              "image": "https://shizukumatchastudio.com/MatchaMix.png",
+              "image": "https://shizukumatchastudio.com/BowlWithMatcha.png",
               "priceRange": "$$",
               "servesCuisine": "Japanese Tea",
               "address": {
@@ -97,7 +140,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="font-sans bg-cream text-charcoal">
+      <body className="font-sans bg-washi-bg text-washi-text">
         {children}
       </body>
     </html>

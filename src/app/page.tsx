@@ -2,32 +2,33 @@ import { Metadata } from 'next'
 import HomePageClient from './HomePageClient'
 
 export const metadata: Metadata = {
-  title: 'Matcha Hermosillo | Matcha Ceremonial Hermosillo | Shizuku Matcha Studio',
-  description: 'Matcha japonés auténtico y matcha ceremonial en Hermosillo, Sonora. Primera cosecha de Shizuoka, Japón. Bolsas de 40g y 150g. Entregas GRATIS los sábados en Hermosillo. Pick-up disponible toda la semana. Compra por Instagram DM.',
-  keywords: 'matcha hermosillo, matcha ceremonial hermosillo, matcha sonora, matcha japonés hermosillo, matcha auténtico hermosillo, matcha ceremonial sonora, té matcha hermosillo, matcha premium hermosillo, matcha ceremonial premium hermosillo, matcha shizuoka hermosillo, matcha 40g hermosillo, matcha 150g hermosillo, entregas gratis hermosillo, compra matcha instagram hermosillo, matcha japonés sonora, matcha hermosillo sonora, donde comprar matcha hermosillo',
+  title: 'Shizuku Matcha Studio — Matcha premium en Hermosillo',
+  description: 'Matcha japonés premium de primera cosecha de Shizuoka. Disponible en Hermosillo, Sonora. The art of stillness.',
+  keywords: 'matcha premium hermosillo, matcha japonés hermosillo, matcha shizuoka, té japonés premium, matcha sonora, stone-ground matcha mexico',
   openGraph: {
     type: 'website',
-    title: 'Matcha Hermosillo | Matcha Ceremonial Hermosillo | Shizuku Matcha Studio',
-    description: 'Matcha japonés auténtico y matcha ceremonial en Hermosillo, Sonora. Primera cosecha de Shizuoka. Entregas GRATIS los sábados.',
     locale: 'es_MX',
+    url: 'https://shizukumatchastudio.com',
     siteName: 'Shizuku Matcha Studio',
+    title: 'Shizuku Matcha Studio — The art of stillness',
+    description: 'Matcha japonés premium de primera cosecha de Shizuoka. Hermosillo, Sonora.',
     images: [
       {
-        url: '/MatchaMix.png',
+        url: '/BowlWithMatcha.png',
         width: 1200,
         height: 630,
-        alt: 'Matcha japonés premium y ceremonial disponible en Hermosillo, Sonora',
+        alt: 'Shizuku Matcha Studio — Matcha premium ritual preparation',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Matcha Hermosillo | Matcha Ceremonial Hermosillo',
-    description: 'Matcha japonés auténtico de primera cosecha de Shizuoka. Disponible en Hermosillo, Sonora.',
-    images: ['/MatchaMix.png'],
+    title: 'Shizuku Matcha Studio — Matcha premium en Hermosillo',
+    description: 'Matcha japonés premium de primera cosecha de Shizuoka. Hermosillo, Sonora.',
+    images: ['/BowlWithMatcha.png'],
   },
   alternates: {
-    canonical: '/',
+    canonical: 'https://shizukumatchastudio.com',
   },
   other: {
     'geo.region': 'MX-SON',

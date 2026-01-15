@@ -8,21 +8,30 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        serif: ['var(--font-playfair)', 'serif'],
-        sans: ['var(--font-montserrat)', 'system-ui', 'sans-serif'],
+        serif: ['var(--font-cormorant)', 'Georgia', 'serif'],
+        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-space-mono)', 'Courier New', 'monospace'],
         script: ['var(--font-noto-serif-jp)', 'Hiragino Mincho ProN', 'Yu Mincho', 'MS PMincho', 'serif'],
       },
       colors: {
+        'washi-bg': '#F9F8F4',
+        'washi-text': '#1A1C1A',
         charcoal: {
-          DEFAULT: '#2C3E2D',
-          light: '#3A4F3B',
-          dark: '#1F2B20',
+          DEFAULT: '#1A1C1A',
+          light: '#3A3C3A',
+          dark: '#0A0C0A',
+        },
+        'forest-green': {
+          DEFAULT: '#3E4A3C',
+          light: '#5A6658',
+          dark: '#2A332A',
+          pale: '#E8EBE7',
         },
         matcha: {
-          DEFAULT: '#2b3d15',
-          light: '#3d5620',
-          dark: '#1f2d0f',
-          pale: '#E8F0E1',
+          DEFAULT: '#3E4A3C',
+          light: '#5A6658',
+          dark: '#2A332A',
+          pale: '#E8EBE7',
         },
         gold: {
           DEFAULT: '#d1ad60',
@@ -31,7 +40,7 @@ module.exports = {
           pale: '#f5f0e6',
         },
         cream: {
-          DEFAULT: '#F8F6F3',
+          DEFAULT: '#F9F8F4',
           light: '#FDFCFA',
           dark: '#F0EDE8',
         },
