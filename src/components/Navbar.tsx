@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Instagram, Menu, X, Building2 } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
@@ -49,14 +50,23 @@ const Navbar = () => {
           {/* Logo */}
           <button 
             onClick={handleLogoClick}
-            className="flex flex-col items-start transition-colors duration-500 group"
+            className="flex items-center gap-2 transition-colors duration-500 group"
           >
-            <span className="text-2xl md:text-3xl font-serif text-washi-text tracking-tight leading-tight transition-colors duration-500">
-              Shizuku
-            </span>
-            <span className="font-mono text-[10px] md:text-xs uppercase tracking-[0.2em] text-charcoal-light transition-colors duration-500">
-              Matcha Studio
-            </span>
+            <Image 
+              src="/ShizukuIcon.png" 
+              alt="Shizuku Matcha Studio" 
+              width={48} 
+              height={48}
+              className="transition-opacity duration-500"
+            />
+            <div className="flex flex-col items-start">
+              <span className="text-2xl md:text-3xl font-serif font-medium text-washi-text transition-colors duration-500 tracking-[0.08em]">
+                Shizuku
+              </span>
+              <span className="font-mono text-[10px] md:text-xs uppercase tracking-[0.1em] text-charcoal-light transition-colors duration-500">
+                Matcha Studio
+              </span>
+            </div>
           </button>
 
           {/* Desktop Navigation */}

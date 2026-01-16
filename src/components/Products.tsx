@@ -314,32 +314,11 @@ const Products = () => {
                             ${sizeInfo.price} MXN
                           </span>
                         )}
-                        {'badge' in sizeInfo && sizeInfo.badge && (
-                          <span className="font-mono text-[9px] uppercase tracking-wider bg-forest-green/10 text-forest-green px-3 py-1">
-                            {sizeInfo.badge}
-                          </span>
-                        )}
                       </div>
                     );
                   })}
                 </div>
               </div>
-
-              {/* Characteristics */}
-              {'characteristics' in currentProduct && (
-                <div className="space-y-4">
-                  <h4 className="font-mono text-[10px] uppercase tracking-[0.25em] text-charcoal-light/70">
-                    Características
-                  </h4>
-                  <ul className="grid grid-cols-2 gap-3">
-                    {currentProduct.characteristics.map((item, index) => (
-                      <li key={index} className="text-sm text-charcoal-light font-light">
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
 
               {/* Taste Profile */}
               {'tasteProfile' in currentProduct && (
@@ -370,25 +349,6 @@ const Products = () => {
                 </a>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Benefits Grid - Clean & Spacious */}
-        <div className="mt-24 lg:mt-32 grid grid-cols-1 sm:grid-cols-3 gap-8 lg:gap-12 max-w-5xl mx-auto">
-          <div className="text-center space-y-4 py-8">
-            <div className="text-3xl">📍</div>
-            <h4 className="font-mono text-xs uppercase tracking-[0.2em] text-washi-text">Pick-up</h4>
-            <p className="text-sm text-charcoal-light font-light">Disponible toda la semana</p>
-          </div>
-          <div className="text-center space-y-4 py-8">
-            <div className="text-3xl">💚</div>
-            <h4 className="font-mono text-xs uppercase tracking-[0.2em] text-washi-text">Guía incluida</h4>
-            <p className="text-sm text-charcoal-light font-light">Soporte personalizado</p>
-          </div>
-          <div className="text-center space-y-4 py-8">
-            <div className="text-3xl">✨</div>
-            <h4 className="font-mono text-xs uppercase tracking-[0.2em] text-washi-text">Primera cosecha</h4>
-            <p className="text-sm text-charcoal-light font-light">Calidad premium</p>
           </div>
         </div>
       </div>

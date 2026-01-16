@@ -109,14 +109,6 @@ const Story = () => {
               </div>
             </div>
           </div>
-
-          {/* Final Quote */}
-          <div className="max-w-2xl mx-auto text-center pt-12">
-            <p className="text-2xl md:text-3xl font-serif text-washi-text italic font-light leading-relaxed">
-              "En cada taza de Shizuku, servimos la esencia de lo que 
-              descubrimos en Japón"
-            </p>
-          </div>
         </div>
       </div>
     </section>

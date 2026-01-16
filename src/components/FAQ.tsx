@@ -8,24 +8,12 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: "¿Venden matcha ceremonial?",
-      answer: "Sí, ofrecemos matcha premium de primera cosecha de Shizuoka, Japón. Nuestro matcha es de calidad premium, ideal tanto para preparación tradicional como para lattes y bebidas modernas. Disponible en bolsas de 40g y 150g. Hacemos entregas gratis los sábados en Hermosillo y pick-up disponible toda la semana."
-    },
-    {
       question: "¿Dónde puedo comprar matcha?",
       answer: "Puedes comprar matcha premium a través de nuestro Instagram @shizukumatchastudio. Ofrecemos entregas GRATIS los sábados a domicilio en Hermosillo, y también tenemos opción de pick-up disponible toda la semana. Solo escríbenos por DM para hacer tu pedido."
     },
     {
       question: "¿Qué diferencia hay entre matcha premium y matcha ceremonial?",
       answer: "El término 'ceremonial' es principalmente un término de marketing occidental. En Japón, el matcha se clasifica por calidad y uso. Nuestro matcha premium es de primera cosecha de Shizuoka y es versátil: funciona excelente para preparación tradicional (como ceremonial) y también para lattes y bebidas modernas. Es matcha de alta calidad sin el precio inflado del marketing."
-    },
-    {
-      question: "¿Cuánto cuesta el matcha?",
-      answer: "Ofrecemos matcha premium japonés en presentaciones de 40g y 150g. Los precios varían según la presentación. Contáctanos por Instagram @shizukumatchastudio para conocer los precios actuales y hacer tu pedido."
-    },
-    {
-      question: "¿Hacen entregas?",
-      answer: "Sí, hacemos entregas GRATIS todos los sábados a domicilio en Hermosillo. También ofrecemos opción de pick-up disponible toda la semana. Coordinamos la ubicación y horario por DM en Instagram."
     },
     {
       question: "¿El matcha es auténtico de Japón?",

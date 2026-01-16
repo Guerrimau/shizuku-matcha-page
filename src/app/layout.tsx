@@ -83,7 +83,7 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${cormorant.variable} ${inter.variable} ${spaceMono.variable} ${notoSerifJP.variable}`}>
       <head>
-        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <link rel="icon" type="image/png" href="/ShizukuIcon.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

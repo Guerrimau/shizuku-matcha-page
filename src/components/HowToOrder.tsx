@@ -71,26 +71,6 @@ const HowToOrder = () => {
             </div>
           </div>
 
-          {/* Pick-up Info */}
-          <div className="bg-forest-green-pale/20 border border-forest-green/10 p-10 lg:p-16">
-            <h3 className="font-serif text-2xl text-washi-text font-light tracking-tight mb-10 text-center">
-              Pick-up disponible
-            </h3>
-            <div className="grid md:grid-cols-2 gap-10 max-w-2xl mx-auto">
-              <div className="text-center space-y-4">
-                <div className="text-3xl">📍</div>
-                <p className="text-sm text-charcoal-light font-light leading-relaxed">
-                  Coordina la ubicación y horario por dm
-                </p>
-              </div>
-              <div className="text-center space-y-4">
-                <div className="text-3xl">📅</div>
-                <p className="text-sm text-charcoal-light font-light leading-relaxed">
-                  Disponible toda la semana
-                </p>
-              </div>
-            </div>
-          </div>
 
           {/* CTA */}
           <div className="text-center">

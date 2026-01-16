@@ -21,7 +21,7 @@ const Experience = () => {
         </div>
 
         {/* Main Feature - Split Section */}
-        <div className="max-w-6xl mx-auto mb-16 lg:mb-24">
+        <div className="max-w-6xl mx-auto mb-16">
           <div className="grid md:grid-cols-2 gap-0">
             
             {/* Image Side */}
@@ -79,15 +79,6 @@ const Experience = () => {
                     </div>
                     <p className="text-sm text-charcoal-light font-light">
                       Alto contenido de EGCG
-                    </p>
-                  </div>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-3">
-                      <Instagram className="text-forest-green" size={18} />
-                      <h4 className="font-mono text-xs uppercase tracking-[0.15em] text-washi-text">Comunidad</h4>
-                    </div>
-                    <p className="text-sm text-charcoal-light font-light">
-                      Soporte y tips diarios
                     </p>
                   </div>
                 </div>

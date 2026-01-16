@@ -18,7 +18,6 @@ export default function HomePageClient() {
       <Experience />
       <Products />
       <Story />
-      <HowToOrder />
       <FAQ />
       <BusinessSection />
       <Footer /> 
