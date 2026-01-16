@@ -8,7 +8,7 @@ const CafeteriasProcess = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-serif text-charcoal mb-4">
-            Proceso Simple para Negocios
+            Proceso simple para negocios
           </h2>
           <div className="w-24 h-px bg-matcha mx-auto mb-6"></div>
         </div>

@@ -8,7 +8,7 @@ const CafeteriasBenefits = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-serif text-charcoal mb-4">
-            Para Cafeterías que se Toman en Serio el Matcha
+            Para cafeterías que se toman en serio el matcha
           </h2>
           <div className="w-24 h-px bg-matcha mx-auto mb-6"></div>
           <p className="text-xl text-charcoal-light max-w-2xl mx-auto">
@@ -23,7 +23,7 @@ const CafeteriasBenefits = () => {
               <TrendingUp className="text-matcha" size={32} />
             </div>
             <h3 className="font-serif text-xl text-charcoal mb-3">
-              Precio Competitivo
+              Precio competitivo
             </h3>
             <p className="text-charcoal-light">
               Aproximadamente 50% más barato que el mercado. Matcha premium 
@@ -36,7 +36,7 @@ const CafeteriasBenefits = () => {
               <Award className="text-matcha" size={32} />
             </div>
             <h3 className="font-serif text-xl text-charcoal mb-3">
-              Matcha Premium Japonés
+              Matcha premium japonés
             </h3>
             <p className="text-charcoal-light">
               Primera cosecha de Shizuoka, Japón. Calidad auténtica para 
@@ -49,10 +49,10 @@ const CafeteriasBenefits = () => {
               <Users className="text-matcha" size={32} />
             </div>
             <h3 className="font-serif text-xl text-charcoal mb-3">
-              Asesoramiento de Preparación
+              Asesoría de preparación
             </h3>
             <p className="text-charcoal-light">
-              Guía profesional para tu equipo. Técnicas, recetas y tips para 
+              Guía profesional para tu equipo. Técnicas, recetas y consejos para 
               preparar el mejor matcha latte.
             </p>
           </div>
@@ -62,7 +62,7 @@ const CafeteriasBenefits = () => {
               <Coffee className="text-matcha" size={32} />
             </div>
             <h3 className="font-serif text-xl text-charcoal mb-3">
-              Sin Consumo Mínimo
+              Sin consumo mínimo
             </h3>
             <p className="text-charcoal-light">
               Empieza con el volumen que necesites. Sin compromisos ni 

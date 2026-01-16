@@ -9,14 +9,14 @@ const Testimonials = () => {
       location: "Hermosillo"
     },
     {
-      text: "Uso el Culinary Grade para mis postres y el sabor mejora muchísimo. Mis clientes lo notaron de inmediato.",
+      text: "Uso el matcha culinario para mis postres y el sabor mejora muchísimo. Mis clientes lo notaron de inmediato.",
       name: "Javier R.",
-      location: "repostería local"
+      location: "Repostería local"
     },
     {
-      text: "El ceremonial tiene un umami increíble, y el proceso de preparación es súper meditativo. Una experiencia completa.",
+      text: "El matcha tiene un umami increíble, y el proceso de preparación es muy meditativo. Una experiencia completa.",
       name: "Mariana L.",
-      location: "clienta frecuente"
+      location: "Clienta frecuente"
     }
   ];
 

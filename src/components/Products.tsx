@@ -13,7 +13,7 @@ const Products = () => {
         alt: "Productos de matcha Shizuku"
       },
       {
-        src: "/MatchaLatter.png",
+        src: "/MatchaLatte.png",
         alt: "Matcha latte preparado"
       },
       {
@@ -113,7 +113,7 @@ const Products = () => {
         "Tostado tradicional japonés",
         "Bajo en cafeína, ideal para cualquier hora",
         "Sabor suave y reconfortante",
-        "TODO: Agregar características específicas del producto"
+        "Perfecto para bebidas de tarde"
       ]
     },
     sencha: {
@@ -128,7 +128,7 @@ const Products = () => {
         "Hojas de primera cosecha",
         "Rico en antioxidantes y L-teanina",
         "Sabor fresco y vegetal característico",
-        "TODO: Agregar características específicas del producto"
+        "Experiencia clásica de té japonés"
       ]
     }
   };

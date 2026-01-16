@@ -44,7 +44,7 @@ const Story = () => {
                 </p>
                 <p className="text-charcoal-light font-light leading-relaxed text-base">
                   Hoy traemos esa misma pasión y respeto por el matcha a Hermosillo, 
-                  compartiendo no solo el té, sino toda una tradición milenaria.
+                  compartiendo no solo el té, sino toda una cultura ancestral.
                 </p>
               </div>
             </div>

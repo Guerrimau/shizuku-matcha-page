@@ -11,7 +11,7 @@ const CafeteriasHero = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-cream/90 to-matcha-pale/90"></div>
       <div className="absolute inset-0">
         <img 
-          src="/MatchaLatter.png" 
+          src="/MatchaLatte.png" 
           alt="Matcha preparation" 
           className="w-full h-full object-cover opacity-20"
         />
@@ -30,13 +30,13 @@ const CafeteriasHero = () => {
             
             {/* Title */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-charcoal leading-tight">
-              Matcha para Cafeterías de Especialidad
+              Matcha para cafeterías de especialidad
             </h1>
             
             {/* Subtitle */}
             <p className="text-lg md:text-xl text-charcoal-light leading-relaxed max-w-xl">
-              Si te tomas en serio el café de especialidad, tómate en serio el matcha premium. 
-              Matcha japonés auténtico de primera cosecha, precio competitivo y asesoramiento profesional.
+              Si te tomas en serio el café de especialidad, tómate en serio el matcha. 
+              Matcha japonés auténtico de primera cosecha, precio competitivo y asesoría profesional.
             </p>
             
             {/* CTA Buttons */}
@@ -48,14 +48,14 @@ const CafeteriasHero = () => {
                 className="group bg-matcha text-white px-8 py-4 font-medium text-lg transition-all duration-300 hover:bg-matcha-dark flex items-center justify-center gap-3"
               >
                 <Instagram size={20} />
-                Solicitar Cotización
+                Solicitar cotización
               </a>
               
               <Link 
                 href="/#products"
                 className="group bg-white text-charcoal border-2 border-charcoal px-8 py-4 font-medium text-lg transition-all duration-300 hover:bg-charcoal hover:text-white flex items-center justify-center gap-3"
               >
-                Ver Productos Individuales
+                Ver productos individuales
               </Link>
             </div>
 
@@ -65,7 +65,7 @@ const CafeteriasHero = () => {
               <span>•</span>
               <span>Sin consumo mínimo</span>
               <span>•</span>
-              <span>Asesoramiento de preparación</span>
+              <span>Asesoría de preparación</span>
             </div>
           </div>
 
@@ -73,7 +73,7 @@ const CafeteriasHero = () => {
           <div className="hidden md:block relative">
             <div className="relative">
               <img 
-                src="/MatchaLatter.png" 
+                src="/MatchaLatte.png" 
                 alt="Matcha para cafeterías" 
                 className="w-full h-auto object-cover shadow-medium"
               />

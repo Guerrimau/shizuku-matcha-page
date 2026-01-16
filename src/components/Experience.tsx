@@ -60,7 +60,7 @@ const Experience = () => {
                       <h4 className="font-mono text-xs uppercase tracking-[0.15em] text-washi-text">Enfoque</h4>
                     </div>
                     <p className="text-sm text-charcoal-light font-light">
-                      Energía estable sin crashes
+                      Energía estable sin caídas
                     </p>
                   </div>
                   <div className="space-y-2">
@@ -129,7 +129,7 @@ const Experience = () => {
             <div className="space-y-6">
               <div className="aspect-square bg-cream overflow-hidden">
                 <img 
-                  src="/MatchaLatter.png" 
+                  src="/MatchaLatte.png" 
                   alt="Matcha frío" 
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />

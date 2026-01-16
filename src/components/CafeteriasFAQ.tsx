@@ -25,7 +25,7 @@ const CafeteriasFAQ = () => {
     },
     {
       question: "¿Qué incluye el asesoramiento de preparación?",
-      answer: "Te proporcionamos guías técnicas sobre cómo preparar el matcha perfecto para diferentes bebidas, ratios de matcha a leche, temperaturas ideales, técnicas de batido, y recetas para tu menú. También podemos hacer sesiones de entrenamiento con tu equipo si lo necesitas. Todo incluido, sin costo adicional."
+      answer: "Te proporcionamos guías técnicas sobre cómo preparar el matcha perfecto para diferentes bebidas, proporciones de matcha y leche, temperaturas ideales, técnicas de batido y recetas para tu menú. También podemos hacer sesiones de entrenamiento con tu equipo si lo necesitas. Todo incluido, sin costo adicional."
     },
     {
       question: "¿Cuál es el pedido mínimo?",
@@ -43,7 +43,7 @@ const CafeteriasFAQ = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-serif text-charcoal mb-4">
-            Preguntas Frecuentes
+            Preguntas frecuentes
           </h2>
           <div className="w-24 h-px bg-matcha mx-auto mb-6"></div>
           <p className="text-xl text-charcoal-light max-w-2xl mx-auto">

@@ -8,7 +8,7 @@ const CafeteriasProducts = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-serif text-charcoal mb-4">
-            Matcha Premium para Bebidas
+            Matcha premium para bebidas
           </h2>
           <div className="w-24 h-px bg-matcha mx-auto mb-6"></div>
           <p className="text-xl text-charcoal-light max-w-2xl mx-auto">
@@ -24,7 +24,7 @@ const CafeteriasProducts = () => {
               <Package className="text-matcha" size={64} />
             </div>
             <h3 className="font-serif text-2xl text-charcoal mb-4">
-              Matcha Premium
+              Matcha premium
             </h3>
             <ul className="space-y-2 text-charcoal-light mb-6">
               <li>• Primera cosecha de Shizuoka, Japón</li>
@@ -80,7 +80,7 @@ const CafeteriasProducts = () => {
         <div className="max-w-4xl mx-auto mt-16 bg-matcha-pale/20 p-8">
           <div className="text-center">
             <h3 className="font-serif text-2xl text-charcoal mb-4">
-              Precio Competitivo • Sin Consumo Mínimo
+              Precio competitivo · Sin consumo mínimo
             </h3>
             <p className="text-charcoal-light mb-6">
               Aproximadamente 50% más barato que el mercado. Empieza con el volumen que necesites, 
@@ -93,7 +93,7 @@ const CafeteriasProducts = () => {
               className="inline-flex items-center gap-2 bg-matcha text-white px-8 py-4 hover:bg-matcha-dark transition-colors"
             >
               <Instagram size={20} />
-              Solicitar Cotización
+                Solicitar cotización
             </a>
           </div>
         </div>
