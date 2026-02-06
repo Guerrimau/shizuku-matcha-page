@@ -2,24 +2,10 @@
 
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Faq } from '@/app/types';
 
-const FAQ = () => {
+const FAQ = ({ data }: { data: Faq[] }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const faqs = [
-    {
-      question: "¿Dónde puedo comprar matcha?",
-      answer: "Puedes comprar matcha premium a través de nuestro Instagram @shizukumatchastudio. Ofrecemos entregas GRATIS los sábados a domicilio en Hermosillo, y también tenemos opción de pick-up disponible toda la semana. Solo escríbenos por DM para hacer tu pedido."
-    },
-    {
-      question: "¿Qué diferencia hay entre matcha premium y matcha ceremonial?",
-      answer: "El término 'ceremonial' es principalmente un término de marketing occidental. En Japón, el matcha se clasifica por calidad y uso. Nuestro matcha premium es de primera cosecha de Shizuoka y es versátil: funciona excelente para preparación tradicional (como ceremonial) y también para lattes y bebidas modernas. Es matcha de alta calidad sin el precio inflado del marketing."
-    },
-    {
-      question: "¿El matcha es auténtico de Japón?",
-      answer: "Sí, nuestro matcha es 100% auténtico de primera cosecha de Shizuoka, Japón. Shizuoka es una de las regiones más reconocidas para la producción de matcha de calidad. Trabajamos directamente con productores japoneses para asegurar autenticidad y calidad premium."
-    }
-  ];
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -45,14 +31,14 @@ const FAQ = () => {
 
         {/* FAQ Items - Minimal Design */}
         <div className="max-w-4xl mx-auto space-y-2">
-          {faqs.map((faq, index) => (
+          {data.map((faq, index) => (
             <div key={index} className="border-b border-charcoal/10">
               <button
                 onClick={() => toggleFAQ(index)}
                 className="w-full py-8 flex items-center justify-between text-left hover:opacity-70 transition-opacity duration-300"
               >
                 <h3 className="font-serif text-xl md:text-2xl text-washi-text font-light tracking-tight pr-8">
-                  {faq.question}
+                  {faq.Question}
                 </h3>
                 {openIndex === index ? (
                   <ChevronUp className="text-forest-green flex-shrink-0" size={20} />
@@ -63,7 +49,7 @@ const FAQ = () => {
               {openIndex === index && (
                 <div className="pb-8 pr-12">
                   <p className="text-charcoal-light font-light leading-relaxed">
-                    {faq.answer}
+                    {faq.Answer}
                   </p>
                 </div>
               )}
