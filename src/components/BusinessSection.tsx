@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { Building2, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
@@ -51,10 +52,12 @@ const BusinessSection = () => {
             {/* Visual Side */}
             <div className="bg-washi-bg p-6 lg:p-8 flex items-center justify-center">
               <div className="aspect-[4/3] w-full relative overflow-hidden">
-                <img 
-                  src="/CoffeeShop.png" 
+                <Image 
+                  src="/MATCHA_BAG.jpg" 
                   alt="Cafetería con matcha premium" 
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-washi-bg/80 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6 text-center">

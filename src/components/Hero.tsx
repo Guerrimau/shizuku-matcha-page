@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
@@ -77,10 +78,13 @@ const Hero = () => {
           {/* Right Side - Ritual-Focused Lifestyle Image */}
           <div className="order-1 md:order-2 relative">
             <div className="relative aspect-[3/4] md:aspect-[4/5] overflow-hidden">
-              <img 
-                src="/BowlWithMatcha.png" 
+              <Image 
+                src="/WISK.jpg" 
                 alt="Ritual de matcha - preparación ceremonial" 
-                className="w-full h-full object-cover transition-transform duration-700 ease-out"
+                fill
+                priority
+                className="object-cover transition-transform duration-700 ease-out"
+                sizes="(max-width: 768px) 100vw, 50vw"
                 style={{
                   transform: `translateY(${parallaxOffset * 0.5}px)`,
                   willChange: 'transform',

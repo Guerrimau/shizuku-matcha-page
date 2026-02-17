@@ -1,62 +1,27 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { Instagram, ChevronLeft, ChevronRight } from 'lucide-react';
+import React, { useState } from "react";
+import Image from "next/image";
+import { Instagram, ChevronLeft, ChevronRight } from "lucide-react";
+import { Tea } from "@/app/types";
 
-const Products = () => {
-  const [selectedProduct, setSelectedProduct] = useState<'matcha' | 'hojicha' | 'sencha'>('matcha');
-
-  const productImages = {
-    matcha: [
-      {
-        src: "/MatchaProducts.png",
-        alt: "Productos de matcha Shizuku"
-      },
-      {
-        src: "/MatchaLatte.png",
-        alt: "Matcha latte preparado"
-      },
-      {
-        src: "/MatchaPowder.png",
-        alt: "Matcha en polvo premium de primera cosecha"
-      },
-
-    ],
-    hojicha: [
-      {
-        src: "/HojichaBag.png",
-        alt: "Bolsa de hojicha Shizuku"
-      },
-      {
-        src: "/HojichaPowder.png",
-        alt: "Hojicha en polvo"
-      }
-    ],
-    sencha: [
-      {
-        src: "/TeaFarmTea.png",
-        alt: "Sencha Shizuku"
-      },
-      {
-        src: "/TeaPlant.png",
-        alt: "Plantas de té"
-      }
-    ]
-  };
+const Products = ({ data }: { data: Tea[] }) => {
+  const [selectedProduct, setSelectedProduct] = useState<number>(0);
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const currentImages = productImages[selectedProduct];
+  const currentProduct = data[selectedProduct];
+  const productImages = [ "PRODUCT.jpg","FULL.jpg", "BAG.jpg"]
 
   const nextImage = () => {
-    setCurrentImageIndex((prev) => 
-      prev === currentImages.length - 1 ? 0 : prev + 1
+    setCurrentImageIndex((prev) =>
+      prev === productImages.length - 1 ? 0 : prev + 1,
     );
   };
 
   const prevImage = () => {
-    setCurrentImageIndex((prev) => 
-      prev === 0 ? currentImages.length - 1 : prev - 1
+    setCurrentImageIndex((prev) =>
+      prev === 0 ? productImages.length - 1 : prev - 1,
     );
   };
 
@@ -64,81 +29,9 @@ const Products = () => {
     setCurrentImageIndex(index);
   };
 
-  const products = {
-    matcha: {
-      name: "Matcha Shizu no Midori",
-      subtitle: "抹茶",
-      description: "Té verde molido en piedra. Origen Shizuoka, Japón. Cultivar Okumidori.",
-      quality: "Calidad premium",
-      use: "Formulación especializada para lattes y bebidas selectas",
-      sizes: [
-        {
-          size: "30g",
-          price: 350
-        },
-        {
-          size: "100g",
-          price: 950,
-          badge: "Mejor valor"
-        }
-      ],
-      characteristics: [
-        "Cosecha estacional",
-        "Notas verdes dulces",
-        "Hierba fresca",
-        "Toques cremosos"
-      ],
-      tasteProfile: [
-        "Dulzor vegetal",
-        "Umami moderado",
-        "Amargor bajo",
-        "Cuerpo medio a cremoso"
-      ],
-      features: [
-        "Stone-ground • Molido en piedra",
-        "Origen Shizuoka, Japón",
-        "Cultivar Okumidori",
-        "Guía de preparación incluida"
-      ]
-    },
-    hojicha: {
-      name: "Hojicha",
-      description: "Té verde tostado japonés con sabor suave y aroma reconfortante",
-      sizes: [
-        {
-          size: "40g"
-        }
-      ],
-      features: [
-        "Tostado tradicional japonés",
-        "Bajo en cafeína, ideal para cualquier hora",
-        "Sabor suave y reconfortante",
-        "Perfecto para bebidas de tarde"
-      ]
-    },
-    sencha: {
-      name: "Sencha",
-      description: "Té verde japonés premium, el más popular en Japón",
-      sizes: [
-        {
-          size: "50g"
-        }
-      ],
-      features: [
-        "Hojas de primera cosecha",
-        "Rico en antioxidantes y L-teanina",
-        "Sabor fresco y vegetal característico",
-        "Experiencia clásica de té japonés"
-      ]
-    }
-  };
-
-  const currentProduct = products[selectedProduct];
-
   return (
     <section id="products" className="section-padding bg-washi-bg">
       <div className="container-custom">
-        
         {/* Header with Elegant Typography */}
         <div className="text-center mb-16 lg:mb-20 space-y-6">
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-forest-green">
@@ -149,8 +42,9 @@ const Products = () => {
           </h2>
           <div className="w-20 h-px bg-forest-green/30 mx-auto"></div>
           <p className="text-base md:text-lg text-charcoal-light max-w-xl mx-auto font-light leading-relaxed">
-            Tés japoneses premium importados directamente de Shizuoka. 
-            Matcha de primera cosecha, ideal para preparación tradicional y bebidas modernas.
+            Tés japoneses premium importados directamente de Shizuoka. Matcha de
+            primera cosecha, ideal para preparación tradicional y bebidas
+            modernas.
           </p>
         </div>
 
@@ -161,45 +55,24 @@ const Products = () => {
               Selecciona tu té
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              <button
-                onClick={() => {
-                  setSelectedProduct('matcha');
-                  setCurrentImageIndex(0);
-                }}
-                className={`relative px-8 py-3 transition-all duration-500 font-mono text-xs uppercase tracking-[0.15em] ${
-                  selectedProduct === 'matcha'
-                    ? 'bg-forest-green text-washi-bg'
-                    : 'bg-transparent text-charcoal-light border border-charcoal/20 hover:border-forest-green/40'
-                }`}
-              >
-                matcha
-              </button>
-              <button
-                onClick={() => {
-                  setSelectedProduct('hojicha');
-                  setCurrentImageIndex(0);
-                }}
-                className={`px-8 py-3 transition-all duration-500 font-mono text-xs uppercase tracking-[0.15em] ${
-                  selectedProduct === 'hojicha'
-                    ? 'bg-forest-green text-washi-bg'
-                    : 'bg-transparent text-charcoal-light border border-charcoal/20 hover:border-forest-green/40'
-                }`}
-              >
-                hojicha
-              </button>
-              <button
-                onClick={() => {
-                  setSelectedProduct('sencha');
-                  setCurrentImageIndex(0);
-                }}
-                className={`px-8 py-3 transition-all duration-500 font-mono text-xs uppercase tracking-[0.15em] ${
-                  selectedProduct === 'sencha'
-                    ? 'bg-forest-green text-washi-bg'
-                    : 'bg-transparent text-charcoal-light border border-charcoal/20 hover:border-forest-green/40'
-                }`}
-              >
-                sencha
-              </button>
+              {data.map((tea, index) => {
+                return (
+                  <button
+                    key={tea.id}
+                    onClick={() => {
+                      setSelectedProduct(index);
+                      setCurrentImageIndex(0)
+                    }}
+                    className={`px-8 py-3 transition-all duration-500 font-mono text-xs uppercase tracking-[0.15em] ${
+                      selectedProduct === index
+                        ? "bg-forest-green text-washi-bg"
+                        : "bg-transparent text-charcoal-light border border-charcoal/20 hover:border-forest-green/40"
+                    }`}
+                  >
+                    {tea.NameShort}
+                  </button>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -207,29 +80,31 @@ const Products = () => {
         {/* Product Display - Clean Layout */}
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-start">
-            
             {/* Image Side */}
             <div className="space-y-8">
               <div className="relative">
                 {/* Main Image Container */}
                 <div className="aspect-[4/5] relative overflow-hidden bg-cream">
-                  <img 
-                    src={currentImages[currentImageIndex].src}
-                    alt={currentImages[currentImageIndex].alt}
-                    className="w-full h-full object-cover transition-opacity duration-700"
+                  <Image
+                    src={`/${currentProduct.NameShort.replace(" ", "").toUpperCase()}/${productImages[currentImageIndex]}`}
+                    alt={currentProduct.Name}
+                    fill
+                    loading="eager"
+                    className="object-cover transition-opacity duration-700"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
 
                   {/* Navigation Arrows */}
-                  {currentImages.length > 1 && (
+                  {(
                     <>
-                      <button 
+                      <button
                         onClick={prevImage}
                         className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-washi-bg/90 backdrop-blur-sm hover:bg-washi-bg flex items-center justify-center text-charcoal transition-all duration-300"
                         aria-label="Imagen anterior"
                       >
                         <ChevronLeft size={20} />
                       </button>
-                      <button 
+                      <button
                         onClick={nextImage}
                         className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-washi-bg/90 backdrop-blur-sm hover:bg-washi-bg flex items-center justify-center text-charcoal transition-all duration-300"
                         aria-label="Siguiente imagen"
@@ -241,21 +116,24 @@ const Products = () => {
                 </div>
 
                 {/* Thumbnail Navigation */}
-                {currentImages.length > 1 && (
+                {productImages.length > 1 && (
                   <div className="flex gap-4 mt-6 justify-center">
-                    {currentImages.map((image, index) => (
+                    {productImages.map((image, index) => (
                       <button
                         key={index}
                         onClick={() => goToImage(index)}
                         className={`w-16 h-16 overflow-hidden transition-all duration-300 ${
-                          currentImageIndex === index 
-                            ? 'ring-1 ring-forest-green' 
-                            : 'opacity-40 hover:opacity-70'
+                          currentImageIndex === index
+                            ? "ring-1 ring-forest-green"
+                            : "opacity-40 hover:opacity-70"
                         }`}
                       >
-                        <img 
-                          src={image.src}
+                        <Image
+                          src={`/${currentProduct.NameShort.replace(" ", "").toUpperCase()}/${image}`}
                           alt={`Miniatura ${index + 1}`}
+                          width={64}
+                          height={64}
+                          loading="eager"
                           className="w-full h-full object-cover"
                         />
                       </button>
@@ -267,32 +145,31 @@ const Products = () => {
 
             {/* Content Side */}
             <div className="space-y-10 pt-4">
-              
               {/* Product Name */}
               <div className="space-y-3">
                 <h3 className="text-4xl md:text-5xl font-serif text-washi-text font-light tracking-tight">
-                  {currentProduct.name}
+                  {currentProduct.Name}
                 </h3>
-                {'subtitle' in currentProduct && (
+                {"Kanji" in currentProduct && (
                   <p className="text-2xl text-charcoal-light font-script">
-                    {currentProduct.subtitle}
+                    {currentProduct.Kanji}
                   </p>
                 )}
-                {'quality' in currentProduct && (
+                {"Caption" in currentProduct && (
                   <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-forest-green">
-                    {currentProduct.quality}
+                    {currentProduct.Caption}
                   </p>
                 )}
               </div>
-              
+
               {/* Description */}
               <p className="text-base text-charcoal-light font-light leading-relaxed">
-                {currentProduct.description}
+                {currentProduct.Description}
               </p>
-              
-              {'use' in currentProduct && (
+
+              {"Quote" in currentProduct && (
                 <p className="text-sm text-charcoal-light/80 italic border-l border-forest-green/30 pl-6 font-light">
-                  {currentProduct.use}
+                  {currentProduct.Quote}
                 </p>
               )}
 
@@ -302,16 +179,18 @@ const Products = () => {
                   Presentaciones
                 </h4>
                 <div className="space-y-3">
-                  {currentProduct.sizes.map((sizeInfo, index) => {
-                    const sizeNumber = sizeInfo.size.replace('g', '').replace('G', '');
+                  {currentProduct.Presentations.map((sizeInfo, index) => {
                     return (
-                      <div key={index} className="flex items-center justify-between py-3 border-b border-charcoal/5">
+                      <div
+                        key={index}
+                        className="flex items-center justify-between py-3 border-b border-charcoal/5"
+                      >
                         <span className="font-mono text-sm tracking-wide text-washi-text">
-                          Lata {sizeNumber} g
+                          {sizeInfo.Name} {sizeInfo.Amount} {sizeInfo.Type}
                         </span>
-                        {'price' in sizeInfo && sizeInfo.price && (
+                        {"Price" in sizeInfo && sizeInfo.Price && (
                           <span className="text-base text-charcoal-light">
-                            ${sizeInfo.price} MXN
+                            ${sizeInfo.Price} MXN
                           </span>
                         )}
                       </div>
@@ -321,15 +200,18 @@ const Products = () => {
               </div>
 
               {/* Taste Profile */}
-              {'tasteProfile' in currentProduct && (
+              {"Profile" in currentProduct && (
                 <div className="space-y-4">
                   <h4 className="font-mono text-[10px] uppercase tracking-[0.25em] text-charcoal-light/70">
                     Perfil de sabor
                   </h4>
                   <ul className="grid grid-cols-2 gap-3">
-                    {currentProduct.tasteProfile.map((item, index) => (
-                      <li key={index} className="text-sm text-charcoal-light font-light">
-                        {item}
+                    {currentProduct.Profile.map((item, index) => (
+                      <li
+                        key={index}
+                        className="text-sm text-charcoal-light font-light"
+                      >
+                        {item.Content}
                       </li>
                     ))}
                   </ul>
@@ -338,8 +220,8 @@ const Products = () => {
 
               {/* CTA */}
               <div className="pt-8">
-                <a 
-                  href="https://www.instagram.com/shizukumatchastudio/" 
+                <a
+                  href="https://www.instagram.com/shizukumatchastudio/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 border border-forest-green text-forest-green px-8 py-4 font-mono text-xs uppercase tracking-[0.15em] hover:bg-forest-green hover:text-washi-bg transition-all duration-500 w-full justify-center"
