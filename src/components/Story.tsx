@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const Story = () => {
   return (
@@ -23,10 +24,12 @@ const Story = () => {
             
             {/* Large Feature Image */}
             <div className="aspect-[4/3] md:aspect-auto md:h-[60vh] relative bg-cream">
-              <img 
+              <Image 
                 src="/EKI.jpg"
                 alt="Matcha Shizu no Midori en Shizuoka, Japón" 
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
               <div className="absolute bottom-0 left-0 bg-washi-bg/95 backdrop-blur-sm p-8 max-w-sm">
                 <p className="font-serif text-xl text-washi-text font-light tracking-tight mb-1">Shizuoka, Japón</p>
@@ -53,11 +56,13 @@ const Story = () => {
           {/* Experiences Gallery - Clean Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
             <div className="space-y-6">
-              <div className="aspect-square bg-washi-bg overflow-hidden">
-                <img 
+              <div className="aspect-square bg-washi-bg overflow-hidden relative">
+                <Image 
                   src="/TEA_FIELD.jpg"
                   alt="Plantación de té en Shizuoka" 
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  fill
+                  className="object-cover transition-transform duration-700 hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
               <div className="space-y-3">
@@ -72,11 +77,13 @@ const Story = () => {
             </div>
 
             <div className="space-y-6">
-              <div className="aspect-square bg-washi-bg overflow-hidden">
-                <img 
+              <div className="aspect-square bg-washi-bg overflow-hidden relative">
+                <Image 
                   src="/MATCHA_WISK.jpg"
                   alt="Preparación tradicional de matcha con chasen" 
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  fill
+                  className="object-cover transition-transform duration-700 hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
               <div className="space-y-3">
@@ -91,11 +98,13 @@ const Story = () => {
             </div>
 
             <div className="space-y-6">
-              <div className="aspect-square bg-washi-bg overflow-hidden">
-                <img 
-                  src="/TEA_PLANT.jpg"
+              <div className="aspect-square bg-washi-bg overflow-hidden relative">
+                <Image 
+                  src="/TEA_SESSION_EMPTY.jpg"
                   alt="Plantas de té en Shizuoka" 
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  fill
+                  className="object-cover transition-transform duration-700 hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
               <div className="space-y-3">

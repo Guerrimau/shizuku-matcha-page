@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { Instagram, Sparkles, Clock, Leaf } from "lucide-react";
 import { type Experience } from "@/app/types";
 
@@ -25,10 +26,12 @@ const Experience = ({ data }: { data: Experience }) => {
           <div className="grid md:grid-cols-2 gap-0">
             {/* Image Side */}
             <div className="aspect-[4/3] relative bg-cream">
-              <img
-                src="/WISK.jpg"
+              <Image
+                src="/TEA_PLANT.jpg"
                 alt="Matcha en polvo - energía natural"
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent">
                 <div className="absolute bottom-12 left-12 text-white space-y-2">
@@ -80,11 +83,13 @@ const Experience = ({ data }: { data: Experience }) => {
               const images = ["MATCHA_BOWL", "MATCHA_LATTE_HOT", "MATCHA_LATTE"]
               return (
               <div className="space-y-6">
-                <div className="aspect-square bg-cream overflow-hidden">
-                  <img
+                <div className="aspect-square bg-cream overflow-hidden relative">
+                  <Image
                     src={`/${images[index]}.jpg`}
-                    alt="Matcha tradicional"
-                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                    alt={preparation.Name}
+                    fill
+                    className="object-cover transition-transform duration-700 hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
                 <div className="space-y-2">

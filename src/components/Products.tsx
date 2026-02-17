@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { Instagram, ChevronLeft, ChevronRight } from "lucide-react";
 import { Tea } from "@/app/types";
 
@@ -60,6 +61,7 @@ const Products = ({ data }: { data: Tea[] }) => {
                     key={tea.id}
                     onClick={() => {
                       setSelectedProduct(index);
+                      setCurrentImageIndex(0)
                     }}
                     className={`px-8 py-3 transition-all duration-500 font-mono text-xs uppercase tracking-[0.15em] ${
                       selectedProduct === index
@@ -83,9 +85,13 @@ const Products = ({ data }: { data: Tea[] }) => {
               <div className="relative">
                 {/* Main Image Container */}
                 <div className="aspect-[4/5] relative overflow-hidden bg-cream">
-                  <img
+                  <Image
                     src={`/${currentProduct.NameShort.replace(" ", "").toUpperCase()}/${productImages[currentImageIndex]}`}
-                    className="w-full h-full object-cover transition-opacity duration-700"
+                    alt={currentProduct.Name}
+                    fill
+                    loading="eager"
+                    className="object-cover transition-opacity duration-700"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
 
                   {/* Navigation Arrows */}
@@ -122,9 +128,12 @@ const Products = ({ data }: { data: Tea[] }) => {
                             : "opacity-40 hover:opacity-70"
                         }`}
                       >
-                        <img
+                        <Image
                           src={`/${currentProduct.NameShort.replace(" ", "").toUpperCase()}/${image}`}
                           alt={`Miniatura ${index + 1}`}
+                          width={64}
+                          height={64}
+                          loading="eager"
                           className="w-full h-full object-cover"
                         />
                       </button>
