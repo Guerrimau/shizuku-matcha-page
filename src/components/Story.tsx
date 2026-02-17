@@ -24,7 +24,7 @@ const Story = () => {
             {/* Large Feature Image */}
             <div className="aspect-[4/3] md:aspect-auto md:h-[60vh] relative bg-cream">
               <img 
-                src="/ShiShizuoka.png"
+                src="/EKI.jpg"
                 alt="Matcha Shizu no Midori en Shizuoka, Japón" 
                 className="w-full h-full object-cover"
               />
@@ -55,7 +55,7 @@ const Story = () => {
             <div className="space-y-6">
               <div className="aspect-square bg-washi-bg overflow-hidden">
                 <img 
-                  src="/TeaFarm.png"
+                  src="/TEA_FIELD.jpg"
                   alt="Plantación de té en Shizuoka" 
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
@@ -74,7 +74,7 @@ const Story = () => {
             <div className="space-y-6">
               <div className="aspect-square bg-washi-bg overflow-hidden">
                 <img 
-                  src="/TeaWhisk.png"
+                  src="/MATCHA_WISK.jpg"
                   alt="Preparación tradicional de matcha con chasen" 
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
@@ -93,7 +93,7 @@ const Story = () => {
             <div className="space-y-6">
               <div className="aspect-square bg-washi-bg overflow-hidden">
                 <img 
-                  src="/TeaPlant.png"
+                  src="/TEA_PLANT.jpg"
                   alt="Plantas de té en Shizuoka" 
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />

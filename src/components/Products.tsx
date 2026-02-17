@@ -7,64 +7,26 @@ import { Tea } from "@/app/types";
 const Products = ({ data }: { data: Tea[] }) => {
   const [selectedProduct, setSelectedProduct] = useState<number>(0);
 
-  const productImages = {
-    matcha: [
-      {
-        src: "/MatchaProducts.png",
-        alt: "Productos de matcha Shizuku",
-      },
-      {
-        src: "/MatchaLatte.png",
-        alt: "Matcha latte preparado",
-      },
-      {
-        src: "/MatchaPowder.png",
-        alt: "Matcha en polvo premium de primera cosecha",
-      },
-    ],
-    hojicha: [
-      {
-        src: "/HojichaBag.png",
-        alt: "Bolsa de hojicha Shizuku",
-      },
-      {
-        src: "/HojichaPowder.png",
-        alt: "Hojicha en polvo",
-      },
-    ],
-    sencha: [
-      {
-        src: "/TeaFarmTea.png",
-        alt: "Sencha Shizuku",
-      },
-      {
-        src: "/TeaPlant.png",
-        alt: "Plantas de té",
-      },
-    ],
-  };
-
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const currentImages = productImages.matcha;
+  const currentProduct = data[selectedProduct];
+  const productImages = [ "PRODUCT.jpg","FULL.jpg", "BAG.jpg"]
 
   const nextImage = () => {
     setCurrentImageIndex((prev) =>
-      prev === currentImages.length - 1 ? 0 : prev + 1,
+      prev === productImages.length - 1 ? 0 : prev + 1,
     );
   };
 
   const prevImage = () => {
     setCurrentImageIndex((prev) =>
-      prev === 0 ? currentImages.length - 1 : prev - 1,
+      prev === 0 ? productImages.length - 1 : prev - 1,
     );
   };
 
   const goToImage = (index: number) => {
     setCurrentImageIndex(index);
   };
-
-  const currentProduct = data[selectedProduct];
 
   return (
     <section id="products" className="section-padding bg-washi-bg">
@@ -122,13 +84,12 @@ const Products = ({ data }: { data: Tea[] }) => {
                 {/* Main Image Container */}
                 <div className="aspect-[4/5] relative overflow-hidden bg-cream">
                   <img
-                    src={currentImages[currentImageIndex].src}
-                    alt={currentImages[currentImageIndex].alt}
+                    src={`/${currentProduct.NameShort.replace(" ", "").toUpperCase()}/${productImages[currentImageIndex]}`}
                     className="w-full h-full object-cover transition-opacity duration-700"
                   />
 
                   {/* Navigation Arrows */}
-                  {currentImages.length > 1 && (
+                  {(
                     <>
                       <button
                         onClick={prevImage}
@@ -149,9 +110,9 @@ const Products = ({ data }: { data: Tea[] }) => {
                 </div>
 
                 {/* Thumbnail Navigation */}
-                {currentImages.length > 1 && (
+                {productImages.length > 1 && (
                   <div className="flex gap-4 mt-6 justify-center">
-                    {currentImages.map((image, index) => (
+                    {productImages.map((image, index) => (
                       <button
                         key={index}
                         onClick={() => goToImage(index)}
@@ -162,7 +123,7 @@ const Products = ({ data }: { data: Tea[] }) => {
                         }`}
                       >
                         <img
-                          src={image.src}
+                          src={`/${currentProduct.NameShort.replace(" ", "").toUpperCase()}/${image}`}
                           alt={`Miniatura ${index + 1}`}
                           className="w-full h-full object-cover"
                         />

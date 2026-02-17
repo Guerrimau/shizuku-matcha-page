@@ -26,7 +26,7 @@ const Experience = ({ data }: { data: Experience }) => {
             {/* Image Side */}
             <div className="aspect-[4/3] relative bg-cream">
               <img
-                src="/MatchaPowder.png"
+                src="/WISK.jpg"
                 alt="Matcha en polvo - energía natural"
                 className="w-full h-full object-cover"
               />
@@ -76,25 +76,27 @@ const Experience = ({ data }: { data: Experience }) => {
         {/* Usage Examples - Clean Grid */}
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
-            {data.Preparations.map((praparation) => (
+            {data.Preparations.map((preparation, index) =>{
+              const images = ["MATCHA_BOWL", "MATCHA_LATTE_HOT", "MATCHA_LATTE"]
+              return (
               <div className="space-y-6">
                 <div className="aspect-square bg-cream overflow-hidden">
                   <img
-                    src="/BowlWithMatcha.png"
+                    src={`/${images[index]}.jpg`}
                     alt="Matcha tradicional"
                     className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                   />
                 </div>
                 <div className="space-y-2">
                   <h4 className="font-serif text-2xl text-washi-text font-light tracking-tight">
-                    Tradicional
+                    {preparation.Name}
                   </h4>
                   <p className="text-sm text-charcoal-light font-light leading-relaxed">
-                    La forma más pura de disfrutar el matcha
+                    {preparation.Description}
                   </p>
                 </div>
               </div>
-            ))}
+            )})}
           </div>
         </div>
       </div>

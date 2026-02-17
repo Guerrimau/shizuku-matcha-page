@@ -78,7 +78,7 @@ const Hero = () => {
           <div className="order-1 md:order-2 relative">
             <div className="relative aspect-[3/4] md:aspect-[4/5] overflow-hidden">
               <img 
-                src="/BowlWithMatcha.png" 
+                src="/TEA_SESSION_EMPTY.jpg" 
                 alt="Ritual de matcha - preparación ceremonial" 
                 className="w-full h-full object-cover transition-transform duration-700 ease-out"
                 style={{

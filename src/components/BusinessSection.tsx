@@ -52,7 +52,7 @@ const BusinessSection = () => {
             <div className="bg-washi-bg p-6 lg:p-8 flex items-center justify-center">
               <div className="aspect-[4/3] w-full relative overflow-hidden">
                 <img 
-                  src="/CoffeeShop.png" 
+                  src="/MATCHA_BAG.jpg" 
                   alt="Cafetería con matcha premium" 
                   className="w-full h-full object-cover"
                 />

@@ -10,7 +10,7 @@ export const getFaqs = async () => {
 
 export const getTeas = async () => {
   const response = await query<{ data: Tea[] }>("products?populate=*");
-  return response.data;
+  return response.data.sort((a,b) => b.id - a.id);
 };
 
 export const getExperience = async () => {
