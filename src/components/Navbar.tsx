@@ -52,13 +52,13 @@ const Navbar = () => {
             onClick={handleLogoClick}
             className="flex items-center gap-2 transition-colors duration-500 group"
           >
-            <Image 
+            {/* <Image 
               src="/ShizukuIcon.png" 
               alt="Shizuku Matcha Studio" 
               width={48} 
               height={48}
               className="transition-opacity duration-500"
-            />
+            /> */}
             <div className="flex flex-col items-start">
               <span className="text-2xl md:text-3xl font-serif font-medium text-washi-text transition-colors duration-500 tracking-[0.08em]">
                 Shizuku
