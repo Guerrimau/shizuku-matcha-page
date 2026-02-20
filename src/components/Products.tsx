@@ -42,9 +42,9 @@ const Products = ({ data }: { data: Tea[] }) => {
           </h2>
           <div className="w-20 h-px bg-forest-green/30 mx-auto"></div>
           <p className="text-base md:text-lg text-charcoal-light max-w-xl mx-auto font-light leading-relaxed">
-            Tés japoneses premium importados directamente de Shizuoka. Matcha de
-            primera cosecha, ideal para preparación tradicional y bebidas
-            modernas.
+            Tés japoneses de especialidad importados de Shizuoka. Matcha de
+            primera cosecha, cultivar Okumidori. Perfil balanceado para lattes
+            y preparación tradicional.
           </p>
         </div>
 

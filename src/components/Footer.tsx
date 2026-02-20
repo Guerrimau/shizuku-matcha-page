@@ -23,13 +23,16 @@ const Footer = () => {
           
           {/* Description */}
           <p className="text-base text-washi-bg/80 max-w-xl mx-auto font-light leading-relaxed">
-            Llevando el arte del matcha japonés a Hermosillo, Sonora, una gota de belleza a la vez.
+            Shizuku Matcha Studio. Shizuoka — México.
           </p>
           
           {/* Location Detail */}
-          <div className="pt-8">
+          <div className="pt-8 space-y-2">
             <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-washi-bg/50">
-              Hermosillo, MX — 29.07° N, 110.95° W
+              Despacho local en Hermosillo y envíos nacionales
+            </p>
+            <p className="font-mono text-[10px] tracking-[0.15em] text-washi-bg/40">
+              29.07° N, 110.95° W
             </p>
           </div>
           
