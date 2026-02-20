@@ -47,19 +47,19 @@ const Hero = () => {
             {/* Small Label */}
             <div className="space-y-3">
               <p className="font-mono text-xs uppercase tracking-[0.2em] text-forest-green">
-                Hermosillo, MX
+                Primera Cosecha
               </p>
               <div className="w-16 h-px bg-forest-green"></div>
             </div>
 
             {/* Main Headline */}
             <h1 className="text-5xl lg:text-6xl xl:text-7xl font-serif font-light tracking-tight text-washi-text leading-[1.1]">
-              El arte de<br />la quietud.
+              Matcha Shizu no Midori.
             </h1>
             
             {/* Subheadline */}
             <p className="text-lg md:text-xl text-charcoal-light leading-relaxed font-light max-w-md">
-              Matcha premium de Shizuoka, curado para el ritual moderno en Hermosillo, Sonora.
+              Importado directamente de Shizuoka, Japón. Curado para el matcha latte perfecto.
             </p>
             
             {/* Ghost CTA - Lowercase for modern studio feel */}
@@ -75,12 +75,12 @@ const Hero = () => {
 
           </div>
 
-          {/* Right Side - Ritual-Focused Lifestyle Image */}
+          {/* Right Side - Product Lifestyle Image */}
           <div className="order-1 md:order-2 relative">
             <div className="relative aspect-[3/4] md:aspect-[4/5] overflow-hidden">
               <Image 
                 src="/WISK.jpg" 
-                alt="Ritual de matcha - preparación ceremonial" 
+                alt="Preparación de matcha de especialidad con chasen" 
                 fill
                 priority
                 className="object-cover transition-transform duration-700 ease-out"
@@ -98,10 +98,10 @@ const Hero = () => {
             {/* Floating Detail Element */}
             <div className="absolute -bottom-8 -left-8 md:-left-12 bg-washi-bg border border-forest-green/20 p-6 md:p-8 max-w-xs shadow-lg">
               <p className="font-mono text-xs uppercase tracking-[0.15em] text-forest-green mb-2">
-                Desde Shizuoka
+                Ficha Técnica
               </p>
               <p className="text-sm text-charcoal-light leading-relaxed font-light">
-                Matcha de primera cosecha, molido en piedra, de las montañas de Shizuoka.
+                Cultivar Okumidori. Té verde Tencha molido en piedra. Umami moderado, amargor bajo. Desarrollado para mantener estructura y color en preparaciones con leche.
               </p>
             </div>
           </div>

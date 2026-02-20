@@ -43,11 +43,11 @@ const Story = () => {
                 <p className="text-charcoal-light font-light leading-relaxed text-base">
                   Nuestro viaje nos llevó a Shizuoka, la región más importante de Japón 
                   para la producción de té. Visitamos las plantaciones donde se cultiva 
-                  nuestro matcha y conocimos a los maestros que preservan esta tradición milenaria.
+                  nuestro matcha y conocimos a los productores que preservan el proceso de molido lento en piedra.
                 </p>
                 <p className="text-charcoal-light font-light leading-relaxed text-base">
-                  Hoy traemos esa misma pasión y respeto por el matcha a Hermosillo, 
-                  compartiendo no solo el té, sino toda una cultura ancestral.
+                  Hoy importamos directamente ese matcha de especialidad a México, 
+                  manteniendo la cadena de frío y los estándares de calidad de origen.
                 </p>
               </div>
             </div>

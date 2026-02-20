@@ -30,8 +30,8 @@ const notoSerifJP = Noto_Serif_JP({
 })
 
 export const metadata: Metadata = {
-  title: 'Shizuku Matcha Studio — The art of stillness',
-  description: 'Ceremonial grade matcha from Shizuoka, curated for the modern ritual in Hermosillo, Sonora. Tés japoneses premium importados directamente de Shizuoka.',
+  title: 'Shizuku Matcha Studio | Matcha Hermosillo',
+  description: 'Premium grade matcha from Shizuoka, to Hermosillo, Sonora. Tés japoneses premium importados directamente de Shizuoka.',
   keywords: 'matcha ceremonial, matcha hermosillo, matcha sonora, té japonés premium, matcha shizuoka, ceremonial matcha mexico, japanese tea hermosillo',
   metadataBase: new URL('https://shizukumatchastudio.com'),
   openGraph: {
@@ -39,28 +39,28 @@ export const metadata: Metadata = {
     locale: 'es_MX',
     url: 'https://shizukumatchastudio.com',
     siteName: 'Shizuku Matcha Studio',
-    title: 'Shizuku Matcha Studio — The art of stillness',
-    description: 'Ceremonial grade matcha from Shizuoka, curated for the modern ritual in Hermosillo, Sonora.',
+    title: 'Shizuku Matcha Studio | Matcha de Especialidad',
+    description: 'Specialty grade matcha from Shizuoka. Okumidori cultivar. Balanced profile for lattes.',
     images: [
       {
-        url: '/BowlWithMatcha.png',
+        url: '/HERO.jpg',
         width: 1200,
         height: 630,
-        alt: 'Shizuku Matcha Studio — Ceremonial matcha preparation',
+        alt: 'Shizuku Matcha Studio — Matcha de especialidad Shizu no Midori',
       },
       {
-        url: '/MatchaMix.png',
+        url: '/MATCHA_LATTE_HOT.jpg',
         width: 1200,
         height: 630,
-        alt: 'Matcha japonés premium en Hermosillo',
+        alt: 'Matcha de especialidad importado de Shizuoka',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shizuku Matcha Studio — The art of stillness',
-    description: 'Ceremonial grade matcha from Shizuoka, curated for the modern ritual in Hermosillo, Sonora.',
-    images: ['/BowlWithMatcha.png'],
+    title: 'Shizuku Matcha Studio | Matcha de Especialidad',
+    description: 'Specialty grade matcha from Shizuoka. Okumidori cultivar. First harvest.',
+    images: ['/MATCHA_LATTE_HOT.jpg'],
   },
   robots: {
     index: true,
@@ -91,7 +91,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "Shizuku Matcha Studio",
-              "description": "Ceremonial grade matcha from Shizuoka, curated for the modern ritual in Hermosillo, Sonora. Tés japoneses premium importados directamente de Shizuoka, Japón.",
+              "description": "Specialty grade matcha from Shizuoka, Japan. First harvest Okumidori cultivar. Balanced profile for lattes. Local dispatch in Hermosillo, national shipping.",
               "url": "https://shizukumatchastudio.com",
               "image": "https://shizukumatchastudio.com/BowlWithMatcha.png",
               "priceRange": "$$",
