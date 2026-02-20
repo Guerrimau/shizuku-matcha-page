@@ -14,7 +14,7 @@ const Testimonials = () => {
       location: "Repostería local"
     },
     {
-      text: "El matcha tiene un umami increíble, y el proceso de preparación es muy meditativo. Una experiencia completa.",
+      text: "El umami es notable desde la primera taza. El color se mantiene verde intenso incluso en el latte con leche.",
       name: "Mariana L.",
       location: "Clienta frecuente"
     }
@@ -28,7 +28,7 @@ const Testimonials = () => {
             Lo que dicen nuestros clientes
           </h3>
           <p className="text-lg text-shizuku-600 max-w-2xl mx-auto font-cursive italic">
-            Experiencias auténticas de quienes han descubierto la pureza del matcha japonés en Hermosillo
+            Opiniones de quienes preparan nuestro matcha en Hermosillo
           </p>
         </div>
         

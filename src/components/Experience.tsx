@@ -10,14 +10,14 @@ const Experience = ({ data }: { data: Experience }) => {
         {/* Header */}
         <div className="text-center mb-16 lg:mb-20 space-y-6">
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-forest-green">
-            Beneficios
+            Propiedades
           </p>
           <h2 className="studio-subheading text-washi-text">
-            La experiencia Shizuku
+            ¿Por qué matcha de primera cosecha?
           </h2>
           <div className="w-20 h-px bg-forest-green/30 mx-auto"></div>
           <p className="text-base md:text-lg text-charcoal-light max-w-xl mx-auto font-light leading-relaxed">
-            Descubre los beneficios del auténtico matcha premium
+            Mayor concentración de L-teanina, clorofila y aminoácidos que cosechas posteriores
           </p>
         </div>
 

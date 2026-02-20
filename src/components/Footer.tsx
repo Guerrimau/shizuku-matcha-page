@@ -39,9 +39,9 @@ const Footer = () => {
           {/* Divider */}
           <div className="border-t border-washi-bg/10 pt-12 mt-12 space-y-4">
             <div className="flex items-center justify-center gap-2 text-washi-bg/60">
-              <span className="font-mono text-xs tracking-wide">© 2025 hecho con</span>
+              <span className="font-mono text-xs tracking-wide">© 2026</span>
               <Heart size={14} className="fill-current" />
-              <span className="font-mono text-xs tracking-wide">tradición y matcha</span>
+              <span className="font-mono text-xs tracking-wide">Shizuoka → Hermosillo</span>
             </div>
             
             <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-washi-bg/40">

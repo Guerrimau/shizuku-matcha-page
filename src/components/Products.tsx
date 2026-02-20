@@ -89,7 +89,6 @@ const Products = ({ data }: { data: Tea[] }) => {
                     src={`/${currentProduct.NameShort.replace(" ", "").toUpperCase()}/${productImages[currentImageIndex]}`}
                     alt={currentProduct.Name}
                     fill
-                    loading="eager"
                     className="object-cover transition-opacity duration-700"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
@@ -133,7 +132,6 @@ const Products = ({ data }: { data: Tea[] }) => {
                           alt={`Miniatura ${index + 1}`}
                           width={64}
                           height={64}
-                          loading="eager"
                           className="w-full h-full object-cover"
                         />
                       </button>

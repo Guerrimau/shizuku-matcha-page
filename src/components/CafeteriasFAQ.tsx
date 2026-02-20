@@ -3,74 +3,76 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
-const CafeteriasFAQ = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+const faqs = [
+  {
+    question: '¿Por qué matcha de especialidad y no ceremonial?',
+    answer: 'En Japón, el matcha se clasifica por perfil sensorial y uso, no por categorías comerciales. Nuestro matcha de primera cosecha de Shizuoka está seleccionado específicamente para bebidas con leche: alta solubilidad, color verde estable y un perfil de umami moderado que destaca sobre la base láctea sin amargor excesivo.',
+  },
+  {
+    question: '¿Qué hace que este matcha sea premium?',
+    answer: 'Primera cosecha de Shizuoka, cultivar Okumidori. Las hojas se cosechan en la primera temporada (abril-mayo) tras 20+ días de sombreado, cuando tienen la mayor concentración de L-teanina y clorofila. El proceso de molido lento en piedra preserva el perfil aromático y el color verde intenso.',
+  },
+  {
+    question: '¿Por qué funciona mejor en lattes que otros matchas?',
+    answer: 'El cultivar Okumidori tiene alta solubilidad y un perfil balanceado que mantiene estructura en preparaciones con leche. El amargor bajo y el umami moderado permiten que el matcha resalte sin dominar. El color se mantiene verde intenso incluso con leche entera.',
+  },
+  {
+    question: '¿Por qué el precio es más accesible?',
+    answer: 'Importamos directamente de productores en Shizuoka, sin intermediarios ni distribuidores. Eso nos permite ofrecer matcha de primera cosecha a un precio significativamente menor que el promedio del mercado, manteniendo la misma calidad de origen.',
+  },
+  {
+    question: '¿Qué incluye la asesoría técnica?',
+    answer: 'Guías de proporción matcha-leche, temperaturas óptimas, técnica de batido (tamizado, temperatura del agua, frío vs caliente), y recetas base para tu menú. Podemos hacer una sesión con tu equipo si lo necesitas. Sin costo adicional.',
+  },
+  {
+    question: '¿Cuál es el pedido mínimo?',
+    answer: 'No hay pedido mínimo. Puedes comenzar con una presentación estándar para evaluar el producto en tu operación antes de comprometerte a volumen. Sin contratos ni obligaciones.',
+  },
+];
 
-  const faqs = [
-    {
-      question: "¿Por qué matcha premium y no ceremonial?",
-      answer: "La categoría 'ceremonial' es en gran parte un término de marketing occidental. En Japón, el matcha se clasifica por calidad y uso. Nuestro matcha premium es de primera cosecha de Shizuoka y está específicamente seleccionado para bebidas como lattes, donde necesita disolverse bien, tener buen sabor con leche y crear una textura cremosa. Es el matcha que realmente necesitas para tu cafetería, no el que se usa en ceremonias tradicionales (que es demasiado delicado y costoso para bebidas)."
-    },
-    {
-      question: "¿Qué hace que este matcha sea premium?",
-      answer: "Nuestro matcha es de primera cosecha de Shizuoka, Japón, una de las regiones más reconocidas para matcha de calidad. Primera cosecha significa que las hojas se cosechan en la primera temporada (abril-mayo), cuando tienen el mejor sabor y mayor contenido de nutrientes. El proceso de sombreado y molienda tradicional asegura un polvo fino y de calidad superior."
-    },
-    {
-      question: "¿Por qué es mejor para lattes que el matcha ceremonial?",
-      answer: "El matcha ceremonial está diseñado para beberse solo con agua caliente, donde su sabor delicado y amargor mínimo son ideales. Para lattes y bebidas con leche, necesitas un matcha con más cuerpo y sabor que pueda destacar sobre la leche. Nuestro matcha premium tiene el equilibrio perfecto: sabor rico sin ser demasiado amargo, se disuelve bien y crea una textura cremosa ideal para bebidas de especialidad."
-    },
-    {
-      question: "¿Realmente es 50% más barato?",
-      answer: "Sí. Comparado con proveedores que venden matcha 'ceremonial' a cafeterías, nuestros precios son aproximadamente 50% más bajos porque trabajamos directamente con productores en Japón y no inflamos los precios con términos de marketing innecesarios. Obtienes matcha de primera calidad a un precio justo."
-    },
-    {
-      question: "¿Qué incluye el asesoramiento de preparación?",
-      answer: "Te proporcionamos guías técnicas sobre cómo preparar el matcha perfecto para diferentes bebidas, proporciones de matcha y leche, temperaturas ideales, técnicas de batido y recetas para tu menú. También podemos hacer sesiones de entrenamiento con tu equipo si lo necesitas. Todo incluido, sin costo adicional."
-    },
-    {
-      question: "¿Cuál es el pedido mínimo?",
-      answer: "No hay pedido mínimo. Entendemos que cada cafetería tiene necesidades diferentes. Puedes empezar con una bolsa pequeña para probar o pedir el volumen que necesites para tu operación. Sin compromisos ni obligaciones."
-    }
-  ];
+const CafeteriasFAQ = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <section id="cafeterias-faq" className="section-padding bg-white">
+    <section id="cafeterias-faq" className="section-padding bg-washi-bg">
       <div className="container-custom">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-serif text-charcoal mb-4">
-            Preguntas frecuentes
+
+        <div className="text-center mb-16 lg:mb-20 space-y-6">
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-forest-green">
+            FAQ
+          </p>
+          <h2 className="studio-subheading text-washi-text">
+            Información técnica
           </h2>
-          <div className="w-24 h-px bg-matcha mx-auto mb-6"></div>
-          <p className="text-xl text-charcoal-light max-w-2xl mx-auto">
-            Todo lo que necesitas saber sobre nuestro matcha para cafeterías
+          <div className="w-20 h-px bg-forest-green/30 mx-auto"></div>
+          <p className="text-base md:text-lg text-charcoal-light max-w-xl mx-auto font-light leading-relaxed">
+            Lo que necesitas saber antes de incorporar Shizuku a tu carta
           </p>
         </div>
 
-        {/* FAQ Items */}
-        <div className="max-w-4xl mx-auto space-y-4">
+        <div className="max-w-4xl mx-auto space-y-2">
           {faqs.map((faq, index) => (
-            <div key={index} className="bg-cream border border-charcoal/10">
+            <div key={index} className="border-b border-charcoal/10">
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-cream/80 transition-colors"
+                className="w-full py-8 flex items-center justify-between text-left hover:opacity-70 transition-opacity duration-300"
               >
-                <h3 className="font-serif text-lg md:text-xl text-charcoal pr-8">
+                <h3 className="font-serif text-xl md:text-2xl text-washi-text font-light tracking-tight pr-8">
                   {faq.question}
                 </h3>
                 {openIndex === index ? (
-                  <ChevronUp className="text-matcha flex-shrink-0" size={24} />
+                  <ChevronUp className="text-forest-green flex-shrink-0" size={20} />
                 ) : (
-                  <ChevronDown className="text-matcha flex-shrink-0" size={24} />
+                  <ChevronDown className="text-forest-green flex-shrink-0" size={20} />
                 )}
               </button>
               {openIndex === index && (
-                <div className="px-8 pb-6">
-                  <p className="text-charcoal-light leading-relaxed">
+                <div className="pb-8 pr-12">
+                  <p className="text-charcoal-light font-light leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
@@ -78,10 +80,10 @@ const CafeteriasFAQ = () => {
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
 };
 
 export default CafeteriasFAQ;
-

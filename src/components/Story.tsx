@@ -12,7 +12,7 @@ const Story = () => {
             Origen
           </p>
           <h2 className="studio-subheading text-washi-text">
-            Nuestro viaje al origen
+            De Shizuoka a Hermosillo
           </h2>
           <div className="w-20 h-px bg-forest-green/30 mx-auto"></div>
         </div>
@@ -33,7 +33,7 @@ const Story = () => {
               />
               <div className="absolute bottom-0 left-0 bg-washi-bg/95 backdrop-blur-sm p-8 max-w-sm">
                 <p className="font-serif text-xl text-washi-text font-light tracking-tight mb-1">Shizuoka, Japón</p>
-                <p className="font-mono text-xs uppercase tracking-[0.15em] text-charcoal-light">El origen de nuestro matcha premium</p>
+                <p className="font-mono text-xs uppercase tracking-[0.15em] text-charcoal-light">Región productora de nuestro cultivar Okumidori</p>
               </div>
             </div>
 
@@ -41,9 +41,9 @@ const Story = () => {
             <div className="bg-forest-green-pale/20 p-8 lg:p-16 flex items-center">
               <div className="space-y-8 max-w-lg">
                 <p className="text-charcoal-light font-light leading-relaxed text-base">
-                  Nuestro viaje nos llevó a Shizuoka, la región más importante de Japón 
-                  para la producción de té. Visitamos las plantaciones donde se cultiva 
-                  nuestro matcha y conocimos a los productores que preservan el proceso de molido lento en piedra.
+                  Shizuoka produce más del 40% del té de Japón. Ahí seleccionamos 
+                  nuestro cultivar Okumidori y conocimos a los productores que 
+                  preservan el proceso de sombreado y molido lento en piedra.
                 </p>
                 <p className="text-charcoal-light font-light leading-relaxed text-base">
                   Hoy importamos directamente ese matcha de especialidad a México, 
@@ -70,8 +70,8 @@ const Story = () => {
                   Las plantaciones
                 </h3>
                 <p className="text-sm text-charcoal-light font-light leading-relaxed">
-                  Visitamos las plantaciones de Shizuoka donde se cultiva nuestro matcha, 
-                  conociendo el cuidado y dedicación que requiere cada hoja.
+                  Cultivo bajo sombra durante 20+ días antes de la cosecha. 
+                  Este proceso incrementa la concentración de L-teanina y clorofila en cada hoja.
                 </p>
               </div>
             </div>
@@ -88,11 +88,11 @@ const Story = () => {
               </div>
               <div className="space-y-3">
                 <h3 className="font-serif text-2xl text-washi-text font-light tracking-tight">
-                  La ceremonia
+                  La preparación
                 </h3>
                 <p className="text-sm text-charcoal-light font-light leading-relaxed">
-                  Aprendimos que cada movimiento en la preparación es un arte 
-                  refinado durante siglos de tradición.
+                  Las hojas de Tencha se desvenan, se secan y se muelen en molinos de piedra 
+                  a baja velocidad para conservar el perfil aromático.
                 </p>
               </div>
             </div>
@@ -109,11 +109,11 @@ const Story = () => {
               </div>
               <div className="space-y-3">
                 <h3 className="font-serif text-2xl text-washi-text font-light tracking-tight">
-                  El origen
+                  La importación
                 </h3>
                 <p className="text-sm text-charcoal-light font-light leading-relaxed">
-                  Shizuoka, donde cada grano de matcha cuenta la historia de 
-                  una región dedicada a la excelencia del té.
+                  Cadena de frío desde Shizuoka hasta Hermosillo. 
+                  Lotes pequeños para garantizar frescura y trazabilidad completa.
                 </p>
               </div>
             </div>

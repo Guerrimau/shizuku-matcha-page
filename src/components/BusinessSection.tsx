@@ -22,8 +22,8 @@ const BusinessSection = () => {
                   ¿Tienes una cafetería?
                 </h2>
                 <p className="text-lg text-charcoal-light leading-relaxed font-light">
-                  Matcha premium para negocios en Hermosillo. Precios mayoristas,
-                  soporte especializado y calidad consistente para tu menú.
+                  Matcha de especialidad para cafeterías en Hermosillo. Precio directo de importador,
+                  asesoría técnica de preparación y perfil consistente lote a lote.
                 </p>
                 <ul className="space-y-3 text-charcoal-light font-light">
                   <li className="flex items-center gap-2">
@@ -62,10 +62,10 @@ const BusinessSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-washi-bg/80 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6 text-center">
                   <h3 className="font-serif text-2xl font-light text-charcoal mb-2">
-                    Eleva tu menú
+                    Matcha para tu carta
                   </h3>
                   <p className="text-charcoal-light font-light">
-                    Únete a las cafeterías que ya ofrecen matcha premium
+                    Mismo origen, perfil consistente, formato para volumen
                   </p>
                 </div>
               </div>

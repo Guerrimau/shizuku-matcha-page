@@ -8,36 +8,37 @@ import Experience from "@/components/Experience";
 import BusinessSection from "@/components/BusinessSection";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
+import SectionDivider from "@/components/SectionDivider";
 
 export const metadata: Metadata = {
-  title: "Shizuku Matcha Studio | Matcha Premium de Origen en Hermosillo",
+  title: "Shizuku Matcha Studio | Matcha Latte Hermosillo | Matcha de Especialidad",
   description:
-    "Matcha premium de especialidad importado de Shizuoka, Japón. Perfil balanceado e ideal para lattes. Calidad técnica de primera cosecha. Envíos a todo México.",
+    "Matcha de primera cosecha importado de Shizuoka, Japón. Cultivar Okumidori, molido en piedra. Disponible en Hermosillo con envíos a todo México.",
   keywords:
-    "matcha premium hermosillo, matcha japonés hermosillo, matcha latte, matcha ceremonial, matcha shizuoka, té japonés premium, matcha sonora, stone-ground matcha mexico, matcha okumidori, tencha molido en piedra",
+    "matcha latte hermosillo, donde comprar matcha hermosillo, matcha hermosillo, matcha shizuoka méxico, matcha primera cosecha méxico, matcha para cafeterías hermosillo, matcha mayoreo hermosillo, qué es el matcha, matcha vs ceremonial, matcha sonora, matcha okumidori",
   openGraph: {
     type: "website",
     locale: "es_MX",
     url: "https://shizukumatchastudio.com",
     siteName: "Shizuku Matcha Studio",
-    title: "Shizuku Matcha Studio | Matcha Premium de Especialidad",
+    title: "Shizuku Matcha Studio | Matcha de Especialidad en Hermosillo",
     description:
-      "Matcha de especialidad importado de Shizuoka, Japón. Cultivar Okumidori de primera cosecha. Perfil balanceado para lattes.",
+      "Matcha de origen en Shizuoka, Japón. Importado a Hermosillo. Primera cosecha, cultivar Okumidori. Envíos a todo México.",
     images: [
       {
         url: "/MATCHA_LATTE_HOT.jpg",
         width: 1200,
         height: 630,
-        alt: "Shizuku Matcha Studio — Matcha de especialidad Shizu no Midori",
+        alt: "Matcha latte preparado con Shizu no Midori en Hermosillo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shizuku Matcha Studio | Matcha de Especialidad",
+    title: "Shizuku Matcha Studio | Matcha Hermosillo",
     description:
-      "Matcha de especialidad importado de Shizuoka, Japón. Cultivar Okumidori. Primera cosecha.",
-    images: ["/MATCHA_WISK.jpg"],
+      "Matcha de origen en Shizuoka, Japón. Importado a Hermosillo. Primera cosecha. Envíos nacionales.",
+    images: ["/MATCHA_LATTE_HOT.jpg"],
   },
   alternates: {
     canonical: "https://shizukumatchastudio.com",
@@ -59,10 +60,15 @@ export default async function Home() {
     <div className="min-h-screen bg-cream">
       <Navbar />
       <Hero />
+      <SectionDivider />
       <Experience data={experience} />
+      <SectionDivider />
       <Products data={teas} />
+      <SectionDivider />
       <Story />
+      <SectionDivider />
       <FAQ data={faqs} />
+      <SectionDivider />
       <BusinessSection />
       <Footer />
     </div>

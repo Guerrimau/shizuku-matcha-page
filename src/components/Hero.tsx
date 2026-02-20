@@ -47,7 +47,7 @@ const Hero = () => {
             {/* Small Label */}
             <div className="space-y-3">
               <p className="font-mono text-xs uppercase tracking-[0.2em] text-forest-green">
-                Primera Cosecha
+                Shizuoka → Hermosillo
               </p>
               <div className="w-16 h-px bg-forest-green"></div>
             </div>
@@ -59,7 +59,7 @@ const Hero = () => {
             
             {/* Subheadline */}
             <p className="text-lg md:text-xl text-charcoal-light leading-relaxed font-light max-w-md">
-              Importado directamente de Shizuoka, Japón. Curado para el matcha latte perfecto.
+              Primera cosecha de Shizuoka, Japón. Cultivar Okumidori, importado directo a Hermosillo. Envíos a todo México.
             </p>
             
             {/* Ghost CTA - Lowercase for modern studio feel */}
