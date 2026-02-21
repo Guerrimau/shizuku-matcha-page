@@ -1,91 +1,69 @@
-import React from 'react';
-import { Star, Instagram } from 'lucide-react';
+type Testimonial = {
+  text: string;
+  name: string;
+  city: string;
+};
+
+const testimonials: Testimonial[] = [
+  {
+    text: "Llevaba meses tomando matcha de otra marca. La diferencia en el latte es inmediata — este tiene cuerpo real, no desaparece con la leche.",
+    name: "Andrea R.",
+    city: "Hermosillo, Son.",
+  },
+  {
+    text: "Por fin entendí por qué el matcha que compraba antes sabía aguado. El Okumidori tiene un verde que no había visto en ningún otro.",
+    name: "Carlos M.",
+    city: "Hermosillo, Son.",
+  },
+  {
+    text: "Lo usamos en la cafetería y nuestros clientes lo notan. Es el único matcha que hemos encontrado que rinde bien en cold latte sin perder color.",
+    name: "Sofía L.",
+    city: "Hermosillo, Son.",
+  },
+];
 
 const Testimonials = () => {
-  const testimonials = [
-    {
-      text: "Nunca imaginé que el matcha pudiera saber así. El color, la textura y el sabor son simplemente perfectos.",
-      name: "Ana G.",
-      location: "Hermosillo"
-    },
-    {
-      text: "Uso el matcha culinario para mis postres y el sabor mejora muchísimo. Mis clientes lo notaron de inmediato.",
-      name: "Javier R.",
-      location: "Repostería local"
-    },
-    {
-      text: "El umami es notable desde la primera taza. El color se mantiene verde intenso incluso en el latte con leche.",
-      name: "Mariana L.",
-      location: "Clienta frecuente"
-    }
-  ];
-
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-shizuku-50">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h3 className="text-3xl md:text-4xl font-cursive font-medium text-shizuku-800 mb-4 italic">
-            Lo que dicen nuestros clientes
-          </h3>
-          <p className="text-lg text-shizuku-600 max-w-2xl mx-auto font-cursive italic">
-            Opiniones de quienes preparan nuestro matcha en Hermosillo
+    <section id="clientes" className="section-padding bg-forest-green-pale/30">
+      <div className="container-custom">
+
+        {/* Header */}
+        <div className="text-center mb-16 lg:mb-20 space-y-6">
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-forest-green">
+            Clientes
           </p>
+          <h2 className="studio-subheading text-washi-text">
+            Lo que dicen quienes ya lo prueban
+          </h2>
+          <div className="w-20 h-px bg-forest-green/30 mx-auto"></div>
         </div>
-        
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {testimonials.map((testimonial, index) => (
-            <div 
-              key={index}
-              className="bg-shizuku-50 p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 relative border border-shizuku-100 clip-path-testimonial"
-            >
-              <div className="absolute -top-4 left-8">
-                <div className="bg-shizuku-600 w-12 h-12 flex items-center justify-center clip-path-star">
-                  <div className="flex gap-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} size={10} className="text-white fill-current" />
-                    ))}
-                  </div>
-                </div>
-              </div>
-              
-              <div className="pt-6">
-                <p className="text-shizuku-700 leading-relaxed mb-6 italic text-lg font-cursive">
-                  "{testimonial.text}"
+
+        {/* Testimonials grid */}
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
+          {testimonials.map(({ text, name, city }) => (
+            <div key={name} className="space-y-6">
+              <p className="font-serif text-xl lg:text-2xl text-washi-text font-light italic leading-relaxed">
+                {text}
+              </p>
+              <div className="border-t border-charcoal/10 pt-6 space-y-1">
+                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-washi-text">
+                  {name}
                 </p>
-                
-                <div className="border-t border-gold-200 pt-4">
-                  <p className="font-medium text-shizuku-800 mb-1 font-cursive">
-                    {testimonial.name}
-                  </p>
-                  <p className="text-shizuku-600 text-sm font-cursive italic">
-                    {testimonial.location}
-                  </p>
-                </div>
+                <p className="text-sm text-charcoal-light/60 font-light">
+                  {city}
+                </p>
               </div>
             </div>
           ))}
         </div>
-        
-        <div className="text-center space-y-4">
-          <button 
-            onClick={() => window.open('https://www.instagram.com/shizukumatchastudio/', '_blank')}
-            className="inline-flex items-center gap-3 bg-shizuku-600 text-white px-8 py-4 font-medium hover:bg-shizuku-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 mb-4 clip-path-button"
-          >
-            <Instagram size={20} />
-            Ordena por Instagram
-          </button>
-          
-          <div>
-            <a 
-              href="https://www.instagram.com/shizukumatchastudio/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-shizuku-600 hover:text-shizuku-700 transition-colors duration-300 underline font-cursive italic"
-            >
-              Ver más reseñas en Instagram
-            </a>
-          </div>
+
+        {/* Closing line */}
+        <div className="max-w-6xl mx-auto mt-16 lg:mt-20 pt-10 border-t border-charcoal/10 text-center">
+          <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-charcoal-light/50">
+            Hermosillo, Son. — Pedidos locales y envíos a todo México
+          </p>
         </div>
+
       </div>
     </section>
   );

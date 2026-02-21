@@ -1,206 +1,237 @@
-import type { Metadata } from 'next'
-import { Cormorant_Garamond, Inter, Space_Mono, Noto_Serif_JP } from 'next/font/google'
-import '@/app/globals.css'
+import type { Metadata } from "next";
+import {
+  Cormorant_Garamond,
+  Inter,
+  Space_Mono,
+  Noto_Serif_JP,
+} from "next/font/google";
+import "@/app/globals.css";
 
 const cormorant = Cormorant_Garamond({
-  weight: ['300', '400', '500', '600'],
-  subsets: ['latin'],
-  variable: '--font-cormorant',
-  display: 'swap',
-})
+  weight: ["300", "400", "500", "600"],
+  subsets: ["latin"],
+  variable: "--font-cormorant",
+  display: "swap",
+});
 
 const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-})
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 const spaceMono = Space_Mono({
-  weight: ['400', '700'],
-  subsets: ['latin'],
-  variable: '--font-space-mono',
-  display: 'swap',
-})
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-space-mono",
+  display: "swap",
+});
 
 const notoSerifJP = Noto_Serif_JP({
-  weight: ['400', '500', '600'],
-  subsets: ['latin'],
-  variable: '--font-noto-serif-jp',
-  display: 'swap',
-})
+  weight: ["400", "500", "600"],
+  subsets: ["latin"],
+  variable: "--font-noto-serif-jp",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: 'Shizuku Matcha Studio | Matcha Latte Hermosillo | Matcha de Especialidad',
-  description: 'Matcha de primera cosecha importado de Shizuoka, Japón. Cultivar Okumidori, molido en piedra. Disponible en Hermosillo con envíos a todo México.',
-  keywords: 'matcha latte hermosillo, donde comprar matcha hermosillo, matcha hermosillo, matcha shizuoka méxico, matcha primera cosecha méxico, matcha para cafeterías hermosillo, matcha mayoreo hermosillo, qué es el matcha, matcha vs ceremonial',
-  metadataBase: new URL('https://shizukumatchastudio.com'),
+  // metadataBase aquí resuelve todas las URLs relativas en todo el sitio
+  metadataBase: new URL("https://shizukumatchastudio.com"),
+
+  title: {
+    // Título por default para el homepage
+    default: "Shizuku Matcha Studio | Matcha de Shizuoka en Hermosillo",
+    // Template para subpáginas: "Matcha para Cafeterías | Shizuku Matcha Studio"
+    template: "%s | Shizuku Matcha Studio",
+  },
+
+  description:
+    "Matcha de especialidad importado directo del productor en Shizuoka, Japón. Cultivar Okumidori, primera cosecha. Envíos a Hermosillo y todo México. Desde $350 MXN.",
+
+  // keywords ya no afecta SEO en Google — removido para no confundir
+
   openGraph: {
-    type: 'website',
-    locale: 'es_MX',
-    url: 'https://shizukumatchastudio.com',
-    siteName: 'Shizuku Matcha Studio',
-    title: 'Shizuku Matcha Studio | Matcha de Especialidad en Hermosillo',
-    description: 'Matcha de origen en Shizuoka. Importado a Hermosillo. Primera cosecha, cultivar Okumidori. Envíos a todo México.',
+    type: "website",
+    locale: "es_MX",
+    siteName: "Shizuku Matcha Studio",
+    // Solo la imagen global — título y descripción se sobreescriben en cada page.tsx
     images: [
       {
-        url: '/HERO.jpg',
+        url: "/MATCHA_BOWL.jpg",
         width: 1200,
         height: 630,
-        alt: 'Matcha latte preparado con Shizu no Midori en Hermosillo',
-      },
-      {
-        url: '/MATCHA_LATTE_HOT.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Matcha de especialidad Shizuoka importado a Hermosillo',
+        alt: "Matcha Shizu no Midori en chawan — Shizuku Matcha Studio Hermosillo",
       },
     ],
   },
+
   twitter: {
-    card: 'summary_large_image',
-    title: 'Shizuku Matcha Studio | Matcha Hermosillo',
-    description: 'Matcha de origen en Shizuoka, Japón. Importado a Hermosillo. Primera cosecha. Envíos nacionales.',
-    images: ['/MATCHA_LATTE_HOT.jpg'],
+    card: "summary_large_image",
+    images: ["/MATCHA_BOWL.jpg"],
   },
+
   robots: {
     index: true,
     follow: true,
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className={`${cormorant.variable} ${inter.variable} ${spaceMono.variable} ${notoSerifJP.variable}`}>
+    <html
+      lang="es"
+      className={`${cormorant.variable} ${inter.variable} ${spaceMono.variable} ${notoSerifJP.variable}`}
+    >
       <head>
         <link rel="icon" type="image/png" href="/ShizukuIcon.png" />
+
+        {/* Schema: LocalBusiness — mejora presencia en Google Maps y búsquedas locales */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "name": "Shizuku Matcha Studio",
-              "description": "Matcha de origen en Shizuoka, Japón. Importado a Hermosillo. Primera cosecha, cultivar Okumidori. Envíos a todo México.",
-              "url": "https://shizukumatchastudio.com",
-              "image": "https://shizukumatchastudio.com/MATCHA_LATTE_HOT.jpg",
-              "priceRange": "$$",
-              "servesCuisine": "Japanese Tea",
-              "address": {
+              "@id": "https://shizukumatchastudio.com/#business",
+              name: "Shizuku Matcha Studio",
+              description:
+                "Matcha de especialidad importado directo del productor en Shizuoka, Japón. Cultivar Okumidori, primera cosecha. Envíos a Hermosillo y todo México.",
+              url: "https://shizukumatchastudio.com",
+              // AGREGA tu número real — sin esto Google no puede verificar el negocio en Maps
+              telephone: "+52-XXX-XXX-XXXX",
+              // AGREGA tu email real
+              email: "hola@shizukumatchastudio.com",
+              image: "https://shizukumatchastudio.com/HERO.jpg",
+              logo: "https://shizukumatchastudio.com/ShizukuIcon.png",
+              priceRange: "$$",
+              servesCuisine: "Japanese Tea",
+              address: {
                 "@type": "PostalAddress",
-                "addressLocality": "Hermosillo",
-                "addressRegion": "Sonora",
-                "addressCountry": "MX"
+                addressLocality: "Hermosillo",
+                addressRegion: "Sonora",
+                addressCountry: "MX",
               },
-              "geo": {
+              geo: {
                 "@type": "GeoCoordinates",
-                "latitude": "29.0729",
-                "longitude": "-110.9559"
+                latitude: 29.0729, // número, no string
+                longitude: -110.9559, // número, no string
               },
-              "areaServed": [
+              areaServed: [
                 {
                   "@type": "City",
-                  "name": "Hermosillo",
-                  "addressRegion": "Sonora",
-                  "addressCountry": "MX"
+                  name: "Hermosillo",
                 },
                 {
                   "@type": "Country",
-                  "name": "México"
-                }
+                  name: "México",
+                },
               ],
-              "openingHoursSpecification": [
+              openingHoursSpecification: [
                 {
                   "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                  "opens": "09:00",
-                  "closes": "18:00"
+                  dayOfWeek: [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                  ],
+                  opens: "09:00",
+                  closes: "18:00",
                 },
                 {
                   "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": "Saturday",
-                  "opens": "10:00",
-                  "closes": "14:00"
-                }
+                  dayOfWeek: "Saturday",
+                  opens: "10:00",
+                  closes: "14:00",
+                },
               ],
-              "sameAs": [
-                "https://www.instagram.com/shizukumatchastudio/"
-              ]
-            })
+              sameAs: ["https://www.instagram.com/shizukumatchastudio/"],
+            }),
           }}
         />
+
+        {/* Schema: Product — activa rich snippets con precio en resultados de búsqueda */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Product",
-              "name": "Matcha Shizu no Midori",
-              "description": "Matcha de especialidad de primera cosecha. Cultivar Okumidori de Shizuoka, Japón. Molido en piedra. Perfil balanceado para lattes.",
-              "image": "https://shizukumatchastudio.com/SHIZUNOMIDORI/PRODUCT.jpg",
-              "brand": {
+              name: "Matcha Shizu no Midori",
+              description:
+                "Matcha de especialidad de primera cosecha. Cultivar Okumidori de Shizuoka, Japón. Molido en piedra. Perfil balanceado para lattes y preparación tradicional.",
+              image: "https://shizukumatchastudio.com/MATCHA/BAG.jpg",
+              brand: {
                 "@type": "Brand",
-                "name": "Shizuku Matcha Studio"
+                name: "Shizuku Matcha Studio",
               },
-              "offers": {
-                "@type": "Offer",
-                "availability": "https://schema.org/InStock",
-                "priceCurrency": "MXN",
-                "priceRange": "$$",
-                "areaServed": {
-                  "@type": "Country",
-                  "name": "México"
-                },
-                "seller": {
-                  "@type": "LocalBusiness",
-                  "name": "Shizuku Matcha Studio",
-                  "address": {
-                    "@type": "PostalAddress",
-                    "addressLocality": "Hermosillo",
-                    "addressRegion": "Sonora",
-                    "addressCountry": "MX"
-                  }
-                }
-              },
-              "additionalProperty": [
+              // Dos offers = ambas presentaciones visibles en Google Shopping
+              offers: [
                 {
-                  "@type": "PropertyValue",
-                  "name": "Origen",
-                  "value": "Shizuoka, Japón"
+                  "@type": "Offer",
+                  name: "Lata 30g",
+                  price: "350",
+                  priceCurrency: "MXN",
+                  availability: "https://schema.org/InStock",
+                  url: "https://shizukumatchastudio.com",
+                  seller: {
+                    "@type": "LocalBusiness",
+                    // @id vincula este producto con el LocalBusiness de arriba
+                    "@id": "https://shizukumatchastudio.com/#business",
+                  },
                 },
                 {
-                  "@type": "PropertyValue",
-                  "name": "Cultivar",
-                  "value": "Okumidori"
+                  "@type": "Offer",
+                  name: "Lata 100g",
+                  price: "950",
+                  priceCurrency: "MXN",
+                  availability: "https://schema.org/InStock",
+                  url: "https://shizukumatchastudio.com",
+                  seller: {
+                    "@type": "LocalBusiness",
+                    "@id": "https://shizukumatchastudio.com/#business",
+                  },
                 },
+              ],
+              additionalProperty: [
                 {
                   "@type": "PropertyValue",
-                  "name": "Cosecha",
-                  "value": "Primera cosecha (Ichibancha)"
+                  name: "Origen",
+                  value: "Shizuoka, Japón",
                 },
                 {
                   "@type": "PropertyValue",
-                  "name": "Proceso",
-                  "value": "Molido en piedra"
-                }
-              ]
-            })
+                  name: "Cultivar",
+                  value: "Okumidori",
+                },
+                {
+                  "@type": "PropertyValue",
+                  name: "Cosecha",
+                  value: "Primera cosecha (Ichibancha)",
+                },
+                {
+                  "@type": "PropertyValue",
+                  name: "Proceso",
+                  value: "Molido en piedra",
+                },
+              ],
+            }),
           }}
         />
       </head>
-      <body className="font-sans bg-washi-bg text-washi-text">
-        {children}
-      </body>
+      <body className="font-sans bg-washi-bg text-washi-text">{children}</body>
     </html>
-  )
+  );
 }
