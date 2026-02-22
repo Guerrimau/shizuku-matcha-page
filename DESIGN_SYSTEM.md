@@ -264,7 +264,7 @@ font-mono text-[10px] uppercase tracking-[0.25em] text-charcoal-light/70
 
 | Archivo | Uso sugerido |
 |---------|-------------|
-| `HERO.jpg` | OG image, fondos |
+| `TEA_SESSION_EMPTY.jpg` | OG image, fondos |
 | `WISK.jpg` | Hero principal |
 | `MATCHA_LATTE_HOT.jpg` | Cafeterías hero, OG |
 | `MATCHA_LATTE.jpg` | Preparaciones |

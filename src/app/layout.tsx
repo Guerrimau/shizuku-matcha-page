@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     // IMPORTANTE: debe ser una imagen horizontal ~1200×630 para que los previews funcionen
     images: [
       {
-        url: "/HERO.jpg",
+        url: "/TEA_SESSION_EMPTY.jpg",
         width: 1200,
         height: 630,
         alt: "Shizuku Matcha Studio — Matcha de especialidad de Shizuoka en Hermosillo",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    images: ["/HERO.jpg"],
+    images: ["/TEA_SESSION_EMPTY.jpg"],
   },
 
   robots: {
@@ -113,7 +113,7 @@ export default function RootLayout({
               telephone: "+52-XXX-XXX-XXXX",
               // AGREGA tu email real
               email: "hola@shizukumatchastudio.com",
-              image: "https://shizukumatchastudio.com/HERO.jpg",
+              image: "https://shizukumatchastudio.com/TEA_SESSION_EMPTY.jpg",
               logo: "https://shizukumatchastudio.com/ShizukuIcon.png",
               priceRange: "$$",
               servesCuisine: "Japanese Tea",

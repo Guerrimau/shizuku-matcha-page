@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     locale: "es_MX",
     images: [
       {
-        url: "/HERO.jpg",
+        url: "/TEA_SESSION_EMPTY.jpg",
         width: 1200,
         height: 630,
         alt: "Shizuku Matcha Studio — Matcha de especialidad de Shizuoka en Hermosillo",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: "Matcha de Shizuoka en Hermosillo | Shizuku Matcha Studio",
     description:
       "Importado directo del productor en Shizuoka. Cultivar Okumidori, primera cosecha. Desde $350 MXN.",
-    images: ["/HERO.jpg"],
+    images: ["/TEA_SESSION_EMPTY.jpg"],
   },
 
   alternates: {
