@@ -16,18 +16,18 @@ import Testimonials from "@/components/Testimonials";
 export const metadata: Metadata = {
   title: "Matcha de Shizuoka en Hermosillo",
   description:
-    "Matcha de especialidad importado directo del productor en Shizuoka, Japón. Cultivar Okumidori, primera cosecha. Envíos a Hermosillo y todo México. Desde $350 MXN.",
+    "Matcha de especialidad importado directo del productor en Shizuoka, Japón. Cultivar Okumidori, blend estacional. Envíos a Hermosillo y todo México. Desde $350 MXN.",
 
   openGraph: {
     title: "Matcha de Shizuoka en Hermosillo | Shizuku Matcha Studio",
     description:
-      "Importado directo del productor en Shizuoka. Cultivar Okumidori, primera cosecha. Desde $350 MXN.",
+      "Importado directo del productor en Shizuoka. Cultivar Okumidori, blend estacional. Desde $350 MXN.",
     url: "https://www.shizukumatchastudio.com",
     type: "website",
     locale: "es_MX",
     images: [
       {
-        url: "/TEA_SESSION_EMPTY_LOW.jpg",
+        url: "https://www.shizukumatchastudio.com/TEA_SESSION_EMPTY_LOW.jpg",
         width: 1200,
         height: 630,
         alt: "Shizuku Matcha Studio — Matcha de especialidad de Shizuoka en Hermosillo",
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Matcha de Shizuoka en Hermosillo | Shizuku Matcha Studio",
     description:
-      "Importado directo del productor en Shizuoka. Cultivar Okumidori, primera cosecha. Desde $350 MXN.",
-    images: ["/TEA_SESSION_EMPTY_LOW.jpg"],
+      "Importado directo del productor en Shizuoka. Cultivar Okumidori, blend estacional. Desde $350 MXN.",
+    images: ["https://www.shizukumatchastudio.com/TEA_SESSION_EMPTY_LOW.jpg"],
   },
 
   alternates: {
@@ -72,9 +72,7 @@ export default async function Home() {
       <Products data={teas} />
       <SectionDivider />
       <HowToPrepare />
-      <SectionDivider />
       <Testimonials />
-      <SectionDivider />
       <FAQ data={faqs} />
       <SectionDivider />
       <BusinessSection />

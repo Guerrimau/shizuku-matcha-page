@@ -57,7 +57,7 @@ const Hero = () => {
 
             {/* Subheadline */}
             <p className="text-lg md:text-xl text-charcoal-light leading-relaxed font-light max-w-md">
-              Cultivar Okumidori, primera cosecha. Importado en lotes pequeños
+              Cultivar Okumidori, blend estacional. Importado en lotes pequeños
               para garantizar frescura. El único matcha de especialidad en
               Hermosillo.
             </p>
@@ -66,7 +66,7 @@ const Hero = () => {
             <div className="pt-4">
               <button
                 onClick={scrollToProducts}
-                className="group inline-flex items-center gap-3 text-sm lowercase tracking-wide text-washi-text transition-all duration-500 hover:gap-5"
+                className="group inline-flex items-center gap-3 text-sm tracking-wide text-forest-green-light transition-all duration-500 hover:gap-5"
               >
                 <span>Desde $350 MXN — Ordenar</span>
                 <ArrowRight
@@ -79,7 +79,7 @@ const Hero = () => {
 
           {/* Right Side - Product Lifestyle Image */}
           <div className="order-1 md:order-2 relative">
-            <div className="relative aspect-[3/4] md:aspect-[4/5] overflow-hidden">
+            <div className="relative aspect-[3/4] md:aspect-square overflow-hidden">
               <Image
                 src="/TEA_SESSION_EMPTY.jpg"
                 alt="Preparación de matcha de especialidad con chasen"

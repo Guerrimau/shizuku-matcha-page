@@ -100,7 +100,7 @@ const Story = () => {
             <div className="space-y-6">
               <div className="aspect-square bg-washi-bg overflow-hidden relative">
                 <Image 
-                  src="/TEA_SESSION_EMPTY.jpg"
+                  src="/MATCHA_BAG.jpg"
                   alt="Plantas de té en Shizuoka" 
                   fill
                   className="object-cover transition-transform duration-700 hover:scale-105"
@@ -112,7 +112,6 @@ const Story = () => {
                   La importación
                 </h3>
                 <p className="text-sm text-charcoal-light font-light leading-relaxed">
-                  Cadena de frío desde Shizuoka hasta Hermosillo. 
                   Lotes pequeños para garantizar frescura y trazabilidad completa.
                 </p>
               </div>

@@ -41,12 +41,12 @@ const Transparency = () => {
         </div>
 
         {/* Main layout — image + text */}
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-0 mb-20 lg:mb-28">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-0">
 
           {/* Image */}
           <div className="aspect-[3/4] md:aspect-auto md:min-h-[520px] relative overflow-hidden bg-washi-bg">
             <Image
-              src="/EKI.jpg"
+              src="/WISK.jpg"
               alt="Estación de Shizuoka, Japón — origen del matcha Shizuku"
               fill
               className="object-cover"
@@ -67,7 +67,7 @@ const Transparency = () => {
                   El término "matcha ceremonial" fue creado por marcas occidentales para justificar precios más altos. En Japón no existe esa categoría — solo existe matcha de mayor o menor calidad, definida por el cultivar, la cosecha y el productor.
                 </p>
                 <p>
-                  Nuestro Shizu no Midori es cultivar Okumidori, primera cosecha, de un solo productor en Shizuoka. Tiene el nivel correcto de astringencia para resaltar en preparaciones con leche sin desaparecer. No es "ceremonial". Es mejor que eso: es trazable.
+                  Nuestro Shizu no Midori es cultivar Okumidori, blend estacional de un solo productor en Shizuoka. Tiene el nivel correcto de astringencia para resaltar en preparaciones con leche sin desaparecer. No es "ceremonial". Es mejor que eso: es trazable.
                 </p>
               </div>
 
@@ -78,7 +78,7 @@ const Transparency = () => {
                 </div>
                 <div className="space-y-1">
                   <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-forest-green">Cosecha</p>
-                  <p className="text-sm text-charcoal-light font-light">Primera (Ichibancha)</p>
+                  <p className="text-sm text-charcoal-light font-light">Blend estacional</p>
                 </div>
                 <div className="space-y-1">
                   <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-forest-green">Origen</p>
@@ -92,27 +92,7 @@ const Transparency = () => {
 
             </div>
           </div>
-
         </div>
-
-        {/* Three cards */}
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-px bg-charcoal/5">
-          {cards.map(({ eyebrow, title, description }) => (
-            <div key={eyebrow} className="bg-cream p-8 lg:p-10 space-y-4">
-              <div className="w-full h-px bg-forest-green/30 mb-6"></div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-forest-green">
-                {eyebrow}
-              </p>
-              <h3 className="font-serif text-xl lg:text-2xl text-washi-text font-light tracking-tight">
-                {title}
-              </h3>
-              <p className="text-sm text-charcoal-light font-light leading-relaxed">
-                {description}
-              </p>
-            </div>
-          ))}
-        </div>
-
       </div>
     </section>
   );

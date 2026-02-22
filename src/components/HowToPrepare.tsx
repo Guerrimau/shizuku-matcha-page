@@ -89,13 +89,13 @@ const HowToPrepare = () => {
                 </div>
 
                 {/* Technical params */}
-                <div className="border-t border-charcoal/10 pt-4 space-y-2">
+                {/* <div className="border-t border-charcoal/10 pt-4 space-y-2">
                   {params.map((param) => (
                     <p key={param} className="font-mono text-[11px] tracking-wide text-charcoal-light/70">
                       · {param}
                     </p>
                   ))}
-                </div>
+                </div> */}
               </div>
 
             </div>

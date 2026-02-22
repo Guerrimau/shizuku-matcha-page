@@ -43,7 +43,7 @@ const Products = ({ data }: { data: Tea[] }) => {
           <div className="w-20 h-px bg-forest-green/30 mx-auto"></div>
           <p className="text-base md:text-lg text-charcoal-light max-w-xl mx-auto font-light leading-relaxed">
             Tés japoneses de especialidad importados de Shizuoka. Matcha de
-            primera cosecha, cultivar Okumidori. Perfil balanceado para lattes
+            blend estacional, cultivar Okumidori. Perfil balanceado para lattes
             y preparación tradicional.
           </p>
         </div>
@@ -88,6 +88,7 @@ const Products = ({ data }: { data: Tea[] }) => {
                   <Image
                     src={`/${currentProduct.NameShort.replace(" ", "").toUpperCase()}/${productImages[currentImageIndex]}`}
                     alt={currentProduct.Name}
+                    unoptimized
                     fill
                     className="object-cover transition-opacity duration-700"
                     sizes="(max-width: 768px) 100vw, 50vw"

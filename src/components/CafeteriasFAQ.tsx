@@ -6,7 +6,7 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 const faqs = [
   {
     question: '¿Por qué matcha de especialidad y no ceremonial?',
-    answer: 'En Japón, el matcha se clasifica por perfil sensorial y uso, no por categorías comerciales. Nuestro matcha de primera cosecha de Shizuoka está seleccionado específicamente para bebidas con leche: alta solubilidad, color verde estable y un perfil de umami moderado que destaca sobre la base láctea sin amargor excesivo.',
+    answer: 'En Japón, el matcha se clasifica por perfil sensorial y uso, no por categorías comerciales. Nuestro Shizu no Midori es un blend estacional de Shizuoka seleccionado específicamente para bebidas con leche: alta solubilidad, color verde estable y un perfil de umami moderado que destaca sobre la base láctea sin amargor excesivo.',
   },
   {
     question: '¿Qué hace que este matcha sea premium?',
@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     question: '¿Por qué el precio es más accesible?',
-    answer: 'Importamos directamente de productores en Shizuoka, sin intermediarios ni distribuidores. Eso nos permite ofrecer matcha de primera cosecha a un precio significativamente menor que el promedio del mercado, manteniendo la misma calidad de origen.',
+    answer: 'Importamos directamente de productores en Shizuoka, sin intermediarios ni distribuidores. Eso nos permite ofrecer matcha de especialidad a un precio significativamente menor que el promedio del mercado, manteniendo la misma calidad de origen.',
   },
   {
     question: '¿Qué incluye la asesoría técnica?',

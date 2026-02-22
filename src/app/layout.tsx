@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Matcha de especialidad importado directo del productor en Shizuoka, Japón. Cultivar Okumidori, primera cosecha. Envíos a Hermosillo y todo México. Desde $350 MXN.",
+    "Matcha de especialidad importado directo del productor en Shizuoka, Japón. Cultivar Okumidori, blend estacional. Envíos a Hermosillo y todo México. Desde $350 MXN.",
 
   // keywords ya no afecta SEO en Google — removido para no confundir
 
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     // IMPORTANTE: debe ser una imagen horizontal ~1200×630 para que los previews funcionen
     images: [
       {
-        url: "/TEA_SESSION_EMPTY_LOW.jpg",
+        url: "https://www.shizukumatchastudio.com/TEA_SESSION_EMPTY_LOW.jpg",
         width: 1200,
         height: 630,
         alt: "Shizuku Matcha Studio — Matcha de especialidad de Shizuoka en Hermosillo",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    images: ["/TEA_SESSION_EMPTY_LOW.jpg"],
+    images: ["https://www.shizukumatchastudio.com/TEA_SESSION_EMPTY_LOW.jpg"],
   },
 
   robots: {
@@ -107,7 +107,7 @@ export default function RootLayout({
               "@id": "https://www.shizukumatchastudio.com/#business",
               name: "Shizuku Matcha Studio",
               description:
-                "Matcha de especialidad importado directo del productor en Shizuoka, Japón. Cultivar Okumidori, primera cosecha. Envíos a Hermosillo y todo México.",
+                "Matcha de especialidad importado directo del productor en Shizuoka, Japón. Cultivar Okumidori, blend estacional. Envíos a Hermosillo y todo México.",
               url: "https://www.shizukumatchastudio.com",
               // AGREGA tu número real — sin esto Google no puede verificar el negocio en Maps
               telephone: "+52-XXX-XXX-XXXX",
@@ -172,7 +172,7 @@ export default function RootLayout({
               "@type": "Product",
               name: "Matcha Shizu no Midori",
               description:
-                "Matcha de especialidad de primera cosecha. Cultivar Okumidori de Shizuoka, Japón. Molido en piedra. Perfil balanceado para lattes y preparación tradicional.",
+                "Matcha de especialidad. Cultivar Okumidori de Shizuoka, Japón. Blend estacional, molido en piedra. Perfil balanceado para lattes y preparación tradicional.",
               image: "https://www.shizukumatchastudio.com/MATCHA/BAG.jpg",
               brand: {
                 "@type": "Brand",
@@ -220,7 +220,7 @@ export default function RootLayout({
                 {
                   "@type": "PropertyValue",
                   name: "Cosecha",
-                  value: "Primera cosecha (Ichibancha)",
+                  value: "Blend estacional (primera y segunda cosecha)",
                 },
                 {
                   "@type": "PropertyValue",
