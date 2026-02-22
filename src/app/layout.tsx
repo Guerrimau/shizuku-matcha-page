@@ -36,7 +36,7 @@ const notoSerifJP = Noto_Serif_JP({
 
 export const metadata: Metadata = {
   // metadataBase aquí resuelve todas las URLs relativas en todo el sitio
-  metadataBase: new URL("https://www.shizukumatchastudio.com"),
+  metadataBase: new URL("https://shizukumatchastudio.com"),
 
   title: {
     // Título por default para el homepage
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     // IMPORTANTE: debe ser una imagen horizontal ~1200×630 para que los previews funcionen
     images: [
       {
-        url: "https://www.shizukumatchastudio.com/MATCHA_LATTE_HOT_SQUARE.jpg",
+        url: "https://shizukumatchastudio.com/MATCHA_LATTE_HOT_SQUARE.jpg",
         width: 1200,
         height: 1200,
         alt: "Matcha latte caliente preparado con Shizu no Midori — Shizuku Matcha Studio Hermosillo",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    images: ["https://www.shizukumatchastudio.com/MATCHA_LATTE_HOT_SQUARE.jpg"],
+    images: ["https://shizukumatchastudio.com/MATCHA_LATTE_HOT_SQUARE.jpg"],
   },
 
   robots: {
@@ -104,17 +104,17 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "@id": "https://www.shizukumatchastudio.com/#business",
+              "@id": "https://shizukumatchastudio.com/#business",
               name: "Shizuku Matcha Studio",
               description:
                 "Matcha de especialidad importado directo del productor en Shizuoka, Japón. Cultivar Okumidori, blend estacional. Envíos a Hermosillo y todo México.",
-              url: "https://www.shizukumatchastudio.com",
+              url: "https://shizukumatchastudio.com",
               // AGREGA tu número real — sin esto Google no puede verificar el negocio en Maps
               telephone: "+52-XXX-XXX-XXXX",
               // AGREGA tu email real
               email: "hola@shizukumatchastudio.com",
-              image: "https://www.shizukumatchastudio.com/TEA_SESSION_EMPTY.jpg",
-              logo: "https://www.shizukumatchastudio.com/ShizukuIcon.png",
+              image: "https://shizukumatchastudio.com/TEA_SESSION_EMPTY.jpg",
+              logo: "https://shizukumatchastudio.com/ShizukuIcon.png",
               priceRange: "$$",
               servesCuisine: "Japanese Tea",
               address: {
@@ -173,7 +173,7 @@ export default function RootLayout({
               name: "Matcha Shizu no Midori",
               description:
                 "Matcha de especialidad. Cultivar Okumidori de Shizuoka, Japón. Blend estacional, molido en piedra. Perfil balanceado para lattes y preparación tradicional.",
-              image: "https://www.shizukumatchastudio.com/MATCHA/BAG.jpg",
+              image: "https://shizukumatchastudio.com/MATCHA/BAG.jpg",
               brand: {
                 "@type": "Brand",
                 name: "Shizuku Matcha Studio",
@@ -186,11 +186,11 @@ export default function RootLayout({
                   price: "350",
                   priceCurrency: "MXN",
                   availability: "https://schema.org/InStock",
-                  url: "https://www.shizukumatchastudio.com",
+                  url: "https://shizukumatchastudio.com",
                   seller: {
                     "@type": "LocalBusiness",
                     // @id vincula este producto con el LocalBusiness de arriba
-                    "@id": "https://www.shizukumatchastudio.com/#business",
+                    "@id": "https://shizukumatchastudio.com/#business",
                   },
                 },
                 {
@@ -199,10 +199,10 @@ export default function RootLayout({
                   price: "950",
                   priceCurrency: "MXN",
                   availability: "https://schema.org/InStock",
-                  url: "https://www.shizukumatchastudio.com",
+                  url: "https://shizukumatchastudio.com",
                   seller: {
                     "@type": "LocalBusiness",
-                    "@id": "https://www.shizukumatchastudio.com/#business",
+                    "@id": "https://shizukumatchastudio.com/#business",
                   },
                 },
               ],

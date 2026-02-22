@@ -9,8 +9,8 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/_next/', '/admin/'],
       },
     ],
-    sitemap: 'https://www.shizukumatchastudio.com/sitemap.xml',
-    host: 'https://www.shizukumatchastudio.com',
+    sitemap: 'https://shizukumatchastudio.com/sitemap.xml',
+    host: 'https://shizukumatchastudio.com',
   }
 }
 

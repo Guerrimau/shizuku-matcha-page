@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Matcha para Cafeterías de Especialidad | Shizuku Matcha Studio',
     description: 'Matcha de especialidad de Shizuoka. Cultivar Okumidori, blend estacional. Precio directo de importador. Sin pedido mínimo.',
-    url: 'https://www.shizukumatchastudio.com/matcha-cafeterias',
+    url: 'https://shizukumatchastudio.com/matcha-cafeterias',
     type: 'website',
     locale: 'es_MX',
     images: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     images: ['/TEA_SESSION_EMPTY_LOW.jpg'],
   },
   alternates: {
-    canonical: 'https://www.shizukumatchastudio.com/matcha-cafeterias',
+    canonical: 'https://shizukumatchastudio.com/matcha-cafeterias',
   },
   other: {
     'geo.region': 'MX-SON',
