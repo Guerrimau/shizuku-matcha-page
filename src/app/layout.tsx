@@ -54,20 +54,21 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_MX",
     siteName: "Shizuku Matcha Studio",
-    // Solo la imagen global — título y descripción se sobreescriben en cada page.tsx
+    // Imagen fallback global — cada page.tsx debe definir la suya explícitamente
+    // IMPORTANTE: debe ser una imagen horizontal ~1200×630 para que los previews funcionen
     images: [
       {
-        url: "/MATCHA_BOWL.jpg",
+        url: "/HERO.jpg",
         width: 1200,
         height: 630,
-        alt: "Matcha Shizu no Midori en chawan — Shizuku Matcha Studio Hermosillo",
+        alt: "Shizuku Matcha Studio — Matcha de especialidad de Shizuoka en Hermosillo",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    images: ["/MATCHA_BOWL.jpg"],
+    images: ["/HERO.jpg"],
   },
 
   robots: {

@@ -14,11 +14,7 @@ import HowToPrepare from "@/components/HowToPrepare";
 import Testimonials from "@/components/Testimonials";
 
 export const metadata: Metadata = {
-  // Next.js aplica el template del layout: "Matcha de Shizuoka en Hermosillo | Shizuku Matcha Studio"
   title: "Matcha de Shizuoka en Hermosillo",
-
-  // Misma description que el layout — se sobreescribe aquí para que sea idéntica
-  // y Google no tenga dos versiones distintas compitiendo
   description:
     "Matcha de especialidad importado directo del productor en Shizuoka, Japón. Cultivar Okumidori, primera cosecha. Envíos a Hermosillo y todo México. Desde $350 MXN.",
 
@@ -29,23 +25,29 @@ export const metadata: Metadata = {
     url: "https://shizukumatchastudio.com",
     type: "website",
     locale: "es_MX",
-    // No se repite la imagen — la hereda del layout.tsx
+    images: [
+      {
+        url: "/HERO.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Shizuku Matcha Studio — Matcha de especialidad de Shizuoka en Hermosillo",
+      },
+    ],
   },
 
   twitter: {
+    card: "summary_large_image",
     title: "Matcha de Shizuoka en Hermosillo | Shizuku Matcha Studio",
     description:
       "Importado directo del productor en Shizuoka. Cultivar Okumidori, primera cosecha. Desde $350 MXN.",
-    // No se repite la imagen — la hereda del layout.tsx
+    images: ["/HERO.jpg"],
   },
 
   alternates: {
-    // Canonical específico del homepage — va aquí, no en layout
     canonical: "https://shizukumatchastudio.com",
   },
 
   other: {
-    // Geo tags específicos de esta página
     "geo.region": "MX-SON",
     "geo.placename": "Hermosillo",
     "geo.position": "29.0729;-110.9559",
