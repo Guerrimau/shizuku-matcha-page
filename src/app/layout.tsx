@@ -40,13 +40,13 @@ export const metadata: Metadata = {
 
   title: {
     // Título por default para el homepage
-    default: "Shizuku Matcha Studio | Matcha de Shizuoka en Hermosillo",
+    default: "Shizuku Matcha Studio — Matcha de Shizuoka directo a Hermosillo",
     // Template para subpáginas: "Matcha para Cafeterías | Shizuku Matcha Studio"
     template: "%s | Shizuku Matcha Studio",
   },
 
   description:
-    "Matcha de especialidad importado directo del productor en Shizuoka, Japón. Cultivar Okumidori, blend estacional. Envíos a Hermosillo y todo México. Desde $350 MXN.",
+    "Importado directamente de Shizuoka, Japón. Cultivar Okumidori. Pickup en Hermosillo y envíos a todo México. Desde $350 MXN.",
 
   // keywords ya no afecta SEO en Google — removido para no confundir
 
@@ -58,17 +58,17 @@ export const metadata: Metadata = {
     // IMPORTANTE: debe ser una imagen horizontal ~1200×630 para que los previews funcionen
     images: [
       {
-        url: "https://www.shizukumatchastudio.com/TEA_SESSION_EMPTY_LOW.jpg",
+        url: "https://www.shizukumatchastudio.com/MATCHA_LATTE_HOT_SQUARE.jpg",
         width: 1200,
-        height: 630,
-        alt: "Shizuku Matcha Studio — Matcha de especialidad de Shizuoka en Hermosillo",
+        height: 1200,
+        alt: "Matcha latte caliente preparado con Shizu no Midori — Shizuku Matcha Studio Hermosillo",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    images: ["https://www.shizukumatchastudio.com/TEA_SESSION_EMPTY_LOW.jpg"],
+    images: ["https://www.shizukumatchastudio.com/MATCHA_LATTE_HOT_SQUARE.jpg"],
   },
 
   robots: {
