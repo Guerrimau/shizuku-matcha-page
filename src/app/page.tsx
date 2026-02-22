@@ -22,12 +22,12 @@ export const metadata: Metadata = {
     title: "Matcha de Shizuoka en Hermosillo | Shizuku Matcha Studio",
     description:
       "Importado directo del productor en Shizuoka. Cultivar Okumidori, primera cosecha. Desde $350 MXN.",
-    url: "https://shizukumatchastudio.com",
+    url: "https://www.shizukumatchastudio.com",
     type: "website",
     locale: "es_MX",
     images: [
       {
-        url: "/TEA_SESSION_EMPTY.jpg",
+        url: "/TEA_SESSION_EMPTY_LOW.jpg",
         width: 1200,
         height: 630,
         alt: "Shizuku Matcha Studio — Matcha de especialidad de Shizuoka en Hermosillo",
@@ -40,11 +40,11 @@ export const metadata: Metadata = {
     title: "Matcha de Shizuoka en Hermosillo | Shizuku Matcha Studio",
     description:
       "Importado directo del productor en Shizuoka. Cultivar Okumidori, primera cosecha. Desde $350 MXN.",
-    images: ["/TEA_SESSION_EMPTY.jpg"],
+    images: ["/TEA_SESSION_EMPTY_LOW.jpg"],
   },
 
   alternates: {
-    canonical: "https://shizukumatchastudio.com",
+    canonical: "https://www.shizukumatchastudio.com",
   },
 
   other: {

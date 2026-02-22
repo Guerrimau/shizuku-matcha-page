@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Matcha para Cafeterías de Especialidad | Shizuku Matcha Studio',
     description: 'Matcha de primera cosecha de Shizuoka. Precio directo de importador. Sin pedido mínimo. Asesoría técnica incluida.',
-    url: 'https://shizukumatchastudio.com/matcha-cafeterias',
+    url: 'https://www.shizukumatchastudio.com/matcha-cafeterias',
     type: 'website',
     locale: 'es_MX',
     images: [
       {
-        url: '/TEA_SESSION_EMPTY.jpg',
+        url: '/TEA_SESSION_EMPTY_LOW.jpg',
         width: 1200,
         height: 630,
         alt: 'Shizuku Matcha Studio — Matcha de especialidad para cafeterías en Hermosillo',
@@ -24,10 +24,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Matcha para Cafeterías de Especialidad | Shizuku Matcha Studio',
     description: 'Matcha de primera cosecha de Shizuoka. Precio directo de importador. Sin pedido mínimo.',
-    images: ['/TEA_SESSION_EMPTY.jpg'],
+    images: ['/TEA_SESSION_EMPTY_LOW.jpg'],
   },
   alternates: {
-    canonical: 'https://shizukumatchastudio.com/matcha-cafeterias',
+    canonical: 'https://www.shizukumatchastudio.com/matcha-cafeterias',
   },
   other: {
     'geo.region': 'MX-SON',
