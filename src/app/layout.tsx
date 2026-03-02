@@ -95,7 +95,9 @@ export default function RootLayout({
       className={`${cormorant.variable} ${inter.variable} ${spaceMono.variable} ${notoSerifJP.variable}`}
     >
       <head>
-        <link rel="icon" type="image/png" href="/ShizukuIcon.png" />
+        <link rel="icon" href="/favicons/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+        <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
 
         {/* Schema: LocalBusiness — mejora presencia en Google Maps y búsquedas locales */}
         <script
@@ -114,7 +116,7 @@ export default function RootLayout({
               // AGREGA tu email real
               email: "hola@shizukumatchastudio.com",
               image: "https://shizukumatchastudio.com/TEA_SESSION_EMPTY.jpg",
-              logo: "https://shizukumatchastudio.com/ShizukuIcon.png",
+              logo: "https://shizukumatchastudio.com/favicons/favicon-512x512.png",
               priceRange: "$$",
               servesCuisine: "Japanese Tea",
               address: {
