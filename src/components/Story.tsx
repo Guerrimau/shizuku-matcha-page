@@ -47,7 +47,7 @@ const Story = () => {
                 </p>
                 <p className="text-charcoal-light font-light leading-relaxed text-base">
                   Hoy importamos directamente ese matcha de especialidad a México, 
-                  manteniendo la cadena de frío y los estándares de calidad de origen.
+                  conservando los estándares de calidad del origen.
                 </p>
               </div>
             </div>
@@ -69,7 +69,7 @@ const Story = () => {
                 <h3 className="font-serif text-2xl text-washi-text font-light tracking-tight">
                   Las plantaciones
                 </h3>
-                <p className="text-sm text-charcoal-light font-light leading-relaxed">
+                <p className="text-base text-charcoal-light font-light leading-relaxed">
                   Cultivo bajo sombra durante 20+ días antes de la cosecha. 
                   Este proceso incrementa la concentración de L-teanina y clorofila en cada hoja.
                 </p>
@@ -90,7 +90,7 @@ const Story = () => {
                 <h3 className="font-serif text-2xl text-washi-text font-light tracking-tight">
                   La preparación
                 </h3>
-                <p className="text-sm text-charcoal-light font-light leading-relaxed">
+                <p className="text-base text-charcoal-light font-light leading-relaxed">
                   Las hojas de Tencha se desvenan, se secan y se muelen en molinos de piedra 
                   a baja velocidad para conservar el perfil aromático.
                 </p>
@@ -111,7 +111,7 @@ const Story = () => {
                 <h3 className="font-serif text-2xl text-washi-text font-light tracking-tight">
                   La importación
                 </h3>
-                <p className="text-sm text-charcoal-light font-light leading-relaxed">
+                <p className="text-base text-charcoal-light font-light leading-relaxed">
                   Lotes pequeños para garantizar frescura y trazabilidad completa.
                 </p>
               </div>

@@ -36,7 +36,7 @@ const Transparency = () => {
           </h2>
           <div className="w-20 h-px bg-forest-green/30 mx-auto"></div>
           <p className="text-base md:text-lg text-charcoal-light max-w-xl mx-auto font-light leading-relaxed">
-            El término no existe en Japón. Aquí te explicamos por qué eso importa.
+            El término no viene de Japón. Aquí te explicamos por qué eso importa.
           </p>
         </div>
 
@@ -58,7 +58,7 @@ const Transparency = () => {
           <div className="bg-washi-bg p-10 lg:p-16 flex items-center">
             <div className="space-y-8 max-w-lg">
 
-              <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-forest-green">
+              <p className="font-mono text-xs uppercase tracking-[0.2em] text-forest-green">
                 Shizu no Midori — Cultivar Okumidori
               </p>
 
@@ -73,20 +73,20 @@ const Transparency = () => {
 
               <div className="border-t border-charcoal/10 pt-8 grid grid-cols-2 gap-6">
                 <div className="space-y-1">
-                  <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-forest-green">Cultivar</p>
-                  <p className="text-sm text-charcoal-light font-light">Okumidori</p>
+                  <p className="font-mono text-xs uppercase tracking-[0.2em] text-forest-green">Cultivar</p>
+                  <p className="text-base text-charcoal-light font-light">Okumidori</p>
                 </div>
                 <div className="space-y-1">
-                  <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-forest-green">Cosecha</p>
-                  <p className="text-sm text-charcoal-light font-light">Blend estacional</p>
+                  <p className="font-mono text-xs uppercase tracking-[0.2em] text-forest-green">Cosecha</p>
+                  <p className="text-base text-charcoal-light font-light">Blend estacional</p>
                 </div>
                 <div className="space-y-1">
-                  <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-forest-green">Origen</p>
-                  <p className="text-sm text-charcoal-light font-light">Shizuoka, Japón</p>
+                  <p className="font-mono text-xs uppercase tracking-[0.2em] text-forest-green">Origen</p>
+                  <p className="text-base text-charcoal-light font-light">Shizuoka, Japón</p>
                 </div>
                 <div className="space-y-1">
-                  <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-forest-green">Proceso</p>
-                  <p className="text-sm text-charcoal-light font-light">Molido en piedra</p>
+                  <p className="font-mono text-xs uppercase tracking-[0.2em] text-forest-green">Proceso</p>
+                  <p className="text-base text-charcoal-light font-light">Molido en piedra</p>
                 </div>
               </div>
 

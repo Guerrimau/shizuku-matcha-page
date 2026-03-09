@@ -51,7 +51,7 @@ const Products = ({ data }: { data: Tea[] }) => {
         {/* Product Selector - Minimal Pills */}
         <div className="max-w-4xl mx-auto mb-16 lg:mb-20">
           <div className="flex flex-col items-center gap-8">
-            <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-charcoal-light/70">
+            <p className="font-mono text-xs uppercase tracking-[0.25em] text-charcoal-light/70">
               Selecciona tu té
             </p>
             <div className="flex flex-wrap justify-center gap-3">
@@ -155,7 +155,7 @@ const Products = ({ data }: { data: Tea[] }) => {
                   </p>
                 )}
                 {"Caption" in currentProduct && (
-                  <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-forest-green">
+                  <p className="font-mono text-xs uppercase tracking-[0.25em] text-forest-green">
                     {currentProduct.Caption}
                   </p>
                 )}
@@ -174,7 +174,7 @@ const Products = ({ data }: { data: Tea[] }) => {
 
               {/* Sizes */}
               <div className="space-y-4 pt-4">
-                <h4 className="font-mono text-[10px] uppercase tracking-[0.25em] text-charcoal-light/70">
+                <h4 className="font-mono text-xs uppercase tracking-[0.25em] text-charcoal-light">
                   Presentaciones
                 </h4>
                 <div className="space-y-3">
@@ -201,14 +201,14 @@ const Products = ({ data }: { data: Tea[] }) => {
               {/* Taste Profile */}
               {"Profile" in currentProduct && (
                 <div className="space-y-4">
-                  <h4 className="font-mono text-[10px] uppercase tracking-[0.25em] text-charcoal-light/70">
+                  <h4 className="font-mono text-xs uppercase tracking-[0.25em] text-charcoal-light">
                     Perfil de sabor
                   </h4>
                   <ul className="grid grid-cols-2 gap-3">
                     {currentProduct.Profile.map((item, index) => (
                       <li
                         key={index}
-                        className="text-sm text-charcoal-light font-light"
+                        className="text-base text-charcoal-light font-light"
                       >
                         {item.Content}
                       </li>

@@ -48,7 +48,7 @@ const FAQ = ({ data }: { data: Faq[] }) => {
               </button>
               {openIndex === index && (
                 <div className="pb-8 pr-12">
-                  <p className="text-charcoal-light font-light leading-relaxed">
+                  <p className="text-base text-charcoal-light font-light leading-relaxed">
                     {faq.Answer}
                   </p>
                 </div>

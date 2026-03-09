@@ -12,6 +12,7 @@ import SectionDivider from "@/components/SectionDivider";
 import Transparency from "@/components/Transparency";
 import HowToPrepare from "@/components/HowToPrepare";
 import Testimonials from "@/components/Testimonials";
+import OrderCTA from "@/components/OrderCTA";
 
 export const metadata: Metadata = {
   title: "Shizuku Matcha Studio — Matcha de Shizuoka directo a Hermosillo",
@@ -65,15 +66,14 @@ export default async function Home() {
       <Navbar />
       <Hero />
       <SectionDivider />
-      <Story />
-      <SectionDivider />
       <Transparency />
       <SectionDivider />
       <Products data={teas} />
       <SectionDivider />
-      <HowToPrepare />
+      <Story />
       <Testimonials />
       <FAQ data={faqs} />
+      <OrderCTA />
       <SectionDivider />
       <BusinessSection />
       <Footer />

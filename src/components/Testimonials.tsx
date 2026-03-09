@@ -6,17 +6,17 @@ type Testimonial = {
 
 const testimonials: Testimonial[] = [
   {
-    text: "Llevaba meses tomando matcha de otra marca. La diferencia en el latte es inmediata — este tiene cuerpo real, no desaparece con la leche.",
+    text: "Hola! Update: me ha gustado mucho! Lo tengo en mi cafeteria y se ha vendido bastante bien, muchas gracias.",
     name: "Andrea R.",
     city: "Hermosillo, Son.",
   },
   {
-    text: "Por fin entendí por qué el matcha que compraba antes sabía aguado. El Okumidori tiene un verde que no había visto en ningún otro.",
-    name: "Carlos M.",
+    text: "Muy ricooo !! 💚💚 me encanto mil graciaass.",
+    name: "Paulina M.",
     city: "Hermosillo, Son.",
   },
   {
-    text: "Lo usamos en la cafetería y nuestros clientes lo notan. Es el único matcha que hemos encontrado que rinde bien en cold latte sin perder color.",
+    text: "Sin problema mi nuevo daily matcha. Me encantó. Muchísimas gracias. Ya finalmente una buena opcion local.",
     name: "Sofía L.",
     city: "Hermosillo, Son.",
   },
@@ -42,14 +42,14 @@ const Testimonials = () => {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
           {testimonials.map(({ text, name, city }) => (
             <div key={name} className="space-y-6">
-              <p className="font-serif text-xl lg:text-2xl text-washi-text font-light italic leading-relaxed">
+              <p className="font-serif text-xl lg:text-2xl text-washi-text font-light italic leading-relaxed min-h-[130px]">
                 {text}
               </p>
               <div className="border-t border-charcoal/10 pt-6 space-y-1">
-                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-washi-text">
+                <p className="font-mono text-xs uppercase tracking-[0.2em] text-washi-text">
                   {name}
                 </p>
-                <p className="text-sm text-charcoal-light/60 font-light">
+                <p className="text-base text-charcoal-light/70 font-light">
                   {city}
                 </p>
               </div>
@@ -59,7 +59,7 @@ const Testimonials = () => {
 
         {/* Closing line */}
         <div className="max-w-6xl mx-auto mt-16 lg:mt-20 pt-10 border-t border-charcoal/10 text-center">
-          <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-charcoal-light/50">
+          <p className="font-mono text-xs uppercase tracking-[0.25em] text-charcoal-light/60">
             Hermosillo, Son. — Pedidos locales y envíos a todo México
           </p>
         </div>
