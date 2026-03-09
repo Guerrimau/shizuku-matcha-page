@@ -20,8 +20,6 @@ export default function CafeteriasPageClient() {
       <SectionDivider />
       <CafeteriasProducts />
       <SectionDivider />
-      <CafeteriasProcess />
-      <SectionDivider />
       <CafeteriasFAQ />
       <SectionDivider />
       <CafeteriasCTA />

@@ -22,12 +22,12 @@ const CafeteriasHero = () => {
               <div className="w-16 h-px bg-forest-green"></div>
             </div>
 
-            <h1 className="text-5xl lg:text-6xl font-serif font-light tracking-tight text-washi-text leading-[1.1]">
-              Matcha de origen para tu carta.
+            <h1 className="text-5xl lg:text-6xl xl:text-7xl font-serif font-light tracking-tight text-washi-text leading-[1.1]">
+              Matcha de especialidad para tu carta.
             </h1>
 
             <p className="text-lg md:text-xl text-charcoal-light leading-relaxed font-light max-w-md">
-              Primera cosecha de Shizuoka, cultivar Okumidori. Precio directo de importador, sin intermediarios. Perfil consistente lote a lote.
+              Blend estacional de Shizuoka, cultivar Okumidori. Precio directo de importador, sin intermediarios. Perfil consistente lote a lote.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
@@ -40,13 +40,7 @@ const CafeteriasHero = () => {
                 <Instagram size={14} />
                 solicitar cotización
               </a>
-              <Link
-                href="/#products"
-                className="group inline-flex items-center justify-center gap-3 text-sm lowercase tracking-wide text-washi-text transition-all duration-500 hover:gap-5"
-              >
-                <span>ver productos</span>
-                <ArrowRight size={16} className="transition-transform duration-500 group-hover:translate-x-1" />
-              </Link>
+
             </div>
 
             <div className="flex flex-wrap gap-6 pt-2">

@@ -3,19 +3,7 @@ import Image from 'next/image';
 import { Instagram } from 'lucide-react';
 
 const products = [
-  {
-    name: 'Matcha Shizu no Midori',
-    kanji: '抹茶',
-    label: 'Primera cosecha · Okumidori',
-    image: '/MATCHA/PRODUCT.jpg',
-    specs: [
-      { key: 'Cultivar', value: 'Okumidori' },
-      { key: 'Origen', value: 'Shizuoka, Japón' },
-      { key: 'Proceso', value: 'Tencha molido en piedra' },
-      { key: 'Perfil', value: 'Umami moderado, amargor bajo' },
-    ],
-    note: 'Seleccionado para bebidas con leche. Alta solubilidad, color verde estable.',
-  },
+
   {
     name: 'Hojicha',
     kanji: '焙じ茶',
@@ -28,6 +16,19 @@ const products = [
       { key: 'Perfil', value: 'Ahumado suave, sin amargor' },
     ],
     note: 'Ideal para lattes de tarde y noche. Perfil diferenciador en la carta.',
+  },
+  {
+    name: 'Matcha Shizu no Midori',
+    kanji: '抹茶',
+    label: 'Primera cosecha · Okumidori',
+    image: '/MATCHA/PRODUCT.jpg',
+    specs: [
+      { key: 'Cultivar', value: 'Okumidori' },
+      { key: 'Origen', value: 'Shizuoka, Japón' },
+      { key: 'Proceso', value: 'Tencha molido en piedra' },
+      { key: 'Perfil', value: 'Umami moderado, amargor bajo' },
+    ],
+    note: 'Seleccionado para bebidas con leche. Alta solubilidad, color verde estable.',
   },
   {
     name: 'Sencha',
@@ -84,7 +85,7 @@ const CafeteriasProducts = () => {
                   <h3 className="font-serif text-2xl text-washi-text font-light tracking-tight">
                     {product.name}
                   </h3>
-                  <p className="text-xl text-charcoal-light/60 font-script">
+                  <p className="text-xl text-charcoal-light/60 font-noto-serif-jp">
                     {product.kanji}
                   </p>
                 </div>

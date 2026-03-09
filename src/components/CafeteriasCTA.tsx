@@ -18,7 +18,7 @@ const CafeteriasCTA = () => {
                   <p className="font-mono text-xs uppercase tracking-[0.2em] text-forest-green">
                     Cotización B2B
                   </p>
-                  <h2 className="text-3xl lg:text-4xl font-serif font-light text-washi-text tracking-tight">
+                  <h2 className="studio-subheading text-washi-text">
                     ¿Listo para agregar matcha de especialidad a tu carta?
                   </h2>
                 </div>
@@ -30,7 +30,7 @@ const CafeteriasCTA = () => {
                 <div className="space-y-3">
                   {[
                     'Precio directo de importador',
-                    'Primera cosecha, cultivar Okumidori',
+                    'Blend estacional, cultivar Okumidori',
                     'Asesoría técnica incluida',
                     'Entrega en Hermosillo y envíos nacionales',
                   ].map((item) => (
@@ -51,13 +51,6 @@ const CafeteriasCTA = () => {
                     <Instagram size={14} />
                     solicitar cotización
                   </a>
-                  <Link
-                    href="/#products"
-                    className="group inline-flex items-center justify-center gap-3 text-sm lowercase tracking-wide text-washi-text transition-all duration-500 hover:gap-5"
-                  >
-                    <span>ver productos individuales</span>
-                    <ArrowRight size={16} className="transition-transform duration-500 group-hover:translate-x-1" />
-                  </Link>
                 </div>
 
               </div>

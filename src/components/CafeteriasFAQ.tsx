@@ -9,24 +9,12 @@ const faqs = [
     answer: 'En Japón, el matcha se clasifica por perfil sensorial y uso, no por categorías comerciales. Nuestro Shizu no Midori es un blend estacional de Shizuoka seleccionado específicamente para bebidas con leche: alta solubilidad, color verde estable y un perfil de umami moderado que destaca sobre la base láctea sin amargor excesivo.',
   },
   {
-    question: '¿Qué hace que este matcha sea premium?',
-    answer: 'Primera cosecha de Shizuoka, cultivar Okumidori. Las hojas se cosechan en la primera temporada (abril-mayo) tras 20+ días de sombreado, cuando tienen la mayor concentración de L-teanina y clorofila. El proceso de molido lento en piedra preserva el perfil aromático y el color verde intenso.',
-  },
-  {
     question: '¿Por qué funciona mejor en lattes que otros matchas?',
     answer: 'El cultivar Okumidori tiene alta solubilidad y un perfil balanceado que mantiene estructura en preparaciones con leche. El amargor bajo y el umami moderado permiten que el matcha resalte sin dominar. El color se mantiene verde intenso incluso con leche entera.',
   },
   {
     question: '¿Por qué el precio es más accesible?',
     answer: 'Importamos directamente de productores en Shizuoka, sin intermediarios ni distribuidores. Eso nos permite ofrecer matcha de especialidad a un precio significativamente menor que el promedio del mercado, manteniendo la misma calidad de origen.',
-  },
-  {
-    question: '¿Qué incluye la asesoría técnica?',
-    answer: 'Guías de proporción matcha-leche, temperaturas óptimas, técnica de batido (tamizado, temperatura del agua, frío vs caliente), y recetas base para tu menú. Podemos hacer una sesión con tu equipo si lo necesitas. Sin costo adicional.',
-  },
-  {
-    question: '¿Cuál es el pedido mínimo?',
-    answer: 'No hay pedido mínimo. Puedes comenzar con una presentación estándar para evaluar el producto en tu operación antes de comprometerte a volumen. Sin contratos ni obligaciones.',
   },
 ];
 
