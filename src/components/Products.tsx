@@ -38,7 +38,7 @@ const Products = ({ data }: { data: Tea[] }) => {
             Colección
           </p>
           <h2 className="studio-subheading text-washi-text">
-            Tés japoneses de origen
+            Matcha y tés japoneses de origen
           </h2>
           <div className="w-20 h-px bg-forest-green/30 mx-auto"></div>
           <p className="text-base md:text-lg text-charcoal-light max-w-xl mx-auto font-light leading-relaxed">

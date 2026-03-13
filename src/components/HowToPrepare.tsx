@@ -17,7 +17,7 @@ const preparations = [
     image: '/MATCHA_LATTE_HOT.jpg',
     alt: 'Matcha latte caliente preparado con Shizu no Midori — Shizuku Matcha Studio',
     eyebrow: 'Matcha Latte',
-    title: 'Cremoso y reconfortante',
+    title: 'Matcha latte caliente',
     description: 'El Okumidori fue desarrollado para esto. Su astringencia resalta incluso con leche.',
     params: [
       '1.5 tsp matcha (3g)',
@@ -29,7 +29,7 @@ const preparations = [
     image: '/MATCHA_LATTE.jpg',
     alt: 'Matcha latte frío para el clima de Hermosillo — Shizuku Matcha Studio',
     eyebrow: 'Matcha Frío',
-    title: 'Refrescante para Hermosillo',
+    title: 'Matcha latte frío',
     description: 'La mejor forma de tomarlo en temporada de calor. Color vibrante, sabor limpio.',
     params: [
       '1.5 tsp matcha (3g)',
@@ -50,7 +50,7 @@ const HowToPrepare = () => {
             Preparación
           </p>
           <h2 className="studio-subheading text-washi-text">
-            Tres formas de tomarlo
+            Matcha latte, frío y tradicional
           </h2>
           <div className="w-20 h-px bg-forest-green/30 mx-auto"></div>
           <p className="text-base md:text-lg text-charcoal-light max-w-xl mx-auto font-light leading-relaxed">

@@ -25,7 +25,7 @@ const FAQ = ({ data }: { data: Faq[] }) => {
           </h2>
           <div className="w-20 h-px bg-forest-green/30 mx-auto"></div>
           <p className="text-base md:text-lg text-charcoal-light max-w-xl mx-auto font-light leading-relaxed">
-            Todo lo que necesitas saber sobre nuestro matcha premium
+            Todo lo que necesitas saber sobre nuestro matcha de especialidad
           </p>
         </div>
 

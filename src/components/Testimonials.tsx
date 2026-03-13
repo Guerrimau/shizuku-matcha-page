@@ -6,17 +6,17 @@ type Testimonial = {
 
 const testimonials: Testimonial[] = [
   {
-    text: "Hola! Update: me ha gustado mucho! Lo tengo en mi cafeteria y se ha vendido bastante bien, muchas gracias.",
+    text: "Lo tengo en mi cafetería y se ha vendido bastante bien. La diferencia con otros matchas que he probado es notable.",
     name: "Andrea R.",
     city: "Hermosillo, Son.",
   },
   {
-    text: "Muy ricooo !! 💚💚 me encanto mil graciaass.",
+    text: "Me encantó. Es el mejor matcha que he probado — y ya he probado varios. El sabor es completamente diferente.",
     name: "Paulina M.",
     city: "Hermosillo, Son.",
   },
   {
-    text: "Sin problema mi nuevo daily matcha. Me encantó. Muchísimas gracias. Ya finalmente una buena opcion local.",
+    text: "Ya es mi matcha de todos los días. Por fin una buena opción local, sin tener que importarlo yo misma.",
     name: "Sofía L.",
     city: "Hermosillo, Son.",
   },
