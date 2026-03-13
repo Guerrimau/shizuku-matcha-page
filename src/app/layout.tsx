@@ -144,7 +144,7 @@ export default function RootLayout({
                     "Thursday",
                     "Friday",
                   ],
-                  opens: "09:00",
+                  opens: "10:00",
                   closes: "18:00",
                 },
                 {
@@ -169,7 +169,11 @@ export default function RootLayout({
               name: "Matcha Shizu no Midori",
               description:
                 "Matcha de especialidad. Cultivar Okumidori de Shizuoka, Japón. Blend estacional, molido en piedra. Perfil balanceado para lattes y preparación tradicional.",
-              image: "https://shizukumatchastudio.com/MATCHA/BAG.jpg",
+              image: [
+                "https://shizukumatchastudio.com/MATCHA/PRODUCT.jpg",
+                "https://shizukumatchastudio.com/MATCHA/BAG.jpg",
+                "https://shizukumatchastudio.com/MATCHA/FULL.jpg",
+              ],
               brand: {
                 "@type": "Brand",
                 name: "Shizuku Matcha Studio",
