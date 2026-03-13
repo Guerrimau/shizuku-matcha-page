@@ -49,6 +49,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_MX",
     siteName: "Shizuku Matcha Studio",
+    url: "https://shizukumatchastudio.com",
     title: "Shizuku Matcha Studio — Matcha de Shizuoka directo a Hermosillo",
     description: "Matcha de especialidad en Hermosillo, importado de Shizuoka, Japón. Cultivar Okumidori. Pickup local y envíos a todo México. Desde $350 MXN.",
     images: [
@@ -100,20 +101,18 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "LocalBusiness",
+              "@type": ["LocalBusiness", "Store"],
               "@id": "https://shizukumatchastudio.com/#business",
               name: "Shizuku Matcha Studio",
               description:
                 "Matcha de especialidad importado directo del productor en Shizuoka, Japón. Cultivar Okumidori, blend estacional. Envíos a Hermosillo y todo México.",
               url: "https://shizukumatchastudio.com",
-              // AGREGA tu número real — sin esto Google no puede verificar el negocio en Maps
-              telephone: "+52-XXX-XXX-XXXX",
-              // AGREGA tu email real
+              // TODO: agrega tu número real de Google Business Profile
+              // telephone: "+52-662-XXX-XXXX",
               email: "hola@shizukumatchastudio.com",
               image: "https://shizukumatchastudio.com/TEA_SESSION_EMPTY.jpg",
               logo: "https://shizukumatchastudio.com/favicons/favicon-512x512.png",
               priceRange: "$$",
-              servesCuisine: "Japanese Tea",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Hermosillo",
