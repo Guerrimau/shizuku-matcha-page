@@ -35,38 +35,16 @@ const notoSerifJP = Noto_Serif_JP({
 });
 
 export const metadata: Metadata = {
+  // Resuelve todas las URLs relativas en el sitio
   metadataBase: new URL("https://shizukumatchastudio.com"),
 
+  // Template para subpáginas: "Matcha para Cafeterías | Shizuku Matcha Studio"
   title: {
     default: "Shizuku Matcha Studio — Matcha de Shizuoka directo a Hermosillo",
     template: "%s | Shizuku Matcha Studio",
   },
 
-  description:
-    "Matcha de especialidad en Hermosillo, importado de Shizuoka, Japón. Cultivar Okumidori. Pickup local y envíos a todo México. Desde $350 MXN.",
-
-  openGraph: {
-    type: "website",
-    locale: "es_MX",
-    siteName: "Shizuku Matcha Studio",
-    url: "https://shizukumatchastudio.com",
-    title: "Shizuku Matcha Studio — Matcha de Shizuoka directo a Hermosillo",
-    description: "Matcha de especialidad en Hermosillo, importado de Shizuoka, Japón. Cultivar Okumidori. Pickup local y envíos a todo México. Desde $350 MXN.",
-    images: [
-      {
-        url: "/og.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Matcha latte caliente preparado con Shizu no Midori — Shizuku Matcha Studio Hermosillo",
-      },
-    ],
-  },
-
-  twitter: {
-    card: "summary_large_image",
-    images: ["/og.jpg"],
-  },
-
+  // Reglas de indexación globales
   robots: {
     index: true,
     follow: true,
@@ -166,7 +144,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Product",
-              name: "Matcha Shizu no Midori",
+              name: "Matcha | Matcha Shizu no Midori",
               description:
                 "Matcha de especialidad. Cultivar Okumidori de Shizuoka, Japón. Blend estacional, molido en piedra. Perfil balanceado para lattes y preparación tradicional.",
               image: [
