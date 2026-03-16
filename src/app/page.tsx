@@ -72,7 +72,6 @@ export default async function Home() {
       <Transparency />
       <SectionDivider />
       <HowToPrepare />
-      <Testimonials />
       <FAQ data={faqs} />
       <OrderCTA />
       <SectionDivider />

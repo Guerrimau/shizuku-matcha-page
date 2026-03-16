@@ -51,14 +51,6 @@ const Navbar = () => {
             onClick={handleLogoClick}
             className="flex items-center transition-colors duration-500 group"
           >
-            {/* Drip icon */}
-            <Image
-              src="/logo_drip.png"
-              alt="Shizuku"
-              width={18}
-              height={28}
-              className="transition-opacity duration-500 mr-3"
-            />
 
             {/* Text block — Shizuku width = Matcha Studio width */}
             <div className="flex flex-col items-start">

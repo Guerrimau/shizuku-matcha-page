@@ -32,7 +32,7 @@ const Transparency = () => {
             Transparencia
           </p>
           <h2 className="studio-subheading text-washi-text">
-            Nosotros no vendemos matcha ceremonial
+            Nosotros no vendemos "matcha ceremonial"
           </h2>
           <div className="w-20 h-px bg-forest-green/30 mx-auto"></div>
           <p className="text-base md:text-lg text-charcoal-light max-w-xl mx-auto font-light leading-relaxed">
