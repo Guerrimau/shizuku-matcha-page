@@ -39,32 +39,47 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-500 ${
-      isScrolled 
-        ? 'bg-washi-bg/95 backdrop-blur-subtle shadow-sm border-b border-charcoal/5' 
+    <nav className={`fixed w-full z-50 transition-all duration-500 ${isScrolled
+        ? 'bg-washi-bg/95 backdrop-blur-subtle shadow-sm border-b border-charcoal/5'
         : 'bg-transparent backdrop-blur-subtle'
-    }`}>
+      }`}>
       <div className="container-custom">
         <div className="flex items-center justify-between py-5 md:py-6">
-          
-          {/* Logo */}
-          <button 
+
+          {/* Logo — architectural presence */}
+          <button
             onClick={handleLogoClick}
-            className="flex items-center gap-2 transition-colors duration-500 group"
+            className="flex items-center transition-colors duration-500 group"
           >
-            {/* <Image 
-              src="/ShizukuIcon.png" 
-              alt="Shizuku Matcha Studio" 
-              width={48} 
-              height={48}
-              className="transition-opacity duration-500"
-            /> */}
+            {/* Drip icon */}
+            <Image
+              src="/logo_drip.png"
+              alt="Shizuku"
+              width={18}
+              height={28}
+              className="transition-opacity duration-500 mr-3"
+            />
+
+            {/* Text block — Shizuku width = Matcha Studio width */}
             <div className="flex flex-col items-start">
-              <span className="text-2xl md:text-3xl font-serif font-medium text-washi-text transition-colors duration-500 tracking-[0.08em]">
+              <span 
+                className="text-[22px] md:text-[24px] leading-none font-serif font-medium text-washi-text transition-colors duration-500"
+                style={{ letterSpacing: '0.12em' }}
+              >
                 Shizuku
               </span>
-              <span className="font-mono text-[10px] md:text-xs uppercase tracking-[0.1em] text-charcoal-light transition-colors duration-500">
+              <span className="font-mono text-[8px] md:text-[9px] uppercase tracking-[0.22em] text-charcoal-light/70 transition-colors duration-500 mt-0.5">
                 Matcha Studio
+              </span>
+            </div>
+            
+            {/* Kanji — matcha green, close to text */}
+            <div className="hidden md:flex items-center ml-0.5">
+              <span
+                className="font-noto-serif-jp text-[14px] leading-tight"
+                style={{ writingMode: 'vertical-rl', color: '#4A7C59' }}
+              >
+                抹茶
               </span>
             </div>
           </button>
@@ -73,25 +88,25 @@ const Navbar = () => {
           <div className="hidden md:flex items-center gap-8 lg:gap-10">
             {pathname === '/' && (
               <>
-                <button 
+                <button
                   onClick={() => scrollToSection('products')}
                   className="font-mono text-xs uppercase tracking-[0.15em] text-charcoal-light hover:text-forest-green transition-colors duration-300"
                 >
                   productos
                 </button>
-                <button 
+                <button
                   onClick={() => scrollToSection('experience')}
                   className="font-mono text-xs uppercase tracking-[0.15em] text-charcoal-light hover:text-forest-green transition-colors duration-300"
                 >
                   experiencia
                 </button>
-                <button 
+                <button
                   onClick={() => scrollToSection('how-to-order')}
                   className="font-mono text-xs uppercase tracking-[0.15em] text-charcoal-light hover:text-forest-green transition-colors duration-300"
                 >
                   ordenar
                 </button>
-                <button 
+                <button
                   onClick={() => scrollToSection('story')}
                   className="font-mono text-xs uppercase tracking-[0.15em] text-charcoal-light hover:text-forest-green transition-colors duration-300"
                 >
@@ -99,26 +114,26 @@ const Navbar = () => {
                 </button>
               </>
             )}
-            <Link 
+            <Link
               href="/matcha-cafeterias"
               className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.15em] text-charcoal-light hover:text-forest-green transition-colors duration-300"
             >
               <Building2 size={14} />
               cafeterías
             </Link>
-            <a 
+            <a
               href="https://www.instagram.com/shizukumatchastudio/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 border border-forest-green text-forest-green px-4 py-2 font-mono text-xs uppercase tracking-[0.15em] hover:bg-forest-green hover:text-washi-bg transition-all duration-500"
             >
               <Instagram size={14} />
-              orden
+              ordena
             </a>
           </div>
 
           {/* Mobile Menu Button */}
-          <button 
+          <button
             className="md:hidden text-washi-text transition-colors duration-300"
             onClick={() => setIsOpen(!isOpen)}
           >
@@ -132,25 +147,25 @@ const Navbar = () => {
             <div className="flex flex-col py-6 space-y-1">
               {pathname === '/' && (
                 <>
-                  <button 
+                  <button
                     onClick={() => scrollToSection('products')}
                     className="px-4 py-3 font-mono text-xs uppercase tracking-[0.15em] text-charcoal-light hover:text-forest-green transition-colors text-left"
                   >
                     productos
                   </button>
-                  <button 
+                  <button
                     onClick={() => scrollToSection('experience')}
                     className="px-4 py-3 font-mono text-xs uppercase tracking-[0.15em] text-charcoal-light hover:text-forest-green transition-colors text-left"
                   >
                     experiencia
                   </button>
-                  <button 
+                  <button
                     onClick={() => scrollToSection('how-to-order')}
                     className="px-4 py-3 font-mono text-xs uppercase tracking-[0.15em] text-charcoal-light hover:text-forest-green transition-colors text-left"
                   >
                     ordenar
                   </button>
-                  <button 
+                  <button
                     onClick={() => scrollToSection('story')}
                     className="px-4 py-3 font-mono text-xs uppercase tracking-[0.15em] text-charcoal-light hover:text-forest-green transition-colors text-left"
                   >
@@ -158,7 +173,7 @@ const Navbar = () => {
                   </button>
                 </>
               )}
-              <Link 
+              <Link
                 href="/matcha-cafeterias"
                 onClick={() => setIsOpen(false)}
                 className="px-4 py-3 font-mono text-xs uppercase tracking-[0.15em] text-charcoal-light hover:text-forest-green transition-colors text-left flex items-center gap-2"
@@ -167,14 +182,14 @@ const Navbar = () => {
                 cafeterías
               </Link>
               <div className="px-4 pt-4">
-                <a 
+                <a
                   href="https://www.instagram.com/shizukumatchastudio/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 border border-forest-green text-forest-green px-4 py-2 w-full justify-center font-mono text-xs uppercase tracking-[0.15em] hover:bg-forest-green hover:text-washi-bg transition-all duration-500"
                 >
                   <Instagram size={14} />
-                  orden
+                  ordena
                 </a>
               </div>
             </div>
