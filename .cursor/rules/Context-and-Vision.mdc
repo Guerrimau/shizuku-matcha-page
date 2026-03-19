@@ -1,0 +1,173 @@
+---
+alwaysApply: true
+---
+
+# Shizuku Matcha Studio - Project Context & Vision
+
+## 1. Project Overview
+**Shizuku Matcha Studio** is a high-end, specialty Japanese tea E-commerce platform based in Hermosillo, Mexico. The project transitions from a generic "Ceremonial" tea brand to a **Technical Tea Studio** focused on traceability, precision, and education.
+
+## 2. Core Philosophy (The "Studio" Brand)
+- **Anti-Generic Copywriting:** We avoid "spirituality-cliché" terms (Calma, Ritual, Intención).
+- **Technical Honesty:** We treat tea like specialty coffee. We focus on:
+    - **Traceability:** Cultivar, Origin, and Harvest.
+    - **Variables:** Water temperature, grams, whisking/brewing technique.
+- **Visual Identity:**
+    - Minimalist, sophisticated, and "clinical" but artisanal.
+    - Primary Palette: Pure White (#FFFFFF), Off-White (#F9F8F3), and Neutral Black (#0A0A0A).
+    - Typography: High-end Serif for headings, clean Sans-serif for technical data.
+
+## 3. Product Inventory & Slugs
+Each product follows a technical "Studio File" architecture with descriptive slugs:
+
+| Product | Slug | Category |
+|---------|------|----------|
+| Matcha Shizu no Midori | `matcha_okumidori_seasonal_blend_latte_30g` | matcha |
+| Hojicha en Polvo | `hojicha_polvo_roasted_latte_30g` | polvo |
+| Sencha Fukamushi | `te_verde_sencha_shizuoka_50g` | hoja |
+| Hojicha Hoja Suelta | `hojicha_roasted_shizuoka_loose_leaf_50g` | hoja |
+| Kit de Preparación | `kit_matcha_ritual_starter_chasen_chawan` | kits |
+| Kyusu Maru-gata Black | `kyusu_maru_gata_black_tokoname_280ml` | accesorios |
+
+## 4. Project Structure
+
+```
+src/
+├── app/
+│   ├── page.tsx                    # Homepage with Hero, Specs, Collections
+│   ├── globals.css                 # Global styles with responsive font scaling
+│   ├── productos/
+│   │   ├── layout.tsx              # SEO metadata for PLP
+│   │   ├── page.tsx                # Product List Page with filters
+│   │   └── [slug]/
+│   │       ├── page.tsx            # Server component with generateStaticParams
+│   │       └── ProductDetail.tsx   # Client component for interactivity
+│   ├── talleres/page.tsx           # Workshops page
+│   ├── aprende/                    # Educational content
+│   │   ├── page.tsx
+│   │   ├── guia-preparacion-matcha/page.tsx
+│   │   └── verdad-matcha-ceremonial/page.tsx
+│   ├── nosotros/page.tsx           # About page
+│   └── mayoreo/page.tsx            # B2B/Wholesale page
+├── components/
+│   ├── Navbar.tsx                  # Glassmorphism sticky navbar
+│   ├── Footer.tsx                  # Deep black footer
+│   ├── HeroSplit.tsx               # Full-width video hero with floating card
+│   └── FadeIn.tsx                  # Intersection Observer scroll animations
+└── data/
+    └── products.ts                 # Centralized product data & types
+```
+
+## 5. UI/UX Architecture
+
+### A. Navbar
+- **Style:** Glassmorphism (`bg-white/80`, `backdrop-blur-md`)
+- **Positioning:** `sticky top-0 z-50`
+- **Responsive Heights:** 72px (mobile) → 80px (lg) → 88px (xl)
+- **Links:** Productos, Talleres, Aprende, Nosotros, Mayoreo
+- **CTA:** Solid black "Ordena" button with Instagram icon
+
+### B. Homepage Hero
+- **Layout:** Full-width video background with right-aligned floating card
+- **Video:** Autoplay, muted, loop with parallax scroll effect
+- **Card:** White background, premium shadow, responsive sizing
+- **Accents:** Kanji overlays (静岡, 抹茶), coordinates
+
+### C. Product List Page (PLP)
+- **Filter Bar:** Todo | Matcha | Té en Polvo | Té Hoja Suelta | Kits | Accesorios
+- **Grid:** 3-column (desktop), 2-column (tablet), 1-column (mobile)
+- **Cards Include:**
+    - Square image with hover zoom
+    - Category labels (small caps)
+    - Product name + Kanji
+    - Starting price
+    - Adaptive technical specs table
+    - "Ver Producto" CTA
+
+### D. Product Detail Page (PDP)
+- **Static Generation:** All pages pre-rendered at build time via `generateStaticParams`
+- **Dynamic Metadata:** SEO title, description, OpenGraph per product
+- **Layout:** 60/40 split (gallery / sticky info)
+- **Features:**
+    - Image gallery with thumbnails
+    - Size selector (30g, 100g, etc.)
+    - Price display (MXN)
+    - "Añadir al Carrito" CTA
+    - Technical specs table (adaptive by type)
+    - Flavor Profile grid (tea only): Dulzor, Umami, Amargor, Cuerpo
+    - Brewing Guide (tea only): Temperatura, Ratio, Tiempo
+
+## 6. Technical Stack
+- **Framework:** Next.js 15 (App Router)
+- **Styling:** Tailwind CSS
+- **Language:** TypeScript
+- **Fonts:** Inter (sans), Cormorant (serif), Space Mono (mono), Noto Serif JP (kanji)
+- **Architecture:** 
+    - Server Components for SEO & static generation
+    - Client Components for interactivity (filters, galleries, size selectors)
+
+## 7. Responsive Typography
+Base font size scales for larger displays:
+
+| Breakpoint | Font Size | Increase |
+|------------|-----------|----------|
+| < 1024px | 16px | — |
+| ≥ 1024px | 17px | +6% |
+| ≥ 1440px | 18px | +12.5% |
+
+## 8. Data Architecture
+Centralized in `src/data/products.ts`:
+
+```typescript
+// Types
+type ProductSpecs = TeaSpecs | AccessorySpecs | KitSpecs;
+type FilterCategory = "all" | "matcha" | "polvo" | "hoja" | "accesorios" | "kits";
+
+interface Product {
+  slug: string;
+  name: string;
+  kanji: string;
+  subtitle: string;
+  labels: string[];
+  image: string;
+  images: string[];
+  category: FilterCategory;
+  sizes: ProductSize[];
+  specs: ProductSpecs;
+  flavorProfile?: FlavorProfile;
+  brewingGuide?: BrewingGuide;
+  description: string;
+}
+
+// Exports
+export const products: Product[];
+export const filters: { id: FilterCategory; label: string }[];
+export function getProductBySlug(slug: string): Product | undefined;
+export function getProductsByCategory(category: FilterCategory): Product[];
+```
+
+## 9. SEO Strategy
+- **Static Generation:** All product pages pre-rendered for indexing
+- **Dynamic Metadata:** Per-page title, description, OpenGraph, Twitter Cards
+- **Semantic HTML:** Proper heading hierarchy, aria-labels, semantic sections
+- **Local SEO:** Geo-targeting for Hermosillo, Sonora (coordinates in meta)
+
+## 10. Completed Features
+- [x] Homepage with Hero, Honesty section, Technical Specs, Collections, Studio, B2B
+- [x] Glassmorphism Navbar with responsive sizing
+- [x] Product List Page with category filters
+- [x] Product Detail Page with static generation
+- [x] Adaptive technical specs tables
+- [x] Flavor profile visualization
+- [x] Brewing guide section
+- [x] Scroll fade-in animations (FadeIn component)
+- [x] Responsive font scaling for large displays
+- [x] Centralized product data architecture
+
+## 11. Next Steps
+1. Implement shopping cart functionality
+2. Add payment integration (Stripe/PayPal)
+3. Build out Talleres booking system
+4. Create Aprende blog with MDX content
+5. Add product image optimization with next/image
+6. Implement search functionality

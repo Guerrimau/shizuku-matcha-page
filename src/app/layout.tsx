@@ -44,6 +44,10 @@ export const metadata: Metadata = {
     template: "%s | Shizuku Matcha Studio",
   },
 
+  // Default description for pages that don't override
+  description:
+    "Matcha de especialidad importado directo de Shizuoka, Japón. Cultivar Okumidori con trazabilidad completa. Talleres y venta en Hermosillo, Sonora.",
+
   // Reglas de indexación globales
   robots: {
     index: true,
@@ -72,6 +76,70 @@ export default function RootLayout({
         <link rel="icon" href="/favicons/favicon.ico" sizes="any" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
         <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
+        
+        {/* RSS Feed — Faster indexing for Google and Bing */}
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Shizuku Matcha Studio Blog"
+          href="https://shizukumatchastudio.com/feed.xml"
+        />
+
+        {/* Schema: Organization — Brand identity signal for AI engines */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "@id": "https://shizukumatchastudio.com/#organization",
+              name: "Shizuku Matcha Studio",
+              url: "https://shizukumatchastudio.com",
+              logo: "https://shizukumatchastudio.com/favicons/favicon-512x512.png",
+              description:
+                "Matcha de especialidad importado directo de Shizuoka, Japón. Cultivar Okumidori con trazabilidad completa. Talleres y venta en Hermosillo, Sonora.",
+              foundingDate: "2025",
+              sameAs: ["https://www.instagram.com/shizukumatchastudio/"],
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "customer support",
+                email: "hola@shizukumatchastudio.com",
+                url: "https://shizukumatchastudio.com",
+                availableLanguage: ["Spanish"],
+              },
+              areaServed: [
+                {
+                  "@type": "City",
+                  name: "Hermosillo",
+                },
+                {
+                  "@type": "Country",
+                  name: "México",
+                },
+              ],
+            }),
+          }}
+        />
+
+        {/* Schema: WebSite — Enables sitelinks search box in Google */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "@id": "https://shizukumatchastudio.com/#website",
+              name: "Shizuku Matcha Studio",
+              url: "https://shizukumatchastudio.com",
+              description:
+                "Tienda de matcha de especialidad en Hermosillo, Sonora. Importación directa de Shizuoka, Japón.",
+              inLanguage: "es-MX",
+              publisher: {
+                "@id": "https://shizukumatchastudio.com/#organization",
+              },
+            }),
+          }}
+        />
 
         {/* Schema: LocalBusiness — mejora presencia en Google Maps y búsquedas locales */}
         <script
@@ -79,16 +147,19 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": ["LocalBusiness", "Store"],
+              "@type": ["LocalBusiness", "Store", "TeaHouse"],
               "@id": "https://shizukumatchastudio.com/#business",
               name: "Shizuku Matcha Studio",
+              alternateName: "Matcha Hermosillo",
               description:
-                "Matcha de especialidad importado directo del productor en Shizuoka, Japón. Cultivar Okumidori, blend estacional. Envíos a Hermosillo y todo México.",
+                "Tienda de matcha de especialidad en Hermosillo, Sonora. Matcha importado directo de Shizuoka, Japón. Cultivar Okumidori con trazabilidad completa. Talleres de preparación de matcha, venta de matcha ceremonial, hojicha, sencha, y accesorios japoneses. Envíos a todo México.",
               url: "https://shizukumatchastudio.com",
-              // TODO: agrega tu número real de Google Business Profile
-              // telephone: "+52-662-XXX-XXXX",
               email: "hola@shizukumatchastudio.com",
-              image: "https://shizukumatchastudio.com/TEA_SESSION_EMPTY.jpg",
+              currenciesAccepted: "MXN",
+              paymentAccepted: "Cash, Credit Card, Debit Card, Bank Transfer",
+              knowsLanguage: ["es", "en"],
+              keywords: "matcha hermosillo, matcha sonora, te verde hermosillo, matcha ceremonial mexico, comprar matcha, matcha latte hermosillo",
+              image: "https://shizukumatchastudio.com/TEA_SESSION_EMPTY_LOW.jpg",
               logo: "https://shizukumatchastudio.com/favicons/favicon-512x512.png",
               priceRange: "$$",
               address: {
@@ -99,8 +170,8 @@ export default function RootLayout({
               },
               geo: {
                 "@type": "GeoCoordinates",
-                latitude: 29.0729, // número, no string
-                longitude: -110.9559, // número, no string
+                latitude: 29.0729,
+                longitude: -110.9559,
               },
               areaServed: [
                 {
@@ -133,79 +204,6 @@ export default function RootLayout({
                 },
               ],
               sameAs: ["https://www.instagram.com/shizukumatchastudio/"],
-            }),
-          }}
-        />
-
-        {/* Schema: Product — activa rich snippets con precio en resultados de búsqueda */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Product",
-              name: "Matcha | Matcha Shizu no Midori",
-              description:
-                "Matcha de especialidad. Cultivar Okumidori de Shizuoka, Japón. Blend estacional, molido en piedra. Perfil balanceado para lattes y preparación tradicional.",
-              image: [
-                "https://shizukumatchastudio.com/MATCHA/PRODUCT.jpg",
-                "https://shizukumatchastudio.com/MATCHA/BAG.jpg",
-                "https://shizukumatchastudio.com/MATCHA/FULL.jpg",
-              ],
-              brand: {
-                "@type": "Brand",
-                name: "Shizuku Matcha Studio",
-              },
-              // Dos offers = ambas presentaciones visibles en Google Shopping
-              offers: [
-                {
-                  "@type": "Offer",
-                  name: "Lata 30g",
-                  price: "350",
-                  priceCurrency: "MXN",
-                  availability: "https://schema.org/InStock",
-                  url: "https://shizukumatchastudio.com",
-                  seller: {
-                    "@type": "LocalBusiness",
-                    // @id vincula este producto con el LocalBusiness de arriba
-                    "@id": "https://shizukumatchastudio.com/#business",
-                  },
-                },
-                {
-                  "@type": "Offer",
-                  name: "Lata 100g",
-                  price: "950",
-                  priceCurrency: "MXN",
-                  availability: "https://schema.org/InStock",
-                  url: "https://shizukumatchastudio.com",
-                  seller: {
-                    "@type": "LocalBusiness",
-                    "@id": "https://shizukumatchastudio.com/#business",
-                  },
-                },
-              ],
-              additionalProperty: [
-                {
-                  "@type": "PropertyValue",
-                  name: "Origen",
-                  value: "Shizuoka, Japón",
-                },
-                {
-                  "@type": "PropertyValue",
-                  name: "Cultivar",
-                  value: "Okumidori",
-                },
-                {
-                  "@type": "PropertyValue",
-                  name: "Cosecha",
-                  value: "Blend estacional (primera y segunda cosecha)",
-                },
-                {
-                  "@type": "PropertyValue",
-                  name: "Proceso",
-                  value: "Molido en piedra",
-                },
-              ],
             }),
           }}
         />

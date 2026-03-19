@@ -3,6 +3,22 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    font-size: 16px;
+  }
+
+  @media (min-width: 1024px) {
+    html {
+      font-size: 17px;
+    }
+  }
+  
+  @media (min-width: 1440px) {
+    html {
+      font-size: 18px;
+    }
+  }
+  
   body {
     font-family: var(--font-inter), system-ui, sans-serif;
     background-color: #F9F8F4;

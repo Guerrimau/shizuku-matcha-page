@@ -1,0 +1,413 @@
+---
+description: 
+alwaysApply: true
+---
+
+Shizuku Matcha Studio — Design System
+
+Documento de referencia para mantener coherencia visual en toda la aplicación.  
+Tono: especialidad japonesa. Preciso, minimalista, con autoridad técnica.
+
+---
+
+## Paleta de Colores
+
+### Primarios
+
+| Token | Valor | Uso |
+|----|----|-----|
+| `washi-bg` | `#F9F8F4` | Fondo principal de secciones |
+| `washi-text` | `#1A1C1A` | Texto principal |
+| `#F9F8F3` | Off-white | Fondo alternante (usado inline) |
+| `#FFFFFF` | Pure white | Tarjetas flotantes, galería de imágenes |
+
+### Neutrals (Sistema Actual)
+
+| Token | Valor | Uso |
+|----|----|-----|
+| `neutral-900` | `#171717` | Texto principal, botones sólidos |
+| `neutral-700` | `#404040` | Texto secundario |
+| `neutral-600` | `#525252` | Texto body |
+| `neutral-500` | `#737373` | Labels, texto terciario |
+| `neutral-400` | `#a3a3a3` | Placeholders, acentos sutiles |
+| `neutral-200` | `#e5e5e5` | Bordes, divisores |
+| `neutral-100` | `#f5f5f5` | Fondos de labels, hover states |
+| `neutral-50` | `#fafafa` | Fondos sutiles |
+| `neutral-950` | `#0a0a0a` | Footer, secciones oscuras |
+
+### Brand Green (Matcha Accent)
+
+| Token | Valor | Uso |
+|----|----|-----|
+| `#2d5a3d` | Forest green oscuro | Texto "Matcha Latte", kanji, acentos principales |
+| `#4A7C59` | Forest green medio | Alternativo para acentos |
+| `#3d6b4c` | Forest green | Kanji en navbar |
+
+> ⚠️ El verde solo se usa para acentos de marca (texto "Matcha Latte", kanji). Nunca como fondo de botones.
+
+---
+
+## Tipografía
+
+### Familias
+
+| Clase | Variable | Uso |
+|----|----|-----|
+| `font-serif` | `--font-cormorant` | H1, H2, títulos de sección, product names |
+| `font-sans` | `--font-inter` | Cuerpo de texto, párrafos, UI |
+| `font-mono` | `--font-space-mono` | Labels, navegación, CTAs, datos técnicos |
+| `font-script` | `--font-noto-serif-jp` | Caracteres japoneses (kanji) |
+
+### Escalado Responsivo de Fuente Base
+
+```css
+html { font-size: 16px; }
+
+@media (min-width: 1024px) {
+  html { font-size: 17px; }  /* +6% para 1080p */
+}
+
+@media (min-width: 1440px) {
+  html { font-size: 18px; }  /* +12.5% para 1440p+ */
+}
+```
+
+### Jerarquía de Texto
+
+**H1 Hero**
+```
+text-[1.75rem] sm:text-[2rem] lg:text-[2.25rem] xl:text-[2.75rem]
+font-serif font-medium text-neutral-900 leading-[1.08]
+style={{ letterSpacing: '-0.02em' }}
+```
+
+**H2 Sección**
+```
+text-[1.75rem] md:text-[2.25rem] lg:text-[2.75rem]
+font-serif font-light text-neutral-900 leading-[1.12]
+style={{ letterSpacing: '-0.02em' }}
+```
+
+**H3 Product Title**
+```
+text-lg lg:text-xl font-serif font-light text-neutral-900
+style={{ letterSpacing: '-0.01em' }}
+```
+
+**Label de sección (small caps)**
+```
+font-mono text-[9px] uppercase text-neutral-400
+style={{ letterSpacing: '0.25em' }}
+```
+
+**Cuerpo principal**
+```
+text-base md:text-lg text-neutral-600 font-light leading-[1.8]
+```
+
+**Dato técnico / ficha**
+```
+font-mono text-[9px] uppercase text-neutral-400
+style={{ letterSpacing: '0.15em' }}
+```
+
+**Precio**
+```
+text-2xl lg:text-3xl font-light text-neutral-900
+style={{ letterSpacing: '-0.02em' }}
+```
+
+---
+
+## Espaciado y Layout
+
+### Contenedor Principal
+
+```
+max-w-7xl mx-auto px-6 sm:px-8 lg:px-12
+```
+
+> ⚠️ Todas las secciones usan `max-w-7xl` para mantener alineación vertical consistente (navbar, hero card, contenido).
+
+### Padding de Sección
+
+| Clase | Valor |
+|----|----|
+| Sección estándar | `py-24 md:py-32 lg:py-40` |
+| Sección compacta | `py-16 md:py-20` |
+| Banner/CTA | `py-12` |
+
+### Grids
+
+| Uso | Clase |
+|-----|----|
+| Productos (PLP) | `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12` |
+| Split 60/40 (PDP) | `grid lg:grid-cols-5 gap-12 lg:gap-16` → `lg:col-span-3` / `lg:col-span-2` |
+| Specs 4 columnas | `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-neutral-200` |
+| Flavor Profile 2x2 | `grid grid-cols-2 gap-8 lg:gap-12` |
+| Brewing Guide 3 cols | `grid grid-cols-3 gap-8 lg:gap-12` |
+
+---
+
+## Componentes
+
+### Navbar
+
+```tsx
+// Estructura
+<nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-neutral-200/40">
+  <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+    <div className="flex items-center justify-between h-[72px] lg:h-[80px] xl:h-[88px]">
+      {/* Logo + Links + CTA */}
+    </div>
+  </div>
+</nav>
+
+// Logo
+<span className="text-[20px] lg:text-[22px] xl:text-[26px] font-serif font-medium text-neutral-900">
+  Shizuku
+</span>
+<span className="font-mono text-[7px] lg:text-[8px] xl:text-[9px] uppercase text-neutral-500">
+  Matcha Studio
+</span>
+
+// Nav Links
+<Link className="font-mono text-[11px] xl:text-[12px] uppercase text-neutral-900 hover:text-neutral-600">
+
+// CTA Button
+<a className="inline-flex items-center gap-2 bg-neutral-900 text-white px-6 py-3 xl:px-7 xl:py-3.5 
+  font-mono text-[11px] xl:text-[12px] uppercase hover:bg-neutral-800 rounded-sm">
+```
+
+### Hero Split (Video + Floating Card)
+
+```tsx
+// Container
+<section className="relative min-h-[calc(100vh-72px)] lg:min-h-[calc(100vh-80px)] xl:min-h-[calc(100vh-88px)]">
+
+// Video Background
+<video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
+
+// Floating Card
+<div className="bg-white p-8 sm:p-10 lg:p-12 xl:p-14 w-full max-w-lg sm:max-w-xl lg:max-w-lg xl:max-w-xl rounded-sm"
+  style={{ boxShadow: "0 4px 30px rgba(0, 0, 0, 0.03), 0 20px 60px rgba(0, 0, 0, 0.08)" }}>
+```
+
+### Product Card (PLP)
+
+```tsx
+<article className="group">
+  {/* Image with hover zoom */}
+  <div className="aspect-square bg-neutral-100 mb-6 overflow-hidden">
+    <img className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out" />
+  </div>
+  
+  {/* Labels */}
+  <div className="flex flex-wrap gap-2 mb-3">
+    <span className="font-mono text-[9px] uppercase text-neutral-500 px-2 py-1 bg-neutral-100 rounded-sm"
+      style={{ letterSpacing: '0.1em' }}>
+      LABEL
+    </span>
+  </div>
+  
+  {/* Title + Kanji */}
+  <h3 className="text-lg lg:text-xl font-serif font-light text-neutral-900 mb-2">
+    Product Name <span className="font-script text-base text-neutral-400 ml-1">漢字</span>
+  </h3>
+  
+  {/* Price */}
+  <p className="text-base text-neutral-600 font-light mb-4">
+    $450 <span className="text-neutral-400 text-sm">MXN</span>
+  </p>
+  
+  {/* Technical Specs */}
+  <div className="border-t border-neutral-200 pt-4 mb-4">
+    <dl className="space-y-2">
+      <div className="flex justify-between items-baseline gap-4">
+        <dt className="font-mono text-[9px] uppercase text-neutral-400">Label</dt>
+        <dd className="text-[13px] text-neutral-700 font-light text-right">Value</dd>
+      </div>
+    </dl>
+  </div>
+  
+  {/* CTA */}
+  <span className="inline-flex items-center gap-2 font-mono text-[10px] uppercase text-neutral-500 
+    group-hover:text-neutral-900 transition-colors duration-300">
+    Ver Producto
+    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300">
+  </span>
+</article>
+```
+
+### Filter Bar (PLP)
+
+```tsx
+<div className="flex flex-wrap justify-center gap-2 mb-12 lg:mb-16">
+  <button className={`font-mono text-[10px] uppercase px-4 py-2.5 rounded-sm transition-all duration-200
+    ${active ? "bg-neutral-900 text-white" : "bg-white text-neutral-600 hover:bg-neutral-100 border border-neutral-200"}`}
+    style={{ letterSpacing: '0.08em' }}>
+    Filter Label
+  </button>
+</div>
+```
+
+### Size Selector (PDP)
+
+```tsx
+<div className="flex gap-3">
+  <button className={`px-6 py-3 font-mono text-[11px] uppercase transition-all duration-200 rounded-sm
+    ${selected ? "bg-neutral-900 text-white" : "bg-white text-neutral-600 border border-neutral-200 hover:border-neutral-400"}`}
+    style={{ letterSpacing: '0.08em' }}>
+    30g
+  </button>
+</div>
+```
+
+### Flavor Profile Bar
+
+```tsx
+<div className="space-y-2">
+  <div className="flex justify-between items-baseline">
+    <span className="font-mono text-[9px] uppercase text-neutral-500" style={{ letterSpacing: '0.12em' }}>
+      Dulzor
+    </span>
+    <span className="font-mono text-[10px] text-neutral-400">7/10</span>
+  </div>
+  <div className="h-1.5 bg-neutral-100 rounded-full overflow-hidden">
+    <div className="h-full bg-[#2d5a3d] rounded-full" style={{ width: '70%' }} />
+  </div>
+</div>
+```
+
+### FadeIn Animation Component
+
+```tsx
+// Usage
+<FadeIn delay={100}>
+  <YourContent />
+</FadeIn>
+
+// Implementation uses Intersection Observer
+// Transition: opacity-0 translate-y-6 → opacity-100 translate-y-0
+// Duration: 700ms ease-out
+```
+
+### Breadcrumb
+
+```tsx
+<nav className="flex items-center gap-2 text-sm">
+  <Link className="text-neutral-400 hover:text-neutral-600">Inicio</Link>
+  <span className="text-neutral-300">/</span>
+  <Link className="text-neutral-400 hover:text-neutral-600">Productos</Link>
+  <span className="text-neutral-300">/</span>
+  <span className="text-neutral-600 font-light">Product Name</span>
+</nav>
+```
+
+---
+
+## Botones
+
+### Primario (Solid Black)
+
+```tsx
+<button className="bg-neutral-900 text-white px-7 sm:px-8 py-4 font-mono text-[10px] sm:text-[11px] uppercase 
+  hover:bg-neutral-800 transition-all duration-300 rounded-sm"
+  style={{ letterSpacing: '0.08em' }}>
+  Añadir al Carrito
+</button>
+```
+
+### Secundario (Outline)
+
+```tsx
+<button className="text-neutral-700 px-7 sm:px-8 py-4 font-mono text-[10px] sm:text-[11px] uppercase 
+  hover:text-neutral-900 hover:border-neutral-900 transition-all duration-300 rounded-sm"
+  style={{ letterSpacing: '0.08em', border: '1.5px solid rgb(212 212 212)' }}>
+  Ver Talleres
+</button>
+```
+
+### Text Link with Arrow
+
+```tsx
+<span className="inline-flex items-center gap-2 font-mono text-[10px] uppercase text-neutral-500 
+  group-hover:text-neutral-900 transition-colors duration-300"
+  style={{ letterSpacing: '0.1em' }}>
+  Ver Producto
+  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300">
+    <path d="M17 8l4 4m0 0l-4 4m4-4H3" />
+  </svg>
+</span>
+```
+
+---
+
+## Sombras
+
+| Uso | Valor |
+|-----|----|
+| Card flotante (Hero) | `0 4px 30px rgba(0, 0, 0, 0.03), 0 20px 60px rgba(0, 0, 0, 0.08)` |
+| Card sutil | `0 4px 20px rgba(0, 0, 0, 0.03)` |
+| PDP sticky | `0 25px 80px rgba(0, 0, 0, 0.15)` |
+
+---
+
+## Fondos por Sección
+
+| Sección | Fondo |
+|---|----|
+| Hero | Video + `bg-black/5` overlay |
+| Hero Card | `bg-white` |
+| Honesty | `bg-washi-bg` con `border-t border-neutral-200/40` |
+| Specs | `bg-neutral-50/60` |
+| Products | `bg-washi-bg` |
+| Studio/Talleres | `bg-neutral-50/60` con `border-t border-neutral-200/40` |
+| B2B Banner | `bg-neutral-950 text-white` |
+| Footer | `bg-neutral-950 text-white` |
+| PDP Gallery | `bg-white border border-neutral-100` |
+| PDP Flavor Profile | `#F9F8F3` |
+
+---
+
+## Assets de Imagen (`/public/`)
+
+| Archivo | Uso |
+|---|-----|
+| `hero_video_studio.mp4` | Video de fondo en Hero |
+| `hero_placeholder.jpg` | Poster del video |
+| `WISK.jpg` | Matcha product card |
+| `MATCHA_LATTE_HOT.jpg` | Hojicha product card |
+| `sencha_loose_leaf.jpg` | Sencha product card |
+| `matcha_kit.jpg` | Kit, Hojicha, Kyusu cards |
+| `workshop.jpg` | Sección Talleres |
+
+---
+
+## Reglas de Voz Visual
+
+| ✅ Hacer | ❌ Evitar |
+|---|----|
+| Labels en `font-mono text-[9px] uppercase` | Labels en `font-sans font-medium` |
+| Botones `bg-neutral-900` o outline | Botones `bg-green-*` sólidos |
+| Verde `#2d5a3d` solo para acentos de texto | Verde como fondo de elementos |
+| Fondos `#F9F8F3` y `bg-white` | Gradientes o colores saturados |
+| Sombras difusas y sutiles | Drop shadows duras |
+| `font-light` en headings y body | `font-bold` en textos largos |
+| `rounded-sm` (2px) en botones | `rounded-lg` o `rounded-full` |
+| Transiciones `duration-300` a `duration-700` | Sin transiciones o muy rápidas |
+| `letter-spacing` negativo en headings | Letter spacing positivo en títulos |
+| `letter-spacing` positivo en labels | Letter spacing neutro en labels |
+
+---
+
+## Breakpoints de Referencia
+
+| Breakpoint | Ancho | Uso |
+|---|----|-----|
+| Default | < 640px | Mobile |
+| `sm` | ≥ 640px | Mobile landscape |
+| `md` | ≥ 768px | Tablet |
+| `lg` | ≥ 1024px | Desktop |
+| `xl` | ≥ 1280px | Desktop grande |
+| `2xl` | ≥ 1536px | Ultrawide |
