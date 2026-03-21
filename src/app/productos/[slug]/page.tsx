@@ -78,6 +78,25 @@ export default function ProductDetailPage({
   const baseUrl = "https://shizukumatchastudio.com";
 
   // Schema: Product — Rich snippets with price, availability
+  // priceValidUntil: 1 year from now (Google recommends this field)
+  const priceValidUntil = new Date(
+    Date.now() + 365 * 24 * 60 * 60 * 1000
+  ).toISOString().split("T")[0];
+
+  const offersList = product.sizes.map((size) => ({
+    "@type": "Offer",
+    name: size.label,
+    price: size.price.toString(),
+    priceCurrency: "MXN",
+    availability: "https://schema.org/InStock",
+    priceValidUntil,
+    url: `${baseUrl}/productos/${product.slug}`,
+    seller: {
+      "@type": "LocalBusiness",
+      "@id": `${baseUrl}/#business`,
+    },
+  }));
+
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -88,18 +107,17 @@ export default function ProductDetailPage({
       "@type": "Brand",
       name: "Shizuku Matcha Studio",
     },
-    offers: product.sizes.map((size) => ({
-      "@type": "Offer",
-      name: size.label,
-      price: size.price.toString(),
-      priceCurrency: "MXN",
-      availability: "https://schema.org/InStock",
-      url: `${baseUrl}/productos/${product.slug}`,
-      seller: {
-        "@type": "LocalBusiness",
-        "@id": `${baseUrl}/#business`,
-      },
-    })),
+    offers:
+      offersList.length === 1
+        ? offersList[0]
+        : {
+            "@type": "AggregateOffer",
+            lowPrice: Math.min(...product.sizes.map((s) => s.price)).toString(),
+            highPrice: Math.max(...product.sizes.map((s) => s.price)).toString(),
+            priceCurrency: "MXN",
+            offerCount: product.sizes.length,
+            offers: offersList,
+          },
     ...(product.specs.type === "tea" && {
       additionalProperty: [
         { "@type": "PropertyValue", name: "Tipo", value: product.specs.tipo },

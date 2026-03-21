@@ -107,6 +107,11 @@ export default function HomePage() {
     ],
   };
 
+  // priceValidUntil: 1 year from now
+  const priceValidUntil = new Date(
+    Date.now() + 365 * 24 * 60 * 60 * 1000
+  ).toISOString().split("T")[0];
+
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -129,6 +134,7 @@ export default function HomePage() {
         price: "350",
         priceCurrency: "MXN",
         availability: "https://schema.org/InStock",
+        priceValidUntil,
         url: "https://shizukumatchastudio.com/productos/matcha_okumidori_seasonal_blend_latte_30g",
         seller: {
           "@type": "LocalBusiness",
@@ -141,6 +147,7 @@ export default function HomePage() {
         price: "950",
         priceCurrency: "MXN",
         availability: "https://schema.org/InStock",
+        priceValidUntil,
         url: "https://shizukumatchastudio.com/productos/matcha_okumidori_seasonal_blend_latte_30g",
         seller: {
           "@type": "LocalBusiness",
