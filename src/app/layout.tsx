@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     url: "https://shizukumatchastudio.com",
     siteName: "Shizuku Matcha Studio",
     images: {
-      url: "https://shizukumatchastudio.com/thumbnail.jpg",
+      url: "https://shizukumatchastudio.com/matcha-latte-hermosillo-1-1.jpg",
       width: 800,
       height: 800,
       alt: "Matcha latte preparado con Shizu no Midori - Matcha Hermosillo",
