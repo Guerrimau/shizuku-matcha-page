@@ -24,6 +24,12 @@ export const metadata: Metadata = {
       "Importamos directamente de Shizuoka, Japón. Matcha cultivar Okumidori seleccionado para el latte perfecto. Trazabilidad y honestidad técnica en Hermosillo, Sonora.",
     images: [
       {
+        url: "https://shizukumatchastudio.com/matcha-latte-hermosillo-1-1.jpg",
+        width: 800,
+        height: 800,
+        alt: "Matcha latte preparado con Shizu no Midori - Matcha Hermosillo",
+      },
+      {
         url: "https://shizukumatchastudio.com/og.jpg",
         width: 1200,
         height: 630,
@@ -108,9 +114,9 @@ export default function HomePage() {
   };
 
   // priceValidUntil: 1 year from now
-  const priceValidUntil = new Date(
-    Date.now() + 365 * 24 * 60 * 60 * 1000
-  ).toISOString().split("T")[0];
+  const priceValidUntil = new Date(Date.now() + 365 * 24 * 60 * 60 * 1000)
+    .toISOString()
+    .split("T")[0];
 
   const productSchema = {
     "@context": "https://schema.org",
@@ -212,7 +218,7 @@ export default function HomePage() {
               <div className="max-w-3xl mx-auto text-center space-y-8">
                 <span
                   className="font-script text-sm text-neutral-400"
-                  style={{ letterSpacing: '0.25em' }}
+                  style={{ letterSpacing: "0.25em" }}
                 >
                   静岡
                 </span>
@@ -220,7 +226,7 @@ export default function HomePage() {
                 <h2
                   id="honesty-heading"
                   className="text-[1.75rem] md:text-[2.25rem] lg:text-[2.75rem] font-serif font-light text-neutral-900 leading-[1.12]"
-                  style={{ letterSpacing: '-0.02em' }}
+                  style={{ letterSpacing: "-0.02em" }}
                 >
                   No es &apos;Ceremonial&apos;. Es mejor:{" "}
                   <span className="text-[#2d5a3d]">Es Trazable.</span>
@@ -229,9 +235,9 @@ export default function HomePage() {
                 <p className="text-base md:text-lg text-neutral-600 font-light leading-[1.8] max-w-2xl mx-auto">
                   El término &apos;ceremonial&apos; es una invención occidental.
                   En Shizuku, hablamos de cultivares, cosechas y productores.
-                  Shizu no Midori es un blend estacional de Shizuoka, seleccionado
-                  por su nivel correcto de astringencia para resaltar en
-                  preparaciones con leche.
+                  Shizu no Midori es un blend estacional de Shizuoka,
+                  seleccionado por su nivel correcto de astringencia para
+                  resaltar en preparaciones con leche.
                 </p>
               </div>
             </FadeIn>
@@ -256,7 +262,7 @@ export default function HomePage() {
                 <article className="py-6 md:py-0 md:px-8 first:md:pl-0 last:md:pr-0">
                   <span
                     className="font-mono text-[9px] uppercase text-neutral-400"
-                    style={{ letterSpacing: '0.2em' }}
+                    style={{ letterSpacing: "0.2em" }}
                   >
                     Origen
                   </span>
@@ -272,7 +278,7 @@ export default function HomePage() {
                 <article className="py-6 md:py-0 md:px-8">
                   <span
                     className="font-mono text-[9px] uppercase text-neutral-400"
-                    style={{ letterSpacing: '0.2em' }}
+                    style={{ letterSpacing: "0.2em" }}
                   >
                     Cultivar
                   </span>
@@ -288,7 +294,7 @@ export default function HomePage() {
                 <article className="py-6 md:py-0 md:px-8">
                   <span
                     className="font-mono text-[9px] uppercase text-neutral-400"
-                    style={{ letterSpacing: '0.2em' }}
+                    style={{ letterSpacing: "0.2em" }}
                   >
                     Proceso
                   </span>
@@ -304,7 +310,7 @@ export default function HomePage() {
                 <article className="py-6 md:py-0 md:px-8 last:md:pr-0">
                   <span
                     className="font-mono text-[9px] uppercase text-neutral-400"
-                    style={{ letterSpacing: '0.2em' }}
+                    style={{ letterSpacing: "0.2em" }}
                   >
                     Notas de cata
                   </span>
@@ -333,14 +339,14 @@ export default function HomePage() {
               <div className="text-center mb-16 lg:mb-20">
                 <span
                   className="font-mono text-[9px] uppercase text-neutral-400"
-                  style={{ letterSpacing: '0.25em' }}
+                  style={{ letterSpacing: "0.25em" }}
                 >
                   Colecciones
                 </span>
                 <h2
                   id="collections-heading"
                   className="mt-4 text-[1.75rem] md:text-[2.25rem] font-serif font-light text-neutral-900"
-                  style={{ letterSpacing: '-0.02em' }}
+                  style={{ letterSpacing: "-0.02em" }}
                 >
                   Productos
                 </h2>
@@ -363,13 +369,13 @@ export default function HomePage() {
                     </div>
                     <h3
                       className="text-lg lg:text-xl font-serif font-light text-neutral-900 mb-3"
-                      style={{ letterSpacing: '-0.01em' }}
+                      style={{ letterSpacing: "-0.01em" }}
                     >
                       Matcha y Hojicha en Polvo
                     </h3>
                     <span
                       className="inline-flex items-center gap-2 font-mono text-[10px] uppercase text-neutral-500 group-hover:text-neutral-900 transition-colors duration-300"
-                      style={{ letterSpacing: '0.12em' }}
+                      style={{ letterSpacing: "0.12em" }}
                     >
                       Comprar
                       <svg
@@ -405,13 +411,13 @@ export default function HomePage() {
                     </div>
                     <h3
                       className="text-lg lg:text-xl font-serif font-light text-neutral-900 mb-3"
-                      style={{ letterSpacing: '-0.01em' }}
+                      style={{ letterSpacing: "-0.01em" }}
                     >
                       Té de Hoja Suelta
                     </h3>
                     <span
                       className="inline-flex items-center gap-2 font-mono text-[10px] uppercase text-neutral-500 group-hover:text-neutral-900 transition-colors duration-300"
-                      style={{ letterSpacing: '0.12em' }}
+                      style={{ letterSpacing: "0.12em" }}
                     >
                       Comprar
                       <svg
@@ -435,7 +441,10 @@ export default function HomePage() {
               {/* Collection 3: Accesorios y Kyusu */}
               <FadeIn delay={200}>
                 <article className="group">
-                  <Link href="/productos/categoria/accesorios" className="block">
+                  <Link
+                    href="/productos/categoria/accesorios"
+                    className="block"
+                  >
                     <div className="aspect-[4/5] bg-neutral-100 mb-6 overflow-hidden relative">
                       <Image
                         src="/products/mini-kit-matcha/FULL.jpg"
@@ -447,13 +456,13 @@ export default function HomePage() {
                     </div>
                     <h3
                       className="text-lg lg:text-xl font-serif font-light text-neutral-900 mb-3"
-                      style={{ letterSpacing: '-0.01em' }}
+                      style={{ letterSpacing: "-0.01em" }}
                     >
                       Accesorios y Kyusu
                     </h3>
                     <span
                       className="inline-flex items-center gap-2 font-mono text-[10px] uppercase text-neutral-500 group-hover:text-neutral-900 transition-colors duration-300"
-                      style={{ letterSpacing: '0.12em' }}
+                      style={{ letterSpacing: "0.12em" }}
                     >
                       Comprar
                       <svg
@@ -504,14 +513,14 @@ export default function HomePage() {
                   <div className="space-y-4">
                     <span
                       className="font-mono text-[9px] uppercase text-neutral-400"
-                      style={{ letterSpacing: '0.25em' }}
+                      style={{ letterSpacing: "0.25em" }}
                     >
                       Hermosillo, Sonora
                     </span>
                     <h2
                       id="studio-heading"
                       className="text-[1.75rem] md:text-[2.25rem] lg:text-[2.75rem] font-serif font-light text-neutral-900 leading-[1.12]"
-                      style={{ letterSpacing: '-0.02em' }}
+                      style={{ letterSpacing: "-0.02em" }}
                     >
                       Nuestros talleres{" "}
                       <span className="font-script text-xl md:text-2xl align-middle text-neutral-300">
@@ -522,8 +531,8 @@ export default function HomePage() {
 
                   <p className="text-base md:text-lg text-neutral-600 font-light leading-[1.8] max-w-lg">
                     Llevamos la cultura técnica del té japonés al desierto.
-                    Participa en nuestros talleres presenciales de preparación de
-                    Usucha, Matcha Latte y Hojicha Latte.
+                    Participa en nuestros talleres presenciales de preparación
+                    de Usucha, Matcha Latte y Hojicha Latte.
                   </p>
 
                   {/* Coordinates accent */}
@@ -531,7 +540,7 @@ export default function HomePage() {
                     <div className="w-8 h-px bg-neutral-300" />
                     <span
                       className="font-mono text-[10px] text-neutral-400"
-                      style={{ letterSpacing: '0.12em' }}
+                      style={{ letterSpacing: "0.12em" }}
                     >
                       29.0729° N, 110.9559° O
                     </span>
@@ -541,8 +550,8 @@ export default function HomePage() {
                     href="/talleres"
                     className="inline-flex items-center gap-2 text-neutral-700 px-8 py-4 font-mono text-[10px] uppercase hover:text-neutral-900 hover:border-neutral-900 transition-all duration-300 rounded-sm"
                     style={{
-                      letterSpacing: '0.08em',
-                      border: '1.5px solid rgb(212 212 212)',
+                      letterSpacing: "0.08em",
+                      border: "1.5px solid rgb(212 212 212)",
                     }}
                   >
                     Ver calendario de Talleres
@@ -552,8 +561,6 @@ export default function HomePage() {
             </FadeIn>
           </div>
         </section>
-
-
 
         {/* ═══════════════════════════════════════════════════════════════
             SECTION 6: LEARN — Article Carousel
@@ -586,27 +593,28 @@ export default function HomePage() {
                 <div className="space-y-4 max-w-xl">
                   <span
                     className="font-mono text-[9px] uppercase text-white/50"
-                    style={{ letterSpacing: '0.25em' }}
+                    style={{ letterSpacing: "0.25em" }}
                   >
                     B2B · Mayoreo
                   </span>
                   <h2
                     id="b2b-heading"
                     className="text-xl md:text-2xl lg:text-[1.75rem] font-serif font-light"
-                    style={{ letterSpacing: '-0.02em' }}
+                    style={{ letterSpacing: "-0.02em" }}
                   >
                     Para Barras de Especialidad
                   </h2>
                   <p className="text-base text-white/60 font-light leading-[1.7]">
                     Suministramos matcha de grado superior a las mejores
-                    cafeterías en Sonora. Precios competitivos y soporte técnico.
+                    cafeterías en Sonora. Precios competitivos y soporte
+                    técnico.
                   </p>
                 </div>
 
                 <Link
                   href="/mayoreo"
                   className="inline-flex items-center justify-center gap-2 border-[1.5px] border-white text-white px-8 py-4 font-mono text-[10px] uppercase hover:bg-white hover:text-neutral-950 transition-all duration-300 whitespace-nowrap rounded-sm"
-                  style={{ letterSpacing: '0.08em' }}
+                  style={{ letterSpacing: "0.08em" }}
                 >
                   Información Completa
                 </Link>

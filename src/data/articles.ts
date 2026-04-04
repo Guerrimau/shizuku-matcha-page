@@ -61,7 +61,7 @@ export const articles: Article[] = [
       "Técnica correcta paso a paso: temperatura, ratio, y batido. Con parámetros exactos para matcha latte.",
     category: "preparacion",
     tags: ["técnica", "latte", "chasen", "principiante"],
-    image: "/MATCHA_WISK.jpg",
+    image: "/matcha-latte-hermosillo-1-1.jpg",
     datePublished: "2025-01-01",
     dateModified: "2026-03-18",
     readingTime: 8,
@@ -80,7 +80,8 @@ export const articles: Article[] = [
         },
         {
           title: "Agregar agua y batir",
-          description: "Verter 25ml de agua a 65°C sobre el matcha y batir con chasen en movimiento de W hasta formar espuma uniforme.",
+          description:
+            "Verter 25ml de agua a 65°C sobre el matcha y batir con chasen en movimiento de W hasta formar espuma uniforme.",
         },
         {
           title: "Preparar latte",
@@ -94,7 +95,11 @@ export const articles: Article[] = [
         "Furui (tamiz)",
         "Chashaku (cuchara de bambú)",
       ],
-      supplies: ["Matcha (3-4g)", "Agua caliente (40ml a 55-65°C)", "Leche (180ml)"],
+      supplies: [
+        "Matcha (3-4g)",
+        "Agua caliente (40ml a 55-65°C)",
+        "Leche (180ml)",
+      ],
     },
     relatedLinks: [
       {
@@ -137,7 +142,8 @@ export const articles: Article[] = [
         type: "article",
         slug: "guia-preparacion-matcha",
         title: "Guía de Preparación de Matcha",
-        description: "Técnica correcta paso a paso: temperatura, ratio, y batido",
+        description:
+          "Técnica correcta paso a paso: temperatura, ratio, y batido",
       },
       {
         type: "product",
@@ -157,7 +163,10 @@ export const articles: Article[] = [
 // Category Filters
 // ═══════════════════════════════════════════════════════════════
 
-export const articleCategories: { id: ArticleCategory | "all"; label: string }[] = [
+export const articleCategories: {
+  id: ArticleCategory | "all";
+  label: string;
+}[] = [
   { id: "all", label: "Todos" },
   { id: "preparacion", label: "Preparación" },
   { id: "grados", label: "Grados y Calidad" },
@@ -175,7 +184,7 @@ export function getArticleBySlug(slug: string): Article | undefined {
 }
 
 export function getArticlesByCategory(
-  category: ArticleCategory | "all"
+  category: ArticleCategory | "all",
 ): Article[] {
   if (category === "all") return articles;
   return articles.filter((a) => a.category === category);
@@ -187,7 +196,7 @@ export function getFeaturedArticles(): Article[] {
 
 export function getRelatedArticles(
   currentSlug: string,
-  limit: number = 3
+  limit: number = 3,
 ): Article[] {
   const current = getArticleBySlug(currentSlug);
   if (!current) return [];

@@ -48,6 +48,19 @@ export const metadata: Metadata = {
   description:
     "Matcha de especialidad importado directo de Shizuoka, Japón. Cultivar Okumidori con trazabilidad completa. Talleres y venta en Hermosillo, Sonora.",
 
+  openGraph: {
+    type: "website",
+    locale: "es_MX",
+    url: "https://shizukumatchastudio.com",
+    siteName: "Shizuku Matcha Studio",
+    images: {
+      url: "https://shizukumatchastudio.com/thumbnail.jpg",
+      width: 800,
+      height: 800,
+      alt: "Matcha latte preparado con Shizu no Midori - Matcha Hermosillo",
+    },
+  },
+
   // Reglas de indexación globales
   robots: {
     index: true,
@@ -74,9 +87,14 @@ export default function RootLayout({
     >
       <head>
         <link rel="icon" href="/favicons/favicon.ico" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicons/favicon-32x32.png"
+        />
         <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
-        
+
         {/* RSS Feed — Faster indexing for Google and Bing */}
         <link
           rel="alternate"
@@ -158,8 +176,13 @@ export default function RootLayout({
               currenciesAccepted: "MXN",
               paymentAccepted: "Cash, Credit Card, Debit Card, Bank Transfer",
               knowsLanguage: ["es", "en"],
-              keywords: "matcha hermosillo, matcha sonora, te verde hermosillo, matcha ceremonial mexico, comprar matcha, matcha latte hermosillo",
-              image: "https://shizukumatchastudio.com/TEA_SESSION_EMPTY_LOW.jpg",
+              keywords:
+                "matcha hermosillo, matcha sonora, te verde hermosillo, matcha ceremonial mexico, comprar matcha, matcha latte hermosillo",
+              image: [
+                "https://shizukumatchastudio.com/matcha-latte-hermosillo-1-1.jpg",
+                "https://shizukumatchastudio.com/og.jpg",
+                "https://shizukumatchastudio.com/TEA_SESSION_EMPTY_LOW.jpg",
+              ],
               logo: "https://shizukumatchastudio.com/favicons/favicon-512x512.png",
               priceRange: "$$",
               address: {
