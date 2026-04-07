@@ -11,17 +11,17 @@ import { getFeaturedArticles } from "@/data/articles";
 import { homeFaqItems } from "@/data/faq";
 
 export const metadata: Metadata = {
-  title: "Shizuku Matcha Studio | El cuerpo del Matcha Latte perfecto",
+  title: "Matcha en Hermosillo | Shizuku Matcha Studio",
   description:
-    "Importamos directamente de Shizuoka, Japón. Matcha cultivar Okumidori seleccionado para el latte perfecto. Trazabilidad y honestidad técnica en Hermosillo, Sonora.",
+    "Matcha de especialidad en Hermosillo, Sonora — mejor que ceremonial: cultivar Okumidori de Shizuoka, 100% trazable. Talleres y envíos a México.",
   openGraph: {
     type: "website",
     locale: "es_MX",
     siteName: "Shizuku Matcha Studio",
     url: "https://shizukumatchastudio.com",
-    title: "Shizuku Matcha Studio | El cuerpo del Matcha Latte perfecto",
+    title: "Matcha en Hermosillo | Shizuku Matcha Studio",
     description:
-      "Importamos directamente de Shizuoka, Japón. Matcha cultivar Okumidori seleccionado para el latte perfecto. Trazabilidad y honestidad técnica en Hermosillo, Sonora.",
+      "Matcha de especialidad en Hermosillo, Sonora. Mas que matcha ceremonial: cultivar Okumidori de Shizuoka, Japón, 100% trazable. Talleres y envíos a México.",
     images: [
       {
         url: "https://shizukumatchastudio.com/matcha-latte-hermosillo-1-1.jpg",
@@ -39,19 +39,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shizuku Matcha Studio | El cuerpo del Matcha Latte perfecto",
+    title: "Matcha en Hermosillo | Shizuku Matcha Studio",
     description:
-      "Importamos directamente de Shizuoka, Japón. Matcha cultivar Okumidori seleccionado para el latte perfecto. Trazabilidad y honestidad técnica en Hermosillo, Sonora.",
+      "Matcha de especialidad en Hermosillo, Sonora. Alternativa real al matcha ceremonial: cultivar Okumidori de Shizuoka, Japón, 100% trazable. Talleres y envíos a México.",
     images: ["https://shizukumatchastudio.com/og.jpg"],
   },
   alternates: {
     canonical: "https://shizukumatchastudio.com",
-  },
-  other: {
-    "geo.region": "MX-SON",
-    "geo.placename": "Hermosillo",
-    "geo.position": "29.0729;-110.9559",
-    ICBM: "29.0729, -110.9559",
   },
 };
 
@@ -126,41 +120,49 @@ export default function HomePage() {
       "Matcha de especialidad. Cultivar Okumidori de Shizuoka, Japón. Blend estacional, molido en piedra. Perfil balanceado para lattes y preparación tradicional.",
     image: [
       "https://shizukumatchastudio.com/MATCHA/PRODUCT.jpg",
-      "https://shizukumatchastudio.com/MATCHA/BAG.jpg",
-      "https://shizukumatchastudio.com/MATCHA/FULL.jpg",
+      "https://shizukumatchastudio.com/MATCHA/BOT_FIELD.jpg",
+      "https://shizukumatchastudio.com/MATCHA/SIDE.jpg",
+      "https://shizukumatchastudio.com/MATCHA_LATTE_HOT.jpg",
     ],
     brand: {
       "@type": "Brand",
       name: "Shizuku Matcha Studio",
     },
-    offers: [
-      {
-        "@type": "Offer",
-        name: "Lata 30g",
-        price: "350",
-        priceCurrency: "MXN",
-        availability: "https://schema.org/InStock",
-        priceValidUntil,
-        url: "https://shizukumatchastudio.com/productos/matcha_okumidori_seasonal_blend_latte_30g",
-        seller: {
-          "@type": "LocalBusiness",
-          "@id": "https://shizukumatchastudio.com/#business",
+    offers: {
+      "@type": "AggregateOffer",
+      lowPrice: "350",
+      highPrice: "950",
+      priceCurrency: "MXN",
+      offerCount: 2,
+      offers: [
+        {
+          "@type": "Offer",
+          name: "Lata 30g",
+          price: "350",
+          priceCurrency: "MXN",
+          availability: "https://schema.org/InStock",
+          priceValidUntil,
+          url: "https://shizukumatchastudio.com/productos/matcha_okumidori_seasonal_blend_latte_30g",
+          seller: {
+            "@type": "LocalBusiness",
+            "@id": "https://shizukumatchastudio.com/#business",
+          },
         },
-      },
-      {
-        "@type": "Offer",
-        name: "Lata 100g",
-        price: "950",
-        priceCurrency: "MXN",
-        availability: "https://schema.org/InStock",
-        priceValidUntil,
-        url: "https://shizukumatchastudio.com/productos/matcha_okumidori_seasonal_blend_latte_30g",
-        seller: {
-          "@type": "LocalBusiness",
-          "@id": "https://shizukumatchastudio.com/#business",
+        {
+          "@type": "Offer",
+          name: "Lata 100g",
+          price: "950",
+          priceCurrency: "MXN",
+          availability: "https://schema.org/InStock",
+          priceValidUntil,
+          url: "https://shizukumatchastudio.com/productos/matcha_okumidori_seasonal_blend_latte_30g",
+          seller: {
+            "@type": "LocalBusiness",
+            "@id": "https://shizukumatchastudio.com/#business",
+          },
         },
-      },
-    ],
+      ],
+    },
     additionalProperty: [
       {
         "@type": "PropertyValue",
@@ -207,7 +209,7 @@ export default function HomePage() {
         <HeroSplit />
 
         {/* ═══════════════════════════════════════════════════════════════
-            SECTION 2: HONESTY & DIFFERENTIATION — Text-heavy, centered
+            SECTION 2: HONESTY & DIFFERENTIATION — Split layout
         ═══════════════════════════════════════════════════════════════ */}
         <section
           aria-labelledby="honesty-heading"
@@ -215,30 +217,44 @@ export default function HomePage() {
         >
           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <FadeIn>
-              <div className="max-w-3xl mx-auto text-center space-y-8">
-                <span
-                  className="font-script text-sm text-neutral-400"
-                  style={{ letterSpacing: "0.25em" }}
-                >
-                  静岡
-                </span>
+              <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                {/* Text side */}
+                <div className="space-y-8">
+                  <span
+                    className="font-script text-sm text-neutral-400"
+                    style={{ letterSpacing: "0.25em" }}
+                  >
+                    静岡
+                  </span>
 
-                <h2
-                  id="honesty-heading"
-                  className="text-[1.75rem] md:text-[2.25rem] lg:text-[2.75rem] font-serif font-light text-neutral-900 leading-[1.12]"
-                  style={{ letterSpacing: "-0.02em" }}
-                >
-                  No es &apos;Ceremonial&apos;. Es mejor:{" "}
-                  <span className="text-[#2d5a3d]">Es Trazable.</span>
-                </h2>
+                  <h2
+                    id="honesty-heading"
+                    className="text-[1.75rem] md:text-[2.25rem] lg:text-[2.75rem] font-serif font-light text-neutral-900 leading-[1.12]"
+                    style={{ letterSpacing: "-0.02em" }}
+                  >
+                    No es &apos;Ceremonial&apos;. Es mejor:{" "}
+                    <span className="text-[#2d5a3d]">Es Trazable.</span>
+                  </h2>
 
-                <p className="text-base md:text-lg text-neutral-600 font-light leading-[1.8] max-w-2xl mx-auto">
-                  El término &apos;ceremonial&apos; es una invención occidental.
-                  En Shizuku, hablamos de cultivares, cosechas y productores.
-                  Shizu no Midori es un blend estacional de Shizuoka,
-                  seleccionado por su nivel correcto de astringencia para
-                  resaltar en preparaciones con leche.
-                </p>
+                  <p className="text-base md:text-lg text-neutral-600 font-light leading-[1.8] max-w-lg">
+                    El término &apos;ceremonial&apos; es una invención
+                    occidental. En Shizuku, hablamos de cultivares, cosechas y
+                    productores. Shizu no Midori es un blend estacional de
+                    Shizuoka, seleccionado por su nivel correcto de astringencia
+                    para resaltar en preparaciones con leche.
+                  </p>
+                </div>
+
+                {/* Image side */}
+                <div className="aspect-[3/4] bg-neutral-100 overflow-hidden relative">
+                  <Image
+                    src="/MATCHA_BAG.jpg"
+                    alt="Polvo de matcha Okumidori recién abierto — Shizuku Matcha Studio"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                </div>
               </div>
             </FadeIn>
           </div>
@@ -522,7 +538,7 @@ export default function HomePage() {
                       className="text-[1.75rem] md:text-[2.25rem] lg:text-[2.75rem] font-serif font-light text-neutral-900 leading-[1.12]"
                       style={{ letterSpacing: "-0.02em" }}
                     >
-                      Nuestros talleres{" "}
+                      Nuestros talleres en Hermosillo{" "}
                       <span className="font-script text-xl md:text-2xl align-middle text-neutral-300">
                         抹茶
                       </span>

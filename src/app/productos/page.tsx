@@ -11,9 +11,9 @@ import {
 } from "@/data/products";
 
 export const metadata: Metadata = {
-  title: "Productos — Té Japonés de Especialidad",
+  title: "Matcha y Té Japonés en Hermosillo — Shizuku",
   description:
-    "Matcha, hojicha, sencha y accesorios japoneses. Importación directa de Shizuoka, Japón con trazabilidad completa. Envío a todo México.",
+    "Matcha, hojicha, sencha y accesorios japoneses importados de Shizuoka. Envío a Hermosillo y todo México. Trazabilidad completa.",
   openGraph: {
     title: "Productos — Té Japonés de Especialidad | Shizuku Matcha Studio",
     description:
@@ -209,10 +209,10 @@ export default function ProductosPage() {
               className="text-3xl md:text-4xl lg:text-[2.75rem] font-serif font-light text-neutral-900"
               style={{ letterSpacing: "-0.02em" }}
             >
-              Productos
+              Matcha y Té Japonés de Especialidad
             </h1>
             <p className="mt-5 text-base text-neutral-600 font-light max-w-xl mx-auto leading-relaxed">
-              Té de especialidad importado directamente de Shizuoka, Japón.
+              Té de especialidad importado de Shizuoka a Hermosillo, Sonora.
               Trazabilidad completa desde el cultivar hasta tu taza.
             </p>
           </header>

@@ -9,7 +9,7 @@ import { b2bFaqItems } from "@/data/faq";
 export const metadata: Metadata = {
   title: "Mayoreo para Cafeterías — Matcha B2B en Hermosillo",
   description:
-    "Matcha de especialidad de Shizuoka para cafeterías en Hermosillo y México. Cultivar Okumidori, precio directo de importador, sin pedido mínimo. Asesoría técnica incluida.",
+    "Matcha de Shizuoka para cafeterías en Hermosillo — mejor que ceremonial: cultivar Okumidori, precio directo de importador, sin pedido mínimo.",
   openGraph: {
     title: "Mayoreo para Cafeterías — Matcha B2B en Hermosillo",
     description:
@@ -36,10 +36,6 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://shizukumatchastudio.com/mayoreo",
-  },
-  other: {
-    "geo.region": "MX-SON",
-    "geo.placename": "Hermosillo",
   },
 };
 
@@ -154,9 +150,9 @@ export default function MayoreoPage() {
                     Matcha de especialidad para tu carta
                   </h1>
                   <p className="text-base md:text-lg text-neutral-600 font-light leading-[1.8] max-w-lg">
-                    Blend estacional de Shizuoka, cultivar Okumidori. Precio
-                    directo de importador, sin intermediarios. Perfil
-                    consistente lote a lote.
+                    Blend estacional de Shizuoka, cultivar Okumidori. Mejor
+                    que matcha ceremonial: precio directo de importador, sin
+                    intermediarios. Perfil consistente lote a lote.
                   </p>
                 </div>
 
@@ -217,7 +213,7 @@ export default function MayoreoPage() {
                 <div className="aspect-[4/5] relative overflow-hidden rounded-sm">
                   <Image
                     src="/MATCHA_LATTE_HOT.jpg"
-                    alt="Matcha latte de especialidad"
+                    alt="Matcha latte de especialidad para cafeterías en Hermosillo — Shizuku Matcha Studio"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
@@ -433,7 +429,7 @@ export default function MayoreoPage() {
                 <div className="aspect-[4/5] relative overflow-hidden rounded-sm">
                   <Image
                     src="/MATCHA_BAG.jpg"
-                    alt="Presentación de matcha Shizuku"
+                    alt="Matcha Okumidori de Shizuoka — presentación mayoreo para cafeterías en Hermosillo"
                     fill
                     className="object-cover"
                     sizes="50vw"

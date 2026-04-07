@@ -43,54 +43,73 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://shizukumatchastudio.com/talleres",
   },
-  other: {
-    "geo.region": "MX-SON",
-    "geo.placename": "Hermosillo",
-  },
 };
 
 export default function TalleresPage() {
   const nextWorkshop = getNextWorkshop();
   const pastWorkshops = getPastWorkshops();
 
-  const workshopEventsSchema = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    itemListElement: workshops.map((workshop, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      item: {
-        "@type": "Event",
-        name: `${workshop.name} — ${workshop.subtitle}`,
-        description: workshop.description,
-        startDate: workshop.date,
-        eventStatus: "https://schema.org/EventScheduled",
-        eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-        location: {
-          "@type": "Place",
-          name: "Shizuku Matcha Studio",
-          address: {
-            "@type": "PostalAddress",
-            addressLocality: "Hermosillo",
-            addressRegion: "Sonora",
-            addressCountry: "MX",
-          },
-        },
-        organizer: {
-          "@type": "Organization",
-          name: "Shizuku Matcha Studio",
-          url: "https://shizukumatchastudio.com",
-        },
-        offers: {
-          "@type": "Offer",
-          price: workshop.price,
-          priceCurrency: "MXN",
-          availability: "https://schema.org/InStock",
-          url: "https://shizukumatchastudio.com/talleres",
-        },
-      },
-    })),
-  };
+  const baseUrl = "https://shizukumatchastudio.com";
+  const now = new Date();
+  const upcomingWorkshops = workshops.filter(
+    (w) => new Date(`${w.date}T${w.time}:00`) > now
+  );
+
+  const workshopEventsSchema =
+    upcomingWorkshops.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          itemListElement: upcomingWorkshops.map((workshop, index) => {
+            const startDate = `${workshop.date}T${workshop.time}:00`;
+            const [h, m] = workshop.time.split(":").map(Number);
+            const endMins = h * 60 + m + 90;
+            const endDate = `${workshop.date}T${String(Math.floor(endMins / 60)).padStart(2, "0")}:${String(endMins % 60).padStart(2, "0")}:00`;
+            return {
+              "@type": "ListItem",
+              position: index + 1,
+              item: {
+                "@type": "Event",
+                name: `${workshop.name} — ${workshop.subtitle}`,
+                description: workshop.description,
+                startDate,
+                endDate,
+                eventStatus: "https://schema.org/EventScheduled",
+                eventAttendanceMode:
+                  "https://schema.org/OfflineEventAttendanceMode",
+                ...(workshop.image && {
+                  image: `${baseUrl}${workshop.image}`,
+                }),
+                location: {
+                  "@type": "Place",
+                  name: "Shizuku Matcha Studio",
+                  address: {
+                    "@type": "PostalAddress",
+                    addressLocality: "Hermosillo",
+                    addressRegion: "Sonora",
+                    addressCountry: "MX",
+                  },
+                },
+                organizer: {
+                  "@type": "Organization",
+                  name: "Shizuku Matcha Studio",
+                  url: baseUrl,
+                },
+                offers: {
+                  "@type": "Offer",
+                  price: workshop.price,
+                  priceCurrency: "MXN",
+                  availability:
+                    workshop.spotsAvailable != null
+                      ? "https://schema.org/LimitedAvailability"
+                      : "https://schema.org/InStock",
+                  url: `${baseUrl}/talleres`,
+                },
+              },
+            };
+          }),
+        }
+      : null;
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -109,12 +128,14 @@ export default function TalleresPage() {
     <div className="min-h-screen bg-washi-bg">
       <Navbar />
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(workshopEventsSchema),
-        }}
-      />
+      {workshopEventsSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(workshopEventsSchema),
+          }}
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

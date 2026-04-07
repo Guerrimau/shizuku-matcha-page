@@ -12,11 +12,11 @@ import {
 export const metadata: Metadata = {
   title: "Aprende — Guías Técnicas sobre Matcha y Té Japonés",
   description:
-    "Guías detalladas: preparación de matcha, grados y calidades, historia del té japonés, y técnicas de infusión. Información verificada, sin marketing.",
+    "Guías técnicas sobre matcha escritas desde Hermosillo: preparación, cultivares, calidades e historia del té japonés. Sin marketing.",
   openGraph: {
     title: "Aprende — Guías Técnicas sobre Matcha y Té Japonés",
     description:
-      "Guías detalladas: preparación de matcha, grados y calidades, historia del té japonés, y técnicas de infusión. Información verificada, sin marketing.",
+      "Guías técnicas sobre matcha escritas desde Hermosillo: preparación, cultivares, calidades e historia del té japonés. Sin marketing.",
     url: "https://shizukumatchastudio.com/aprende",
     type: "website",
     locale: "es_MX",
