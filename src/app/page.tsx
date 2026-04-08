@@ -91,7 +91,7 @@ export default function HomePage() {
         name: "¿Qué significa matcha ceremonial o grado ceremonial?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Matcha ceremonial es un término de marketing occidental sin definición estandarizada. En Japón, el matcha se clasifica por competencias regionales y calidad del tencha (hoja base), no por grados ceremoniales. Lo que realmente importa es: el cultivar (variedad de planta), el tiempo de sombreado, la cosecha (primera vs. segunda), y el proceso de molido. En Shizuku preferimos hablar de trazabilidad: origen exacto, cultivar, y proceso.",
+          text: "'Ceremonial' es un término de marketing occidental sin definición estandarizada. En Japón, el matcha se clasifica por competencias regionales y calidad del tencha (hoja base), no por grados ceremoniales. Lo que realmente importa es: el cultivar (variedad de planta), el tiempo de sombreado, la cosecha (primera vs. segunda), y el proceso de molido. En Shizuku hablamos de trazabilidad: origen exacto, cultivar, y proceso.",
         },
       },
       {
@@ -228,12 +228,13 @@ export default function HomePage() {
                   className="text-[1.75rem] md:text-[2.25rem] lg:text-[2.75rem] font-serif font-light text-neutral-900 leading-[1.12]"
                   style={{ letterSpacing: "-0.02em" }}
                 >
-                  No es &apos;Ceremonial&apos;. Es mejor:{" "}
-                  <span className="text-[#2d5a3d]">Es Trazable.</span>
+                  Mejor que &apos;Ceremonial&apos;,{" "}
+                  <span className="text-[#2d5a3d]">es Trazable.</span>
                 </h2>
 
                 <p className="text-base md:text-lg text-neutral-600 font-light leading-[1.8] max-w-2xl mx-auto">
-                  El término &apos;ceremonial&apos; es una invención occidental.
+                  &apos;Ceremonial&apos; es una etiqueta de marketing occidental
+                  sin definición real.
                   En Shizuku, hablamos de cultivares, cosechas y productores.
                   Shizu no Midori es un blend estacional de Shizuoka,
                   seleccionado por su nivel correcto de astringencia para
