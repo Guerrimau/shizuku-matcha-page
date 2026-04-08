@@ -61,6 +61,13 @@ export const metadata: Metadata = {
     },
   },
 
+  other: {
+    "geo.region": "MX-SON",
+    "geo.placename": "Hermosillo",
+    "geo.position": "29.0729;-110.9559",
+    ICBM: "29.0729, -110.9559",
+  },
+
   // Reglas de indexación globales
   robots: {
     index: true,
@@ -82,7 +89,7 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="es"
+      lang="es-MX"
       className={`${cormorant.variable} ${inter.variable} ${spaceMono.variable} ${notoSerifJP.variable}`}
     >
       <head>
@@ -165,7 +172,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": ["LocalBusiness", "Store", "TeaHouse"],
+              "@type": ["LocalBusiness", "Store", "SpecialtyStore"],
               "@id": "https://shizukumatchastudio.com/#business",
               name: "Shizuku Matcha Studio",
               alternateName: "Matcha Hermosillo",
@@ -177,7 +184,7 @@ export default function RootLayout({
               paymentAccepted: "Cash, Credit Card, Debit Card, Bank Transfer",
               knowsLanguage: ["es", "en"],
               keywords:
-                "matcha hermosillo, matcha sonora, te verde hermosillo, matcha ceremonial mexico, comprar matcha, matcha latte hermosillo",
+                "matcha hermosillo, matcha ceremonial hermosillo, comprar matcha hermosillo, matcha sonora, te verde hermosillo, matcha ceremonial mexico, matcha latte hermosillo",
               image: [
                 "https://shizukumatchastudio.com/matcha-latte-hermosillo-1-1.jpg",
                 "https://shizukumatchastudio.com/og.jpg",

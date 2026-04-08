@@ -97,9 +97,12 @@ export default function ProductDetailPage({
     },
   }));
 
+  const productSchemaId = `${baseUrl}/productos/${product.slug}#product`;
+
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
+    "@id": productSchemaId,
     name: product.name,
     description: product.description,
     image: product.images.map((img) => `${baseUrl}${img}`),
@@ -165,10 +168,7 @@ export default function ProductDetailPage({
       "@type": "WebSite",
       "@id": `${baseUrl}/#website`,
     },
-    about: {
-      "@type": "Product",
-      name: product.name,
-    },
+    about: { "@id": productSchemaId },
   };
 
   return (

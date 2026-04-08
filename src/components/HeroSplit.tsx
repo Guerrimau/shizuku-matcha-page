@@ -82,7 +82,7 @@ const HeroSplit = () => {
               {/* Body text */}
               <p className="text-[15px] sm:text-base lg:text-base xl:text-lg text-neutral-600 font-light leading-[1.7] mb-8 lg:mb-10">
                 Matcha de especialidad cultivar Okumidori. Importado directamente
-                de Shizuoka a Sonora. Sin etiquetas &apos;ceremoniales&apos;
+                de Shizuoka a Hermosillo, Sonora. Sin etiquetas &apos;ceremoniales&apos;
                 pretenciosas, solo trazabilidad.
               </p>
 

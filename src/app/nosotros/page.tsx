@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Nosotros — Importación Directa desde Japón",
+  title: "Nosotros — Matcha Importado Directo a Hermosillo",
   description:
     "Shizuku Matcha Studio importa matcha directo del productor en Shizuoka, Japón. Sin intermediarios. Trazabilidad completa del cultivar Okumidori.",
   openGraph: {
@@ -176,7 +176,7 @@ export default function NosotrosPage() {
                   <div className="aspect-square bg-neutral-100 overflow-hidden relative">
                     <Image
                       src="/MATCHA_BAG.jpg"
-                      alt="Bolsa de matcha importado"
+                      alt="Bolsa de matcha Okumidori importado directo de Shizuoka a Hermosillo"
                       fill
                       className="object-cover transition-transform duration-700 hover:scale-105"
                       sizes="(max-width: 768px) 100vw, 33vw"
