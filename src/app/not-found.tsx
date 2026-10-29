@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { SHOW_MAYOREO } from "@/data/features";
 
 export default function NotFound() {
   return (
@@ -88,12 +89,14 @@ export default function NotFound() {
               >
                 Nosotros
               </Link>
-              <Link
-                href="/mayoreo"
-                className="text-sm text-neutral-500 hover:text-neutral-900 transition-colors"
-              >
-                Mayoreo
-              </Link>
+              {SHOW_MAYOREO && (
+                <Link
+                  href="/mayoreo"
+                  className="text-sm text-neutral-500 hover:text-neutral-900 transition-colors"
+                >
+                  Mayoreo
+                </Link>
+              )}
             </div>
           </div>
         </div>

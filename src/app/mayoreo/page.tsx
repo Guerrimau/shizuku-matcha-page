@@ -1,10 +1,12 @@
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FAQAccordion from "@/components/FAQAccordion";
 import { b2bFaqItems } from "@/data/faq";
+import { SHOW_MAYOREO } from "@/data/features";
 
 export const metadata: Metadata = {
   title: "Mayoreo para Cafeterías — Matcha B2B en Hermosillo",
@@ -37,6 +39,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://shizukumatchastudio.com/mayoreo",
   },
+  robots: SHOW_MAYOREO ? undefined : { index: false, follow: false },
 };
 
 const benefits = [
@@ -70,12 +73,12 @@ const products = [
   {
     name: "Matcha Shizu no Midori",
     kanji: "抹茶",
-    label: "Primera cosecha · Okumidori",
+    label: "Primera y segunda cosecha · Okumidori",
     image: "/WISK.jpg",
     specs: [
       { key: "Cultivar", value: "Okumidori" },
-      { key: "Origen", value: "Shizuoka, Japón" },
-      { key: "Proceso", value: "Tencha molido en piedra" },
+      { key: "Origen", value: "Shimizu, Shizuoka, Japón" },
+      { key: "Proceso", value: "Molido en piedra hace menos de 15 días" },
       { key: "Perfil", value: "Umami moderado, amargor bajo" },
     ],
     note: "Seleccionado para bebidas con leche. Alta solubilidad, color verde estable.",
@@ -109,6 +112,8 @@ const products = [
 ];
 
 export default function MayoreoPage() {
+  if (!SHOW_MAYOREO) notFound();
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -150,7 +155,7 @@ export default function MayoreoPage() {
                     Matcha de especialidad para tu carta
                   </h1>
                   <p className="text-base md:text-lg text-neutral-600 font-light leading-[1.8] max-w-lg">
-                    Blend estacional de Shizuoka, cultivar Okumidori. Mejor
+                    Blend de primera y segunda cosecha de Shimizu, Shizuoka, cultivar Okumidori. Mejor
                     que matcha ceremonial: precio directo de importador, sin
                     intermediarios. Perfil consistente lote a lote.
                   </p>
@@ -398,7 +403,7 @@ export default function MayoreoPage() {
                 <ul className="space-y-3 pt-4">
                   {[
                     "Precio directo de importador",
-                    "Blend estacional, cultivar Okumidori",
+                    "Blend de primera y segunda cosecha, cultivar Okumidori",
                     "Asesoría técnica incluida",
                     "Entrega en Hermosillo y envíos nacionales",
                   ].map((item) => (

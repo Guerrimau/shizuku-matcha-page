@@ -1,13 +1,23 @@
+export interface FAQLink {
+  text: string;
+  href: string;
+}
+
 export interface FAQItem {
   question: string;
   answer: string;
+  links?: FAQLink[];
 }
 
 export const homeFaqItems: FAQItem[] = [
   {
-    question: "¿Dónde comprar matcha en Hermosillo?",
+    question: "¿Dónde conseguir matcha en Hermosillo?",
     answer:
-      "Shizuku Matcha Studio es la tienda de matcha de especialidad en Hermosillo, Sonora. Importamos directamente de Shizuoka, Japón, sin intermediarios. Puedes comprar en línea con envío a todo México o visitarnos en nuestros talleres presenciales en Hermosillo.",
+      "Shizuku Matcha Studio vende matcha de especialidad importado de Shizuoka, Japón. Puedes comprar en línea con envío a todo México, tomar un taller presencial en Hermosillo o encontrar nuestro matcha en cafeterías aliadas. Escríbenos por Instagram para pedir.",
+    links: [
+      { text: "cafeterías aliadas", href: "/donde-tomar-matcha-hermosillo" },
+      { text: "Instagram", href: "https://ig.me/m/shizukumatchastudio" },
+    ],
   },
   {
     question: "¿Qué es el matcha y en qué se diferencia del té verde?",
@@ -35,7 +45,7 @@ export const b2bFaqItems: FAQItem[] = [
   {
     question: "¿Por qué matcha de especialidad y no ceremonial?",
     answer:
-      'En Japón, el matcha se clasifica por perfil sensorial y uso, no por categorías comerciales. Nuestro Shizu no Midori es un blend estacional de Shizuoka seleccionado específicamente para bebidas con leche: alta solubilidad, color verde estable y un perfil de umami moderado que destaca sobre la base láctea sin amargor excesivo.',
+      'En Japón, el matcha se clasifica por perfil sensorial y uso, no por categorías comerciales. Nuestro Shizu no Midori es un blend de primera y segunda cosecha de Shimizu, Shizuoka seleccionado específicamente para bebidas con leche: alta solubilidad, color verde estable y un perfil de umami moderado que destaca sobre la base láctea sin amargor excesivo.',
   },
   {
     question: "¿Por qué funciona mejor en lattes que otros matchas?",

@@ -11,6 +11,7 @@ export interface Workshop {
   date: string;
   time: string;
   spotsAvailable?: number;
+  attendees?: number;
   image?: string;
 }
 
@@ -62,19 +63,24 @@ export const workshops: Workshop[] = [
 
 export const workshopsFaqItems = [
   {
-    question: "¿Necesito experiencia previa para los talleres?",
+    question: "¿Dónde tomar un curso de matcha en Hermosillo?",
     answer:
-      "No, nuestros talleres están diseñados para principiantes. Comenzamos desde cero y avanzamos paso a paso. Solo necesitas curiosidad y ganas de aprender.",
+      "En Shizuku Matcha Studio damos un taller presencial de introducción al matcha en Hermosillo, con cata de matcha de distintas regiones y cultivares de Japón, matcha latte, hojicha y otros tés japoneses.",
   },
   {
-    question: "¿Cómo reservo mi lugar?",
+    question: "¿Los talleres son privados o en grupo?",
     answer:
-      "Escríbenos por Instagram (@shizukumatchastudio) con el taller que te interesa y la fecha. Te confirmamos disponibilidad y te enviamos los datos de pago.",
+      "Ambos. Trabajamos con grupos pequeños y también con talleres privados para amigos, parejas, familias o equipos.",
   },
   {
-    question: "¿Puedo reservar un taller privado?",
+    question: "¿Qué matchas se prueban en el taller?",
     answer:
-      "Sí, ofrecemos talleres privados para grupos de 2 a 8 personas. Escríbenos para coordinar fecha, horario y precio especial.",
+      "Probamos matcha de diferentes regiones de Japón y de distintos cultivares, para que compares sabor, dulzor y cuerpo. El selecto puede variar según la fecha.",
+  },
+  {
+    question: "¿Sirve si quiero abrir una barra o una cafetería?",
+    answer:
+      "Sí. Aprenderás la base de preparación, la mezcla con leche y cómo reconocer un buen matcha, que es el punto de partida antes de armar un menú.",
   },
 ];
 

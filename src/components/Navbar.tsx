@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Instagram, Menu, X, Building2 } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { SHOW_MAYOREO } from '@/data/features';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -87,20 +88,22 @@ const Navbar = () => {
             >
               Nosotros
             </Link>
-            <Link
-              href="/mayoreo"
-              className="inline-flex items-center gap-1.5 font-mono text-[11px] xl:text-[12px] uppercase text-neutral-900 hover:text-neutral-600 transition-colors duration-200"
-              style={{ letterSpacing: '-0.02em' }}
-            >
-              <Building2 size={12} strokeWidth={1.5} className="xl:w-[14px] xl:h-[14px]" />
-              Mayoreo
-            </Link>
+            {SHOW_MAYOREO && (
+              <Link
+                href="/mayoreo"
+                className="inline-flex items-center gap-1.5 font-mono text-[11px] xl:text-[12px] uppercase text-neutral-900 hover:text-neutral-600 transition-colors duration-200"
+                style={{ letterSpacing: '-0.02em' }}
+              >
+                <Building2 size={12} strokeWidth={1.5} className="xl:w-[14px] xl:h-[14px]" />
+                Mayoreo
+              </Link>
+            )}
             
             {/* ORDENA Button — solid black, sharp corners */}
             <a
-              href="https://www.instagram.com/shizukumatchastudio/"
+              href="https://ig.me/m/shizukumatchastudio"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener"
               className="inline-flex items-center gap-2 bg-neutral-900 text-white px-6 py-3 xl:px-7 xl:py-3.5 font-mono text-[11px] xl:text-[12px] uppercase hover:bg-neutral-800 transition-colors duration-200 rounded-sm"
               style={{ letterSpacing: '-0.02em' }}
             >
@@ -135,15 +138,17 @@ const Navbar = () => {
               <Link href="/nosotros" onClick={() => setIsOpen(false)} className="py-3.5 font-mono text-[11px] uppercase text-neutral-900">
                 Nosotros
               </Link>
-              <Link href="/mayoreo" onClick={() => setIsOpen(false)} className="py-3.5 font-mono text-[11px] uppercase text-neutral-900 flex items-center gap-2">
-                <Building2 size={13} strokeWidth={1.5} />
-                Mayoreo
-              </Link>
+              {SHOW_MAYOREO && (
+                <Link href="/mayoreo" onClick={() => setIsOpen(false)} className="py-3.5 font-mono text-[11px] uppercase text-neutral-900 flex items-center gap-2">
+                  <Building2 size={13} strokeWidth={1.5} />
+                  Mayoreo
+                </Link>
+              )}
               <div className="pt-4">
                 <a
-                  href="https://www.instagram.com/shizukumatchastudio/"
+                  href="https://ig.me/m/shizukumatchastudio"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener"
                   className="inline-flex items-center justify-center gap-2 bg-neutral-900 text-white w-full py-4 font-mono text-[11px] uppercase rounded-sm"
                 >
                   <Instagram size={14} strokeWidth={1.5} />

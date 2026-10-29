@@ -60,6 +60,7 @@ export interface Product {
   images: string[];
   category: FilterCategory;
   sizes: ProductSize[];
+  inStock?: boolean;
   specs: ProductSpecs;
   flavorProfile?: FlavorProfile;
   brewingGuide?: BrewingGuide;
@@ -83,14 +84,14 @@ export const products: Product[] = [
     ],
     category: "matcha",
     sizes: [
-      { label: "30g", price: 350, sku: "MATCHA-30" },
-      { label: "100g", price: 950, sku: "MATCHA-100" },
+      { label: "Bolsa 40g", price: 590, sku: "MATCHA-BOLSA-40" },
+      { label: "Lata 40g", price: 690, sku: "MATCHA-LATA-40" },
     ],
     specs: {
       type: "tea",
-      tipo: "Té verde molido en piedra",
-      origen: "Shizuoka, Japón",
-      proceso: "Tencha molido en piedra",
+      tipo: "Blend de primera y segunda cosecha",
+      origen: "Shimizu, Shizuoka, Japón",
+      proceso: "Molido en piedra hace menos de 15 días",
       perfil: "Dulzor vegetal, umami moderado, amargor bajo",
     },
     flavorProfile: {
@@ -105,7 +106,7 @@ export const products: Product[] = [
       tiempo: "Batir 15-20s",
     },
     description:
-      "Nuestro matcha insignia, cultivar Okumidori de cosecha estacional. Notas verdes dulces, hierba fresca y toques cremosos. Formulación especializada para lattes y bebidas selectas. Cuerpo medio a cremoso.",
+      "Nuestro matcha insignia, cultivar Okumidori de Shimizu, Shizuoka. Blend de primera y segunda cosecha, molido hace menos de 15 días. Notas verdes dulces, hierba fresca y toques cremosos. Formulación especializada para lattes y bebidas selectas. Cuerpo medio a cremoso.",
   },
   {
     slug: "hojicha_polvo_roasted_latte_30g",

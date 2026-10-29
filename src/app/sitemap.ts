@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 import { products, filters } from '@/data/products'
 import { articles } from '@/data/articles'
+import { SHOW_MAYOREO } from '@/data/features'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://shizukumatchastudio.com'
@@ -66,11 +67,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/mayoreo`,
+      url: `${baseUrl}/donde-tomar-matcha-hermosillo`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
+      changeFrequency: 'weekly',
+      priority: 0.8,
     },
+    ...(SHOW_MAYOREO
+      ? [
+          {
+            url: `${baseUrl}/mayoreo`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly' as const,
+            priority: 0.7,
+          },
+        ]
+      : []),
 
     // Education: SEO content engine
     {

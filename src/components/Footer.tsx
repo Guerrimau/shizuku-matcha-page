@@ -1,6 +1,7 @@
 import React from 'react';
 import { Instagram, Mail } from 'lucide-react';
 import Link from 'next/link';
+import { SHOW_MAYOREO } from '@/data/features';
 
 const Footer = () => {
   return (
@@ -64,9 +65,14 @@ const Footer = () => {
               <Link href="/nosotros" className="text-sm text-white/70 hover:text-white transition-colors duration-200 font-light">
                 Nosotros
               </Link>
-              <Link href="/mayoreo" className="text-sm text-white/70 hover:text-white transition-colors duration-200 font-light">
-                Mayoreo
+              <Link href="/donde-tomar-matcha-hermosillo" className="text-sm text-white/70 hover:text-white transition-colors duration-200 font-light">
+                Dónde encontrarnos
               </Link>
+              {SHOW_MAYOREO && (
+                <Link href="/mayoreo" className="text-sm text-white/70 hover:text-white transition-colors duration-200 font-light">
+                  Mayoreo
+                </Link>
+              )}
             </nav>
           </div>
 
@@ -109,10 +115,19 @@ const Footer = () => {
               <a 
                 href="https://www.instagram.com/shizukumatchastudio/"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener"
+                className="inline-flex items-center gap-2 text-sm text-white/70 hover:text-white transition-colors duration-200 font-light"
+              >
+                <Instagram size={14} strokeWidth={1.5} aria-hidden="true" />
+                @shizukumatchastudio
+              </a>
+              <a 
+                href="https://ig.me/m/shizukumatchastudio"
+                target="_blank"
+                rel="noopener"
                 className="block text-sm text-white/70 hover:text-white transition-colors duration-200 font-light"
               >
-                @shizukumatchastudio
+                Escríbenos por mensaje
               </a>
             </div>
           </div>

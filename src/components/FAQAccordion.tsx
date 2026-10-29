@@ -1,10 +1,55 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
+
+interface FAQLink {
+  text: string;
+  href: string;
+}
 
 interface FAQItem {
   question: string;
   answer: string;
+  links?: FAQLink[];
+}
+
+const linkClassName =
+  "text-neutral-900 underline underline-offset-4 hover:text-forest-green focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-charcoal rounded-sm";
+
+function escapeRegExp(text: string) {
+  return text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function AnswerText({ answer, links = [] }: { answer: string; links?: FAQLink[] }) {
+  if (links.length === 0) return <>{answer}</>;
+
+  const pattern = new RegExp(`(${links.map((link) => escapeRegExp(link.text)).join("|")})`);
+  const parts = answer.split(pattern);
+
+  return (
+    <>
+      {parts.map((part, index) => {
+        const link = links.find((candidate) => candidate.text === part);
+        if (!link) return part;
+
+        const isExternal = link.href.startsWith("http");
+        if (isExternal) {
+          return (
+            <a key={index} href={link.href} target="_blank" rel="noopener" className={linkClassName}>
+              {part}
+            </a>
+          );
+        }
+
+        return (
+          <Link key={index} href={link.href} className={linkClassName}>
+            {part}
+          </Link>
+        );
+      })}
+    </>
+  );
 }
 
 interface FAQAccordionProps {
@@ -62,7 +107,7 @@ function AccordionItem({
       >
         <div className="overflow-hidden">
           <p className="text-base text-neutral-600 font-light leading-relaxed pb-6">
-            {item.answer}
+            <AnswerText answer={item.answer} links={item.links} />
           </p>
         </div>
       </div>

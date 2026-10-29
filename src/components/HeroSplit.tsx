@@ -62,7 +62,7 @@ const HeroSplit = () => {
               }}
             >
               {/* Location pre-header — darker grey for accessibility */}
-              <p 
+              <p
                 className="font-mono text-[10px] sm:text-[11px] uppercase text-neutral-500 mb-6 lg:mb-8"
                 style={{ letterSpacing: '0.18em' }}
               >
@@ -75,15 +75,21 @@ const HeroSplit = () => {
                 className="text-[1.75rem] sm:text-[2rem] lg:text-[2.25rem] xl:text-[2.75rem] font-serif font-medium text-neutral-900 leading-[1.08] mb-5 lg:mb-6"
                 style={{ letterSpacing: '-0.02em' }}
               >
-                El cuerpo del{" "}
-                <span className="text-[#2d5a3d]">Matcha Latte</span> perfecto.
+                Descubre la cultura del te japones
               </h1>
+
+              <p
+                className="font-mono text-[10px] sm:text-[11px] uppercase text-neutral-500 leading-[1.8] mb-5 lg:mb-6"
+                style={{ letterSpacing: '0.14em' }}
+              >
+                Matcha de especialidad en Hermosillo · Polvo · Hojicha · Talleres · Envíos a todo México
+              </p>
 
               {/* Body text */}
               <p className="text-[15px] sm:text-base lg:text-base xl:text-lg text-neutral-600 font-light leading-[1.7] mb-8 lg:mb-10">
-                Matcha de especialidad cultivar Okumidori. Importado directamente
-                de Shizuoka a Hermosillo, Sonora. Sin etiquetas &apos;ceremoniales&apos;
-                pretenciosas, solo trazabilidad.
+                Matcha de especialidad cultivar Okumidori, importado directamente
+                de Shizuoka, Japón, a México. Sabemos de dónde viene cada lote, y
+                se nota en la taza.
               </p>
 
               {/* CTAs — refined buttons */}
@@ -93,17 +99,17 @@ const HeroSplit = () => {
                   className="inline-flex items-center justify-center bg-neutral-900 text-white px-7 sm:px-8 py-4 font-mono text-[10px] sm:text-[11px] uppercase hover:bg-neutral-800 transition-all duration-300 rounded-sm"
                   style={{ letterSpacing: '0.08em' }}
                 >
-                  Explorar Cosecha
+                  Comprar matcha
                 </Link>
                 <Link
                   href="/talleres"
                   className="inline-flex items-center justify-center text-neutral-700 px-7 sm:px-8 py-4 font-mono text-[10px] sm:text-[11px] uppercase hover:text-neutral-900 hover:border-neutral-900 transition-all duration-300 rounded-sm"
-                  style={{ 
+                  style={{
                     letterSpacing: '0.08em',
                     border: '1.5px solid rgb(212 212 212)',
                   }}
                 >
-                  Ver Talleres
+                  Ver talleres
                 </Link>
               </div>
             </div>
@@ -114,7 +120,7 @@ const HeroSplit = () => {
       {/* ═══════════════════════════════════════════════════════════════
           ACCENTS — Kanji and coordinates
       ═══════════════════════════════════════════════════════════════ */}
-      
+
       {/* Shizuoka kanji — bottom left */}
       <div className="absolute bottom-12 left-8 lg:left-12 z-20">
         <span

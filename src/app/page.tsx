@@ -9,19 +9,25 @@ import ArticleCarousel from "@/components/ArticleCarousel";
 import FAQAccordion from "@/components/FAQAccordion";
 import { getFeaturedArticles } from "@/data/articles";
 import { homeFaqItems } from "@/data/faq";
+import { SHOW_MAYOREO } from "@/data/features";
+import { products } from "@/data/products";
+import { buildProductSchema } from "@/utils/productSchema";
+
+const pageTitle =
+  "Matcha en Hermosillo: Compra y Talleres | Shizuku Matcha Studio";
+const pageDescription =
+  "Matcha de especialidad de Shizuoka en Hermosillo. Compra matcha y hojicha o toma un taller de introducción. Envíos a todo México.";
 
 export const metadata: Metadata = {
-  title: "Matcha en Hermosillo | Shizuku Matcha Studio",
-  description:
-    "Matcha de especialidad en Hermosillo, Sonora — mejor que ceremonial: cultivar Okumidori de Shizuoka, 100% trazable. Talleres y envíos a México.",
+  title: { absolute: pageTitle },
+  description: pageDescription,
   openGraph: {
     type: "website",
     locale: "es_MX",
     siteName: "Shizuku Matcha Studio",
-    url: "https://shizukumatchastudio.com",
-    title: "Matcha en Hermosillo | Shizuku Matcha Studio",
-    description:
-      "Matcha de especialidad en Hermosillo, Sonora. Mas que matcha ceremonial: cultivar Okumidori de Shizuoka, Japón, 100% trazable. Talleres y envíos a México.",
+    url: "https://shizukumatchastudio.com/",
+    title: pageTitle,
+    description: pageDescription,
     images: [
       {
         url: "https://shizukumatchastudio.com/matcha-latte-hermosillo-1-1.jpg",
@@ -39,15 +45,20 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Matcha en Hermosillo | Shizuku Matcha Studio",
-    description:
-      "Matcha de especialidad en Hermosillo, Sonora. Alternativa real al matcha ceremonial: cultivar Okumidori de Shizuoka, Japón, 100% trazable. Talleres y envíos a México.",
+    title: pageTitle,
+    description: pageDescription,
     images: ["https://shizukumatchastudio.com/og.jpg"],
   },
   alternates: {
-    canonical: "https://shizukumatchastudio.com",
+    canonical: "https://shizukumatchastudio.com/",
   },
 };
+
+const featuredMatcha = products.find(
+  (product) => product.slug === "matcha_okumidori_seasonal_blend_latte_30g"
+);
+
+const featuredMatchaLabels = ["CULTIVAR OKUMIDORI", "BLEND DE TEMPORADA"];
 
 export default function HomePage() {
   const featuredArticles = getFeaturedArticles();
@@ -58,10 +69,10 @@ export default function HomePage() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "¿Dónde comprar matcha en Hermosillo?",
+        name: homeFaqItems[0].question,
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Shizuku Matcha Studio es la tienda de matcha de especialidad en Hermosillo, Sonora. Importamos directamente de Shizuoka, Japón, sin intermediarios. Puedes comprar en línea con envío a todo México o visitarnos en nuestros talleres presenciales en Hermosillo. Ofrecemos matcha cultivar Okumidori con trazabilidad completa.",
+          text: homeFaqItems[0].answer,
         },
       },
       {
@@ -107,85 +118,7 @@ export default function HomePage() {
     ],
   };
 
-  // priceValidUntil: 1 year from now
-  const priceValidUntil = new Date(Date.now() + 365 * 24 * 60 * 60 * 1000)
-    .toISOString()
-    .split("T")[0];
-
-  const productSchema = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: "Matcha | Matcha Shizu no Midori",
-    description:
-      "Matcha de especialidad. Cultivar Okumidori de Shizuoka, Japón. Blend estacional, molido en piedra. Perfil balanceado para lattes y preparación tradicional.",
-    image: [
-      "https://shizukumatchastudio.com/MATCHA/PRODUCT.jpg",
-      "https://shizukumatchastudio.com/MATCHA/BOT_FIELD.jpg",
-      "https://shizukumatchastudio.com/MATCHA/SIDE.jpg",
-      "https://shizukumatchastudio.com/MATCHA_LATTE_HOT.jpg",
-    ],
-    brand: {
-      "@type": "Brand",
-      name: "Shizuku Matcha Studio",
-    },
-    offers: {
-      "@type": "AggregateOffer",
-      lowPrice: "350",
-      highPrice: "950",
-      priceCurrency: "MXN",
-      offerCount: 2,
-      offers: [
-        {
-          "@type": "Offer",
-          name: "Lata 30g",
-          price: "350",
-          priceCurrency: "MXN",
-          availability: "https://schema.org/InStock",
-          priceValidUntil,
-          url: "https://shizukumatchastudio.com/productos/matcha_okumidori_seasonal_blend_latte_30g",
-          seller: {
-            "@type": "LocalBusiness",
-            "@id": "https://shizukumatchastudio.com/#business",
-          },
-        },
-        {
-          "@type": "Offer",
-          name: "Lata 100g",
-          price: "950",
-          priceCurrency: "MXN",
-          availability: "https://schema.org/InStock",
-          priceValidUntil,
-          url: "https://shizukumatchastudio.com/productos/matcha_okumidori_seasonal_blend_latte_30g",
-          seller: {
-            "@type": "LocalBusiness",
-            "@id": "https://shizukumatchastudio.com/#business",
-          },
-        },
-      ],
-    },
-    additionalProperty: [
-      {
-        "@type": "PropertyValue",
-        name: "Origen",
-        value: "Shizuoka, Japón",
-      },
-      {
-        "@type": "PropertyValue",
-        name: "Cultivar",
-        value: "Okumidori",
-      },
-      {
-        "@type": "PropertyValue",
-        name: "Cosecha",
-        value: "Blend estacional (primera y segunda cosecha)",
-      },
-      {
-        "@type": "PropertyValue",
-        name: "Proceso",
-        value: "Molido en piedra",
-      },
-    ],
-  };
+  const productSchemas = products.map(buildProductSchema);
 
   return (
     <div className="min-h-screen bg-washi-bg">
@@ -194,10 +127,9 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      {/* Product Schema for Google Shopping rich snippets */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchemas) }}
       />
 
       <Navbar />
@@ -217,126 +149,124 @@ export default function HomePage() {
         >
           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
             <FadeIn>
-              <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-                {/* Text side */}
-                <div className="space-y-8">
-                  <span
-                    className="font-script text-sm text-neutral-400"
-                    style={{ letterSpacing: "0.25em" }}
-                  >
-                    静岡
-                  </span>
+              <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-stretch">
+                <div className="flex flex-col">
+                  <div className="space-y-8">
+                    <span
+                      className="font-script text-sm text-neutral-400"
+                      style={{ letterSpacing: "0.25em" }}
+                    >
+                      静岡
+                    </span>
 
-                  <h2
-                    id="honesty-heading"
-                    className="text-[1.75rem] md:text-[2.25rem] lg:text-[2.75rem] font-serif font-light text-neutral-900 leading-[1.12]"
-                    style={{ letterSpacing: "-0.02em" }}
-                  >
-                    Mejor que &apos;Ceremonial&apos;,{" "}
-                    <span className="text-[#2d5a3d]">es Trazable.</span>
-                  </h2>
+                    <h2
+                      id="honesty-heading"
+                      className="text-[1.75rem] md:text-[2.25rem] lg:text-[2.75rem] font-serif font-light text-neutral-900 leading-[1.12]"
+                      style={{ letterSpacing: "-0.02em" }}
+                    >
+                      Más allá de las etiquetas
+                    </h2>
 
-                  <p className="text-base md:text-lg text-neutral-600 font-light leading-[1.8] max-w-lg">
-                    &apos;Ceremonial&apos; es una etiqueta de marketing
-                    occidental sin definición real. En Shizuku, hablamos de cultivares, cosechas y
-                    productores. Shizu no Midori es un blend estacional de
-                    Shizuoka, seleccionado por su nivel correcto de astringencia
-                    para resaltar en preparaciones con leche.
-                  </p>
+                    <p className="text-base md:text-lg text-neutral-600 font-light leading-[1.8] max-w-lg">
+                      Viajamos hasta Shizuoka para encontrar matcha del que nos sintiéramos orgullosos. Más allá de etiquetas como “ceremonial” o “premium”, hablamos de cultivares, cosechas, productores, usos y notas de cata, para que encuentres el té que mejor se adapte a tus gustos.
+                    </p>
+                  </div>
+
+                  <figure className="mt-12 lg:mt-auto lg:pt-16">
+                    <div className="aspect-[3/2] bg-neutral-100 overflow-hidden relative">
+                      <Image
+                        src="/TEA_FIELD.jpg"
+                        alt="Campos de té en Shizuoka, Japón"
+                        fill
+                        loading="lazy"
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                      />
+                    </div>
+                    <figcaption
+                      className="mt-3 font-mono text-[9px] uppercase text-neutral-400"
+                      style={{ letterSpacing: "0.15em" }}
+                    >
+                      Campos de té en Shizuoka · 210 m s. n. m.
+                    </figcaption>
+                  </figure>
                 </div>
 
-                {/* Image side */}
-                <div className="aspect-[3/4] bg-neutral-100 overflow-hidden relative">
-                  <Image
-                    src="/MATCHA_BAG.jpg"
-                    alt="Polvo de matcha Okumidori recién abierto — Shizuku Matcha Studio"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                  />
-                </div>
-              </div>
-            </FadeIn>
-          </div>
-        </section>
+                {featuredMatcha && (
+                  <article className="group">
+                    <Link
+                      href={`/productos/${featuredMatcha.slug}`}
+                      tabIndex={-1}
+                      aria-hidden="true"
+                      className="block"
+                    >
+                      <div className="aspect-square bg-neutral-100 mb-6 overflow-hidden relative">
+                        <Image
+                          src={featuredMatcha.image}
+                          alt={featuredMatcha.name}
+                          fill
+                          className="object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out"
+                          sizes="(max-width: 1024px) 100vw, 50vw"
+                        />
+                      </div>
+                    </Link>
 
-        {/* ═══════════════════════════════════════════════════════════════
-            SECTION 3: FICHA TÉCNICA — Clean Grid, 4 columns
-        ═══════════════════════════════════════════════════════════════ */}
-        <section
-          aria-labelledby="specs-heading"
-          className="py-16 md:py-20 bg-neutral-50/60"
-        >
-          <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-            <h2 id="specs-heading" className="sr-only">
-              Especificaciones técnicas del matcha
-            </h2>
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      {featuredMatchaLabels.map((label) => (
+                        <span
+                          key={label}
+                          className="font-mono text-[9px] uppercase text-neutral-500 px-2 py-1 bg-neutral-100 rounded-sm"
+                          style={{ letterSpacing: "0.1em" }}
+                        >
+                          {label}
+                        </span>
+                      ))}
+                    </div>
 
-            <FadeIn>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-neutral-200">
-                {/* Spec 1: Origen */}
-                <article className="py-6 md:py-0 md:px-8 first:md:pl-0 last:md:pr-0">
-                  <span
-                    className="font-mono text-[9px] uppercase text-neutral-400"
-                    style={{ letterSpacing: "0.2em" }}
-                  >
-                    Origen
-                  </span>
-                  <p className="mt-3 text-base md:text-lg text-neutral-900 font-light">
-                    Shizuoka, Japón
-                    <span className="block text-sm text-neutral-500 mt-1">
-                      210m sobre el nivel del mar
-                    </span>
-                  </p>
-                </article>
+                    <h3
+                      className="text-lg lg:text-xl font-serif font-light text-neutral-900 mb-2"
+                      style={{ letterSpacing: "-0.01em" }}
+                    >
+                      {featuredMatcha.name}{" "}
+                      <span className="font-script text-base text-neutral-400 ml-1">
+                        {featuredMatcha.kanji}
+                      </span>
+                    </h3>
 
-                {/* Spec 2: Cultivar */}
-                <article className="py-6 md:py-0 md:px-8">
-                  <span
-                    className="font-mono text-[9px] uppercase text-neutral-400"
-                    style={{ letterSpacing: "0.2em" }}
-                  >
-                    Cultivar
-                  </span>
-                  <p className="mt-3 text-base md:text-lg text-neutral-900 font-light">
-                    100% Okumidori
-                    <span className="block text-sm text-neutral-500 mt-1">
-                      Single cultivar
-                    </span>
-                  </p>
-                </article>
+                    <p className="text-base text-neutral-600 font-light mb-6">
+                      ${featuredMatcha.sizes[0].price.toLocaleString("es-MX")}{" "}
+                      <span className="text-neutral-400 text-sm">
+                        MXN · {featuredMatcha.sizes[0].label}
+                      </span>
+                    </p>
 
-                {/* Spec 3: Proceso */}
-                <article className="py-6 md:py-0 md:px-8">
-                  <span
-                    className="font-mono text-[9px] uppercase text-neutral-400"
-                    style={{ letterSpacing: "0.2em" }}
-                  >
-                    Proceso
-                  </span>
-                  <p className="mt-3 text-base md:text-lg text-neutral-900 font-light">
-                    Sombreado 20+ días
-                    <span className="block text-sm text-neutral-500 mt-1">
-                      Molido lento en piedra
-                    </span>
-                  </p>
-                </article>
+                    <Link
+                      href={`/productos/${featuredMatcha.slug}`}
+                      className="group/button flex w-full items-center justify-between gap-4 bg-forest-green-dark px-6 py-3.5 font-mono text-[11px] uppercase text-washi-bg hover:bg-forest-green transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest-green focus-visible:ring-offset-2 focus-visible:ring-offset-washi-bg"
+                      style={{ letterSpacing: "0.1em" }}
+                    >
+                      Probar Shizu no Midori
+                      <svg
+                        className="w-4 h-4 group-hover/button:translate-x-1 transition-transform duration-300"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1.5}
+                          d="M17 8l4 4m0 0l-4 4m4-4H3"
+                        />
+                      </svg>
+                    </Link>
 
-                {/* Spec 4: Notas */}
-                <article className="py-6 md:py-0 md:px-8 last:md:pr-0">
-                  <span
-                    className="font-mono text-[9px] uppercase text-neutral-400"
-                    style={{ letterSpacing: "0.2em" }}
-                  >
-                    Notas de cata
-                  </span>
-                  <p className="mt-3 text-base md:text-lg text-neutral-900 font-light">
-                    Dulzor vegetal, umami
-                    <span className="block text-sm text-neutral-500 mt-1">
-                      Cuerpo cremoso
-                    </span>
-                  </p>
-                </article>
+                    <p className="mt-3 text-xs text-neutral-500 font-light">
+                      Ideal para matcha latte · Envíos a todo México
+                    </p>
+                  </article>
+                )}
               </div>
             </FadeIn>
           </div>
@@ -599,45 +529,47 @@ export default function HomePage() {
         {/* ═══════════════════════════════════════════════════════════════
             SECTION 8: B2B / CAFETERÍAS — Minimalist Banner
         ═══════════════════════════════════════════════════════════════ */}
-        <section
-          aria-labelledby="b2b-heading"
-          className="py-16 md:py-20 bg-neutral-950 text-white"
-        >
-          <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-            <FadeIn>
-              <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
-                <div className="space-y-4 max-w-xl">
-                  <span
-                    className="font-mono text-[9px] uppercase text-white/50"
-                    style={{ letterSpacing: "0.25em" }}
-                  >
-                    B2B · Mayoreo
-                  </span>
-                  <h2
-                    id="b2b-heading"
-                    className="text-xl md:text-2xl lg:text-[1.75rem] font-serif font-light"
-                    style={{ letterSpacing: "-0.02em" }}
-                  >
-                    Para Barras de Especialidad
-                  </h2>
-                  <p className="text-base text-white/60 font-light leading-[1.7]">
-                    Suministramos matcha de grado superior a las mejores
-                    cafeterías en Sonora. Precios competitivos y soporte
-                    técnico.
-                  </p>
-                </div>
+        {SHOW_MAYOREO && (
+          <section
+            aria-labelledby="b2b-heading"
+            className="py-16 md:py-20 bg-neutral-950 text-white"
+          >
+            <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+              <FadeIn>
+                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+                  <div className="space-y-4 max-w-xl">
+                    <span
+                      className="font-mono text-[9px] uppercase text-white/50"
+                      style={{ letterSpacing: "0.25em" }}
+                    >
+                      B2B · Mayoreo
+                    </span>
+                    <h2
+                      id="b2b-heading"
+                      className="text-xl md:text-2xl lg:text-[1.75rem] font-serif font-light"
+                      style={{ letterSpacing: "-0.02em" }}
+                    >
+                      Para Barras de Especialidad
+                    </h2>
+                    <p className="text-base text-white/60 font-light leading-[1.7]">
+                      Suministramos matcha de grado superior a las mejores
+                      cafeterías en Sonora. Precios competitivos y soporte
+                      técnico.
+                    </p>
+                  </div>
 
-                <Link
-                  href="/mayoreo"
-                  className="inline-flex items-center justify-center gap-2 border-[1.5px] border-white text-white px-8 py-4 font-mono text-[10px] uppercase hover:bg-white hover:text-neutral-950 transition-all duration-300 whitespace-nowrap rounded-sm"
-                  style={{ letterSpacing: "0.08em" }}
-                >
-                  Información Completa
-                </Link>
-              </div>
-            </FadeIn>
-          </div>
-        </section>
+                  <Link
+                    href="/mayoreo"
+                    className="inline-flex items-center justify-center gap-2 border-[1.5px] border-white text-white px-8 py-4 font-mono text-[10px] uppercase hover:bg-white hover:text-neutral-950 transition-all duration-300 whitespace-nowrap rounded-sm"
+                    style={{ letterSpacing: "0.08em" }}
+                  >
+                    Información Completa
+                  </Link>
+                </div>
+              </FadeIn>
+            </div>
+          </section>
+        )}
       </main>
 
       <Footer />

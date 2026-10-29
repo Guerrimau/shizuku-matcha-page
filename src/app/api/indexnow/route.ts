@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { SHOW_MAYOREO } from "@/data/features";
 
 const INDEXNOW_KEY = "shizuku2026indexnow";
 const SITE_HOST = "shizukumatchastudio.com";
@@ -65,11 +66,12 @@ export async function GET() {
     "/",
     "/productos",
     "/talleres",
+    "/donde-tomar-matcha-hermosillo",
     "/aprende",
     "/aprende/guia-preparacion-matcha",
     "/aprende/verdad-matcha-ceremonial",
     "/nosotros",
-    "/mayoreo",
+    ...(SHOW_MAYOREO ? ["/mayoreo"] : []),
   ];
 
   const indexNowUrl = "https://api.indexnow.org/indexnow";

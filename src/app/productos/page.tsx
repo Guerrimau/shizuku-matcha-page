@@ -9,6 +9,7 @@ import {
   type Product,
   type ProductSpecs,
 } from "@/data/products";
+import { buildProductSchema } from "@/utils/productSchema";
 
 export const metadata: Metadata = {
   title: "Matcha y Té Japonés en Hermosillo — Shizuku",
@@ -192,6 +193,12 @@ export default function ProductosPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(products.map(buildProductSchema)),
+        }}
       />
       <Navbar />
 
